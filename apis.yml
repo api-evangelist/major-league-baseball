@@ -1,17 +1,108 @@
 aid: major-league-baseball
-url: https://raw.githubusercontent.com/api-evangelist/major-league-baseball/refs/heads/main/apis.yml
 name: Major League Baseball
-type: Index
+description: >-
+  Major League Baseball (MLB) is the professional baseball organization of the
+  United States and Canada, operating the National League and American League
+  with 30 teams. MLB Advanced Media (now part of MLB) provides public stats
+  and game data through the MLB Stats API and the legacy MLB Data (lookup
+  service) API, used by teams, broadcasters, analysts, and a wide community of
+  developers building stats sites, fantasy applications, and analytical tools.
+  MLB also exposes Statcast data through Baseball Savant. There is no
+  general-purpose self-service developer portal with terms or signup; the APIs
+  are widely consumed but are formally intended for partner use.
+kind: company
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Sports
+  - Analytics
   - Baseball
   - Entertainment
-description: 'The oldest major professional sports league in the United States and Canada consisting of 30 teams. Governs the sport of professional baseball and produces one of the most-watched annual sporting events, the World Series.'
+  - Media
+  - Sports
+  - Sports Data
+  - Statistics
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/major-league-baseball/refs/heads/main/apis.yml
 created: '2026-05-05'
-modified: '2026-05-05'
+modified: '2026-05-16'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: major-league-baseball:mlb-stats-api
+    name: MLB Stats API
+    description: >-
+      The MLB Stats API is the modern statistics and game-data service operated
+      by Major League Baseball. It powers official scoreboards, gameday feeds,
+      and downstream applications with endpoints for schedule, live game state,
+      box scores, play-by-play, players, teams, standings, venues, divisions,
+      and statistical splits. Documentation is hosted at docs.statsapi.mlb.com
+      and access is gated through MLB's identity provider for partners.
+    humanURL: https://statsapi.mlb.com/
+    tags:
+      - Game Data
+      - Live Scores
+      - REST API
+      - Sports Statistics
+    properties:
+      - type: Documentation
+        url: https://docs.statsapi.mlb.com/
+      - type: APIReference
+        url: https://statsapi.mlb.com/
+  - aid: major-league-baseball:mlb-data-lookup-service
+    name: MLB Data Lookup Service API
+    description: >-
+      The MLB Data Lookup Service is the legacy public data service exposing
+      player search and details, hitting and pitching statistics, projections,
+      team lists and rosters, game type information, date ranges, transactions,
+      broadcast schedules, injury reports, and statistical leaderboards. The
+      base endpoint is lookup-service-prod.mlb.com, with requests formatted as
+      `/json/named.[endpoint].bam`.
+    humanURL: https://appac.github.io/mlb-data-api-docs/
+    tags:
+      - Legacy API
+      - Player Data
+      - Sports Statistics
+      - Team Data
+    properties:
+      - type: Documentation
+        url: https://appac.github.io/mlb-data-api-docs/
+      - type: APIReference
+        url: http://lookup-service-prod.mlb.com/
+  - aid: major-league-baseball:mlb-statcast-baseball-savant
+    name: MLB Statcast (Baseball Savant)
+    description: >-
+      Baseball Savant is MLB's public Statcast platform, surfacing pitch- and
+      tracking-level data captured by Statcast cameras and radar in every MLB
+      ballpark. It exposes leaderboards, search tools, visualizations, and
+      pitch-by-pitch detail for hitters, pitchers, and fielders, and is widely
+      scraped or queried for analytical workflows.
+    humanURL: https://baseballsavant.mlb.com/
+    tags:
+      - Pitch Tracking
+      - Sports Analytics
+      - Statcast
+    properties:
+      - type: Documentation
+        url: https://baseballsavant.mlb.com/
+      - type: Leaderboard
+        url: https://baseballsavant.mlb.com/statcast_leaderboard
 common:
   - type: Website
-    url: https://www.walmart.com/
+    url: https://www.mlb.com/
+  - type: News
+    url: https://www.mlb.com/news
+  - type: Stats
+    url: https://www.mlb.com/stats
+  - type: Standings
+    url: https://www.mlb.com/standings
+  - type: Schedule
+    url: https://www.mlb.com/schedule
+  - type: Teams
+    url: https://www.mlb.com/team
+  - type: Players
+    url: https://www.mlb.com/players
+  - type: Careers
+    url: https://www.mlb.com/careers
+  - type: Press
+    url: https://www.mlb.com/press
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
