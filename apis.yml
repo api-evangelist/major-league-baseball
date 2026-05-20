@@ -85,6 +85,8 @@ apis:
       - type: Leaderboard
         url: https://baseballsavant.mlb.com/statcast_leaderboard
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/major-league-baseball
   - type: Website
     url: https://www.mlb.com/
   - type: News
