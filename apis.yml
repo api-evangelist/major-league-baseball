@@ -11,7 +11,7 @@ description: >-
   general-purpose self-service developer portal with terms or signup; the APIs
   are widely consumed but are formally intended for partner use.
 kind: company
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Analytics
   - Baseball
