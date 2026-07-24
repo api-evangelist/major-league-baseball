@@ -1,0 +1,143 @@
+openapi: 3.0.1
+info:
+  title: Stats API Documentation Analytics Predictions API
+  description: Official API for Major League Baseball.
+  version: 2.0.0
+servers:
+- url: https://statsapi.mlb.com
+  description: Production
+- url: https://beta-statsapi.mlb.com
+  description: Beta
+- url: https://qa-statsapi.mlb.com
+  description: QA
+- url: http://localhost:8080
+  description: Local
+tags:
+- name: Predictions
+paths:
+  /api/v1/props/play/predictions:
+    get:
+      tags:
+      - Predictions
+      summary: Get play-level predictions based on input scenarios
+      description: This endpoint allows you to get play-level predictions based on input scenarios
+      operationId: getProps
+      parameters:
+      - name: batterId
+        in: query
+        description: 'Unique Player Identifier. Format: 434538, 429665, etc'
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: pitcherId
+        in: query
+        description: 'Unique Player Identifier. Format: 434538, 429665, etc'
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: venueId
+        in: query
+        description: Unique Venue Identifier
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: batSide
+        in: query
+        description: Bat side of hitter
+        required: false
+        schema:
+          type: string
+      - name: pitchHand
+        in: query
+        description: Handedness of pitcher
+        required: false
+        schema:
+          type: string
+      - name: batterPosition
+        in: query
+        description: 'Position abbreviation. Format: SS, P, 1B, etc'
+        required: false
+        schema:
+          type: string
+      - name: pitcherPosition
+        in: query
+        description: 'Position abbreviation. Format: SS, P, 1B, etc'
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+  /api/v1/props/play/predictions/adjust:
+    get:
+      tags:
+      - Predictions
+      summary: Get play-level predictions based on input scenarios
+      description: This endpoint allows you to get play-level predictions based on input scenarios
+      operationId: getPropsAdjust
+      parameters:
+      - name: batterId
+        in: query
+        description: 'Unique Player Identifier. Format: 434538, 429665, etc'
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: pitcherId
+        in: query
+        description: 'Unique Player Identifier. Format: 434538, 429665, etc'
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: venueId
+        in: query
+        description: Unique Venue Identifier
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: batSide
+        in: query
+        description: Bat side of hitter
+        required: false
+        schema:
+          type: string
+      - name: pitchHand
+        in: query
+        description: Handedness of pitcher
+        required: false
+        schema:
+          type: string
+      - name: batterPosition
+        in: query
+        description: 'Position abbreviation. Format: SS, P, 1B, etc'
+        required: false
+        schema:
+          type: string
+      - name: pitcherPosition
+        in: query
+        description: 'Position abbreviation. Format: SS, P, 1B, etc'
+        required: false
+        schema:
+          type: string
+      - name: count
+        in: query
+        description: Count for the at-bat (1-0, 2-2, etc.)
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object

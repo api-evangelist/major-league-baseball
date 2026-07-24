@@ -1,0 +1,180 @@
+openapi: 3.0.1
+info:
+  title: Stats API Documentation Analytics Weather API
+  description: Official API for Major League Baseball.
+  version: 2.0.0
+servers:
+- url: https://statsapi.mlb.com
+  description: Production
+- url: https://beta-statsapi.mlb.com
+  description: Beta
+- url: https://qa-statsapi.mlb.com
+  description: QA
+- url: http://localhost:8080
+  description: Local
+tags:
+- name: Weather
+paths:
+  /api/v1/weather/venues/{venueId}/full:
+    get:
+      tags:
+      - Weather
+      summary: Get full weather for a venue.
+      description: Returns a json file containing full weather for a specific venue.
+      operationId: weatherFull
+      parameters:
+      - name: venueId
+        in: path
+        description: Unique Venue Identifier
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/WeatherWrapperRestObject'
+  /api/v1/weather/venues/{venueId}/basic:
+    get:
+      tags:
+      - Weather
+      summary: Get basic weather for a venue.
+      description: Returns a json file containing basic weather for a specific venue.
+      operationId: weatherBasic
+      parameters:
+      - name: venueId
+        in: path
+        description: Unique Venue Identifier
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/WeatherWrapperRestObject'
+  /api/v1/weather/game/{gamePk}/{playId}:
+    get:
+      tags:
+      - Weather
+      summary: Get the raw field weather data.
+      description: Returns a json file containing weather for the current play.
+      operationId: weatherDataBasedOnPlay
+      parameters:
+      - name: gamePk
+        in: path
+        description: Unique Primary Key Representing a Game
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: playId
+        in: path
+        description: Unique identifier for a play within a game
+        required: true
+        schema:
+          type: string
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/WeatherWrapperRestObject'
+  /api/v1/weather/game/{gamePk}/forecast/{roofType}:
+    get:
+      tags:
+      - Weather
+      summary: Get the weather forecast for a game.
+      description: Returns a json file containing the weather forecast for a specific game.
+      operationId: weatherForecast
+      parameters:
+      - name: gamePk
+        in: path
+        description: Unique Primary Key Representing a Game
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: roofType
+        in: path
+        description: Venue roof type
+        required: true
+        schema:
+          $ref: '#/components/schemas/RoofType'
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/WeatherWrapperRestObject'
+components:
+  schemas:
+    WeatherWrapperRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        units:
+          $ref: '#/components/schemas/JsonNode'
+        data:
+          $ref: '#/components/schemas/RestObject'
+    RoofType:
+      type: string
+      enum:
+      - roofOpen
+      - roofClosedNoPanel
+      - roofClosedPanelOpen
+      - roofClosedPanelClosed
+      - noRoof
+      - unknown
+    RestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+    JsonNode:
+      type: object

@@ -1,0 +1,87 @@
+openapi: 3.0.1
+info:
+  title: Stats API Documentation Analytics Broadcast API
+  description: Official API for Major League Baseball.
+  version: 2.0.0
+servers:
+- url: https://statsapi.mlb.com
+  description: Production
+- url: https://beta-statsapi.mlb.com
+  description: Beta
+- url: https://qa-statsapi.mlb.com
+  description: QA
+- url: http://localhost:8080
+  description: Local
+tags:
+- name: Broadcast
+  description: The broadcast endpoints return information pertaining to broadcasters.
+paths:
+  /api/v1/broadcast:
+    get:
+      tags:
+      - Broadcast
+      summary: Get Broadcasts
+      operationId: getBroadcasts
+      parameters:
+      - name: broadcasterIds
+        in: query
+        required: true
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BroadcastRestObject'
+components:
+  schemas:
+    VideoResolutionEnumRestObject:
+      type: object
+      properties:
+        code:
+          type: string
+        resolutionShort:
+          type: string
+        resolutionFull:
+          type: string
+    BroadcastRestObject:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        type:
+          type: string
+        site:
+          type: string
+        language:
+          type: string
+        copyright:
+          type: string
+        homeAway:
+          type: string
+        isNational:
+          type: boolean
+        sourceUrl:
+          type: string
+        callSign:
+          type: string
+        videoResolution:
+          $ref: '#/components/schemas/VideoResolutionEnumRestObject'

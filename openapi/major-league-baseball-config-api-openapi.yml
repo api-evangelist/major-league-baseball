@@ -1,0 +1,1781 @@
+openapi: 3.0.1
+info:
+  title: Stats API Documentation Analytics Config API
+  description: Official API for Major League Baseball.
+  version: 2.0.0
+servers:
+- url: https://statsapi.mlb.com
+  description: Production
+- url: https://beta-statsapi.mlb.com
+  description: Beta
+- url: https://qa-statsapi.mlb.com
+  description: QA
+- url: http://localhost:8080
+  description: Local
+tags:
+- name: Config
+  description: Config elements
+paths:
+  /api/v1/jobTypes:
+    get:
+      tags:
+      - Config
+      summary: List all job types
+      operationId: jobTypes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobTypeRestObject'
+    post:
+      tags:
+      - Config
+      operationId: updateJobTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /api/v1/gameStatus:
+    get:
+      tags:
+      - Config
+      summary: List all status types
+      operationId: gameStatus
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RestObject'
+    post:
+      tags:
+      - Config
+      summary: Clear all status types
+      operationId: updateGameStatuses
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /api/v1/windDirection:
+    get:
+      tags:
+      - Config
+      summary: List all wind direction options
+      operationId: windDirection
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/weatherTrajectoryConfidences:
+    get:
+      tags:
+      - Config
+      summary: List all weather trajectories
+      operationId: weatherTrajectoryConfidences
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/WeatherTrajectoryConfidenceTypeRestObject'
+  /api/v1/violationTypes:
+    get:
+      tags:
+      - Config
+      summary: View available violationType options
+      operationId: violationTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ViolationType'
+  /api/v1/transactionTypes:
+    get:
+      tags:
+      - Config
+      summary: List all hit trajectories
+      operationId: transactionTypes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/trackingVersions:
+    get:
+      tags:
+      - Config
+      summary: List all tracking versions
+      operationId: trackingVersions
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TrackingVersion'
+  /api/v1/trackingVendors:
+    get:
+      tags:
+      - Config
+      summary: List all tracking vendors
+      operationId: trackingVendors
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TrackingVendor'
+  /api/v1/stats/search/stats:
+    get:
+      tags:
+      - Config
+      summary: List stat search stats
+      operationId: statSearchStats
+      parameters:
+      - name: Categories of filters for stat search
+        in: query
+        required: false
+        schema:
+          $ref: '#/components/schemas/FilterLevelEnum'
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StatSearchStatRestObject'
+  /api/v1/stats/search/params:
+    get:
+      tags:
+      - Config
+      summary: List stat search parameters
+      operationId: statSearchParams
+      parameters:
+      - name: Categories of filters for stat search
+        in: query
+        required: false
+        schema:
+          $ref: '#/components/schemas/FilterLevelEnum'
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StatSearchParamRestObject'
+  /api/v1/stats/search/groupByTypes:
+    get:
+      tags:
+      - Config
+      summary: List groupBy types
+      operationId: statSearchGroupByTypes
+      parameters:
+      - name: Categories of filters for stat search
+        in: query
+        required: false
+        schema:
+          $ref: '#/components/schemas/FilterLevelEnum'
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupByEnum'
+  /api/v1/stats/search/config:
+    get:
+      tags:
+      - Config
+      summary: Stats Search Config Endpoint
+      operationId: statSearchConfig
+      parameters:
+      - name: Categories of filters for stat search
+        in: query
+        required: false
+        schema:
+          $ref: '#/components/schemas/FilterLevelEnum'
+      - name: Category of statistic to return. Available types in /api/v1/statGroups
+        in: query
+        required: false
+        schema:
+          $ref: '#/components/schemas/StatGroup'
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/StatSearchConfigRestObject'
+  /api/v1/statcastPositionTypes:
+    get:
+      tags:
+      - Config
+      summary: List all statcast position types
+      operationId: statcastPositionTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StatcastPositionRestObject'
+  /api/v1/statTypes:
+    get:
+      tags:
+      - Config
+      summary: List all stat types
+      operationId: statTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StatType'
+  /api/v1/statGroups:
+    get:
+      tags:
+      - Config
+      summary: List all stat groups
+      operationId: statGroups
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StatGroup'
+  /api/v1/statFields:
+    get:
+      tags:
+      - Config
+      summary: List all stat fields
+      operationId: statFields
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StatField'
+  /api/v1/standingsTypes:
+    get:
+      tags:
+      - Config
+      summary: List all standings types
+      operationId: standingsTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StandingsType'
+  /api/v1/sortModifiers:
+    get:
+      tags:
+      - Config
+      summary: List all stat fields
+      operationId: aggregateSortEnum
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AggregateSortTypeRestObject'
+  /api/v1/sky:
+    get:
+      tags:
+      - Config
+      summary: List all sky options
+      operationId: sky
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/situationCodes:
+    get:
+      tags:
+      - Config
+      summary: List all situation codes
+      operationId: sitCodes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      - name: Season of play
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: Category of statistic to return. Available types in /api/v1/statGroups
+        in: query
+        required: false
+        schema:
+          $ref: '#/components/schemas/StatGroup'
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SituationCodeRestObject'
+  /api/v1/scheduleTypes:
+    get:
+      tags:
+      - Config
+      summary: List all possible schedule types
+      operationId: scheduleTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ScheduleTypeEnum'
+  /api/v1/scheduleEventTypes:
+    get:
+      tags:
+      - Config
+      summary: List all event types
+      operationId: scheduleEventTypes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ScheduleEventTypeRestObject'
+  /api/v1/runnerDetailTypes:
+    get:
+      tags:
+      - Config
+      summary: List runner detail types
+      operationId: runnerDetailTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RunnerDetailType'
+  /api/v1/ruleSettings:
+    get:
+      tags:
+      - Config
+      summary: List all ruleSettings
+      operationId: ruleSettings
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RuleSettingsRestObject'
+  /api/v1/rosterTypes:
+    get:
+      tags:
+      - Config
+      summary: List all possible roster types
+      operationId: rosterTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RosterType'
+  /api/v1/roofTypes:
+    get:
+      tags:
+      - Config
+      summary: List all roof types
+      operationId: roofTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RoofTypeRestObject'
+  /api/v1/reviewReasons:
+    get:
+      tags:
+      - Config
+      summary: List all replay review reasons
+      operationId: reviewReasons
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/positions:
+    get:
+      tags:
+      - Config
+      summary: List all possible positions
+      operationId: positions
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BaseballPosition'
+  /api/v1/playerStatusCodes:
+    get:
+      tags:
+      - Config
+      summary: List all player status codes
+      operationId: playerStatusCodes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/platforms:
+    get:
+      tags:
+      - Config
+      summary: List all possible platforms
+      operationId: platforms
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Platform'
+  /api/v1/pitchTypes:
+    get:
+      tags:
+      - Config
+      summary: List all pitch classification types
+      operationId: pitchTypes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/pitchCodes:
+    get:
+      tags:
+      - Config
+      summary: List all pitch codes
+      operationId: pitchCodes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/performerTypes:
+    get:
+      tags:
+      - Config
+      summary: List all possible performer types
+      operationId: performerTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PerformerType'
+  /api/v1/metrics:
+    get:
+      tags:
+      - Config
+      summary: List all possible metrics
+      operationId: metrics
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RestObject'
+  /api/v1/lookup/values/all:
+    get:
+      tags:
+      - Config
+      summary: View all lookup values
+      operationId: getLookupValues
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: object
+  /api/v1/logicalEvents:
+    get:
+      tags:
+      - Config
+      summary: List all logical event types
+      operationId: logicalEvents
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/leagueLeaderTypes:
+    get:
+      tags:
+      - Config
+      summary: List all possible player league leader types
+      operationId: leagueLeaderTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LeagueLeaderTypeRestObject'
+  /api/v1/languages:
+    get:
+      tags:
+      - Config
+      summary: List all support languages
+      operationId: languages
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Language'
+  /api/v1/hitTrajectories:
+    get:
+      tags:
+      - Config
+      summary: List all hit trajectories
+      operationId: hitTrajectories
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/groupByTypes:
+    get:
+      tags:
+      - Config
+      summary: List groupBy types
+      operationId: groupByTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupByEnum'
+  /api/v1/gamedayTypes:
+    get:
+      tags:
+      - Config
+      summary: List all gameday types
+      operationId: gamedayTypes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GeneralLookupRestObject'
+  /api/v1/gameTypes:
+    get:
+      tags:
+      - Config
+      summary: List all game types
+      operationId: gameTypes
+      parameters:
+      - name: sportId
+        in: query
+        description: Top level organization of a sport
+        required: false
+        schema:
+          type: integer
+          format: int32
+        x-lookup:
+          name: Sports
+      - name: Unique League Identifier
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: Season of play
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GameTypeEnum'
+  /api/v1/fielderDetailTypes:
+    get:
+      tags:
+      - Config
+      summary: List fielder detail types
+      operationId: fielderDetailTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FielderDetailType'
+  /api/v1/eventTypes:
+    get:
+      tags:
+      - Config
+      summary: List all event types
+      operationId: eventTypes
+      parameters:
+      - name: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        in: query
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+  /api/v1/eventStatus:
+    get:
+      tags:
+      - Config
+      summary: List all possible event status types
+      operationId: eventStatus
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IGameStatus'
+  /api/v1/coachingVideoTypes:
+    get:
+      tags:
+      - Config
+      summary: List all tracking vendors
+      operationId: coachingVideoTypes
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  type: string
+  /api/v1/baseballStats:
+    get:
+      tags:
+      - Config
+      summary: List all baseball stats
+      operationId: baseballStats
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BaseballStatsTypeRestObject'
+components:
+  schemas:
+    OrganizationType:
+      type: string
+      enum:
+      - PLAYER
+      - TEAM
+      - DIVISION
+      - LEAGUE
+      - SPORT
+      - LEAGUE_LIST
+    Platform:
+      type: string
+      enum:
+      - WEB
+      - ANDROID_PHONE
+      - ANDROID_TABLET
+      - IOS_PHONE
+      - IOS_TABLET
+      - XBOX_ONE
+      - XBOX_360
+      - ROKU
+      - PLAYSTATION
+      - CHROMECAST
+      - APPLETV
+      - TV_OS
+    SituationCodeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        sortOrder:
+          type: integer
+          format: int32
+        navigationMenu:
+          type: string
+        description:
+          type: string
+        team:
+          type: boolean
+        batting:
+          type: boolean
+        fielding:
+          type: boolean
+        pitching:
+          type: boolean
+    RestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+    RunnerDetailType:
+      type: string
+      enum:
+      - START_BASE
+      - SEQUENCE
+      - RUNNER_GOING
+      - END_BASE
+      - RUNNER_OUT
+      - FORCED_OUT
+      - ADVANCED_ON_FORCE
+      - ADVANCED_ON_THROW
+      - ADVANCED_ON_PLAY
+      - DOUBLED_OFF
+      - THROWN_OUT
+      - TAGGED_OUT
+      - OUT_STRETCHING
+      - LEFT_EARLY
+      - FIELDERS_CHOICE
+      - OUT_ON_APPEAL
+      - OUT_ADVANCING
+      - DEFENSIVE_INDIFFERENCE
+      - INTERFERENCE
+      - HIT_BY_BATTED_BALL
+      - OUT_OVER_RUNNING
+      - OUT_RETURNING
+      - RUNDOWN
+      - CAUGHT_STEALING_2B
+      - CAUGHT_STEALING_3B
+      - CAUGHT_STEALING_HOME
+      - PICKOFF_CAUGHT_STEALING_2B
+      - PICKOFF_CAUGHT_STEALING_3B
+      - PICKOFF_CAUGHT_STEALING_HOME
+      - STOLEN_BASE_2B
+      - STOLEN_BASE_3B
+      - STOLEN_BASE_HOME
+      - PICKOFF_1B
+      - PICKOFF_2B
+      - PICKOFF_3B
+      - PICKOFF_ERROR_1B
+      - PICKOFF_ERROR_2B
+      - PICKOFF_ERROR_3B
+      - UNKNOWN
+    ScheduleEventTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        name:
+          type: string
+    RoofTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        value:
+          type: string
+        description:
+          type: string
+    LeagueLeaderTypeRestObject:
+      type: object
+      properties:
+        displayName:
+          type: string
+    StatField:
+      type: string
+      enum:
+      - STANDARD
+      - ADVANCED
+      - TRACKING
+      - EXPECTED
+      - SABERMETRICS
+      - RANKING
+      - PERCENTILE
+    TrackingVendor:
+      type: string
+      enum:
+      - SPORTVISION
+      - TRACKMAN
+      - CHYRONHEGO
+      - HAWKEYE
+    RuleSettingsRestObject:
+      type: object
+      properties:
+        playSettingId:
+          type: integer
+          format: int32
+        settingId:
+          type: integer
+          format: int32
+        settingName:
+          type: string
+        settingDisplayName:
+          type: string
+        settingCategory:
+          type: string
+        settingCategoryCode:
+          type: string
+        settingDescription:
+          type: string
+        settingOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsOptionRestObject'
+        valueType:
+          type: string
+        settingValue:
+          type: object
+        settingScope:
+          type: string
+        priorityOverride:
+          type: integer
+          format: int32
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        inherited:
+          type: boolean
+        gameType:
+          type: string
+        allGameTypeStatus:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+    StatGroup:
+      type: string
+      enum:
+      - HITTING
+      - PITCHING
+      - FIELDING
+      - CATCHING
+      - RUNNING
+      - GAME
+      - TEAM
+      - STREAK
+    GeneralLookupRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        base:
+          $ref: '#/components/schemas/GenericLookup'
+        code:
+          type: string
+        description:
+          type: string
+    StatFields:
+      type: object
+      properties:
+        copyright:
+          type: string
+        standard:
+          type: boolean
+        advanced:
+          type: boolean
+        tracking:
+          type: boolean
+        expected:
+          type: boolean
+    ViolationType:
+      type: object
+      properties:
+        violation_type_desc:
+          type: string
+        violationTypeCode:
+          type: string
+        eventType:
+          type: string
+        eventTypeCode:
+          type: string
+        parentId:
+          type: integer
+          format: int32
+        violatorCode:
+          type: string
+    AggregateSortTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        description:
+          type: string
+    StreakLevelEnum:
+      type: string
+      enum:
+      - SEASON
+      - GAME
+      - AT_BAT
+      - PITCH
+    TrackingVersion:
+      type: string
+      enum:
+      - PITCH_FX
+      - STATCAST_2015_COMBINED
+      - STATCAST_2015_RADAR_ONLY_20
+      - STATCAST_2017_RADAR_ONLY_20
+      - STATCAST_2017_COMBINED_RADAR_20
+      - STATCAST_2018_COMBINED_RADAR_25
+      - STATCAST_2018_RADAR_ONLY_25
+      - STATCAST_2020_12_CAM
+      - STATCAST_2020_8_CAM
+      - TRACKMAN_V3
+      - STATCAST_2023_12_CAM
+    PersonStatGroupRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        person:
+          type: string
+        primaryStatGroups:
+          $ref: '#/components/schemas/StatSearchStatGroupRestObject'
+        supportedStatGroups:
+          $ref: '#/components/schemas/StatSearchStatGroupRestObject'
+    PerformerType:
+      type: object
+      properties:
+        name:
+          type: string
+    IGameStatus:
+      type: object
+      properties:
+        code:
+          type: string
+        startTimeTBD:
+          type: boolean
+        abstractGameState:
+          type: string
+        detailedState:
+          type: string
+    RuleSettingsOptionRestObject:
+      type: object
+      properties:
+        settingValueId:
+          type: integer
+          format: int32
+        displayName:
+          type: string
+        description:
+          type: string
+        activeBeginDate:
+          type: string
+          format: date
+        activeEndDate:
+          type: string
+          format: date
+        value:
+          type: object
+        sortOrder:
+          type: integer
+          format: int32
+    ScheduleTypeEnum:
+      type: string
+      enum:
+      - GAMESCHEDULE
+      - XREF
+      - EVENTSCHEDULE
+    StatType:
+      type: string
+      enum:
+      - PROJECTED
+      - PROJECTED_ROS
+      - YEAR_BY_YEAR
+      - YEAR_BY_YEAR_ADVANCED
+      - YEAR_BY_YEAR_PLAYOFFS
+      - SEASON
+      - STANDARD
+      - ADVANCED
+      - CAREER
+      - CAREER_REGULAR_SEASON
+      - CAREER_ADVANCED
+      - SEASON_ADVANCED
+      - CAREER_STAT_SPLITS
+      - CAREER_PLAYOFFS
+      - GAME_LOG
+      - PLAY_LOG
+      - PITCH_LOG
+      - METRIC_LOG
+      - METRIC_AVERAGES
+      - PITCH_ARSENAL
+      - OUTS_ABOVE_AVERAGE
+      - EXPECTED_STATISTICS
+      - SABERMETRICS
+      - SPRAY_CHART
+      - TRACKING_STATISTICS
+      - VS_PLAYER
+      - VS_PLAYER_TOTAL
+      - VS_PLAYER_5Y
+      - VS_TEAM
+      - VS_TEAM_5Y
+      - VS_TEAM_TOTAL
+      - LAST_X_GAMES
+      - BY_DATE_RANGE
+      - BY_DATE_RANGE_ADVANCED
+      - BY_MONTH
+      - BY_MONTH_PLAYOFFS
+      - BY_DAY_OF_WEEK
+      - BY_DAY_OF_WEEK_PLAYOFFS
+      - HOME_AND_AWAY
+      - HOME_AND_AWAY_PLAYOFFS
+      - WIN_LOSS
+      - WIN_LOSS_PLAYOFFS
+      - RANKINGS
+      - RANKINGS_BY_YEAR
+      - STATS_SINGLE_SEASON
+      - STATS_SINGLE_SEASON_ADVANCED
+      - HOT_COLD_ZONES
+      - AVAILABLE_STATS
+      - OPPONENTS_FACED
+      - GAME_TYPE_STATS
+      - FIRST_YEAR_STATS
+      - LAST_YEAR_STATS
+      - STAT_SPLITS
+      - STAT_SPLITS_ADVANCED
+      - AT_GAME_START
+      - VS_OPPONENTS
+    StatcastPositionRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        positionId:
+          type: integer
+          format: int32
+        description:
+          type: string
+    StandingsType:
+      type: string
+      enum:
+      - REGULAR_SEASON
+      - WILD_CARD
+      - DIVISION_LEADERS
+      - WILD_CARD_WITH_LEADERS
+      - FIRST_HALF
+      - SECOND_HALF
+      - SPRING_TRAINING
+      - POSTSEASON
+      - BY_DIVISION
+      - BY_CONFERENCE
+      - BY_LEAGUE
+      - BY_ORGANIZATION
+    StatSearchSitCodeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        sitCode:
+          type: string
+        description:
+          type: string
+        navigationMenu:
+          type: string
+        category:
+          type: string
+        hitting:
+          type: boolean
+        pitching:
+          type: boolean
+        fielding:
+          type: boolean
+        catching:
+          type: boolean
+        running:
+          type: boolean
+    JobTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        job:
+          type: string
+        sortOrder:
+          type: integer
+          format: int32
+    StatSearchPersonFilterRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        name:
+          type: string
+        personStatGroup:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonStatGroupRestObject'
+        primaryFilterLevel:
+          type: string
+        secondaryFilterLevel:
+          type: string
+    GameTypeEnum:
+      type: string
+      enum:
+      - SPRING_TRAINING
+      - REGULAR_SEASON
+      - FIRST_ROUND
+      - DIVISION_SERIES
+      - LEAGUE_CHAMPIONSHIP_SERIES
+      - WORLD_SERIES
+      - CHAMPIONSHIP
+      - NINETEENTH_CENTURY_SERIES
+      - PLAYOFFS
+      - ALL_STAR
+      - INTRASQUAD
+      - EXHIBITION
+    HighLowTypeEnum:
+      type: string
+      enum:
+      - PLAYER
+      - TEAM
+      - GAME
+    BaseballPosition:
+      type: string
+      enum:
+      - PITCHER
+      - CATCHER
+      - FIRST_BASE
+      - SECOND_BASE
+      - THIRD_BASE
+      - SHORTSTOP
+      - LEFT_FIELD
+      - CENTER_FIELD
+      - RIGHT_FIELD
+      - DESIGNATED_HITTER
+      - PINCH_HITTER
+      - PINCH_RUNNER
+      - EXTRA_HITTER
+      - BASE_RUNNER
+      - OUTFIELD
+      - INFIELD
+      - STARTING_PITCHER
+      - RELIEF_PITCHER
+      - CLOSER
+      - UTLITY
+      - UTLITY_INFIELDER
+      - UTLITY_OUTFIELDER
+      - RIGHT_HANDED_PITCHER
+      - LEFT_HANDED_PITCHER
+      - RIGHT_HANDED_STARTER
+      - LEFT_HANDED_STARTER
+      - LEFT_HANDED_RELIEVER
+      - RIGHT_HANDED_RELIEVER
+      - TWO_WAY_PITCHER_INFIELDER
+      - TWO_WAY_PITCHER_OUTFIELDER
+      - TWO_WAY_PITCHER_UTILITY
+      - TWO_WAY_PLAYER
+      - BATTER
+      - UNKNOWN
+      - RUNNER_ON_FIRST
+      - RUNNER_ON_SECOND
+      - RUNNER_ON_THIRD
+    Language:
+      type: string
+      enum:
+      - ENGLISH
+      - ELIAS
+      - SPANISH
+      - BIS
+      - JAPANESE
+      - KOREAN
+      - CHINESE
+      - FRENCH
+      - GERMAN
+      - ITALIAN
+      - DUTCH
+      - PORTUGUESE
+      - GREEK
+      - TAGALOG
+      - JAPANESE_2
+      - UNACCENT_OVERRIDE
+    FilterLevelEnumRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        name:
+          type: string
+        scope:
+          type: integer
+          format: int32
+    FielderDetailType:
+      type: string
+      enum:
+      - ASSIST
+      - OUTFIELD_ASSIST
+      - PASSED_BALL
+      - FIELDED_BALL
+      - DEFLECTION
+      - OUT_NUMBER
+      - PUTOUT
+      - TOUCH
+      - ERROR
+      - FIELDING_ERROR
+      - FOUL_ERROR
+      - DROPPED_BALL_ERROR
+      - INTERFERENCE
+      - THROWING_ERROR
+      - CATCHER_INTERFERENCE
+      - STOLEN_BASE_2B
+      - STOLEN_BASE_3B
+      - STOLEN_BASE_HP
+      - CAUGHT_STEALING_2B
+      - CAUGHT_STEALING_3B
+      - CAUGHT_STEALING_HP
+      - PICKOFF_1B
+      - PICKOFF_2B
+      - PICKOFF_3B
+      - TEAM_ERROR
+      - TEAM_DOUBLE_PLAY
+      - TEAM_TRIPLE_PLAY
+      - UNKNOWN
+    FilterLevelEnum:
+      type: string
+      enum:
+      - PITCH
+      - AT_BAT
+      - INNING
+      - PITCH_TYPE
+      - GAME
+      - SEASON
+      - CAREER
+      - NONE
+    WeatherTrajectoryConfidenceTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        value:
+          type: string
+        description:
+          type: string
+    StatSearchStatGroupRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        hitting:
+          type: boolean
+        pitching:
+          type: boolean
+        fielding:
+          type: boolean
+        catching:
+          type: boolean
+        running:
+          type: boolean
+    RosterType:
+      type: string
+      enum:
+      - FORTY_MAN
+      - FULL_SEASON
+      - FULL_ROSTER
+      - NON_ROSTER_INVITEES
+      - ACTIVE
+      - ALL_TIME
+      - DEPTH_CHART
+      - GAMEDAY
+      - COACH
+    StatSearchGroupByRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        description:
+          type: string
+        filterLevel:
+          type: string
+        hitting:
+          type: boolean
+        pitching:
+          type: boolean
+        fielding:
+          type: boolean
+        catching:
+          type: boolean
+        running:
+          type: boolean
+    StatSearchParamRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        filterLevel:
+          type: string
+        hitting:
+          type: boolean
+        pitching:
+          type: boolean
+        fielding:
+          type: boolean
+        catching:
+          type: boolean
+        running:
+          type: boolean
+    GroupByEnum:
+      type: string
+      enum:
+      - PLAYER
+      - PITCHER
+      - BATTER
+      - VENUE
+      - TEAM
+      - BATTING_TEAM
+      - FIELDING_TEAM
+      - SPORT
+      - BATTING_SPORT
+      - FIELDING_SPORT
+      - LEAGUE
+      - BATTING_LEAGUE
+      - FIELDING_LEAGUE
+      - DIVISION
+      - BATTING_DIVISION
+      - FIELDING_DIVISION
+      - SEASON
+      - POSITION
+      - STAT_GROUP
+      - GAME
+      - PITCH_TYPE
+      - EVENT_TYPE
+      - PITCH_CODE
+      - BATTING_ORDER
+      - PITCH_HAND
+      - BAT_SIDE
+      - MONTH
+      - DAY_OF_WEEK
+      - DAY_NIGHT
+      - GAME_TYPE
+      - HOME_AWAY
+      - BASE_STATE
+      - RISP
+      - INNING
+      - COUNT_BALLS
+      - COUNT_STRIKES
+      - COUNT_OUTS
+      - HIT_TRAJECTORY
+      - PITCH_NUMBER
+      - AT_BAT_NUMBER
+      - RUNNER_FIRST
+      - RUNNER_SECOND
+      - RUNNER_THIRD
+      - CATCHER
+      - FIRST_BASEMAN
+      - SECOND_BASEMAN
+      - SHORTSTOP
+      - THIRD_BASEMAN
+      - LEFT_FIELDER
+      - CENTER_FIELDER
+      - RIGHT_FIELDER
+      - DESIGNATED_HITTER
+      - DEFENSIVE_ALIGNMENT
+      - SITUATION_CODE
+      - OPPONENT_TEAM
+      - HIT_DIRECTION
+      - PITCH_ZONE
+      - DATE
+    FilterLevels:
+      type: object
+      properties:
+        copyright:
+          type: string
+        pitch:
+          type: boolean
+        atBat:
+          type: boolean
+        inning:
+          type: boolean
+        game:
+          type: boolean
+        season:
+          type: boolean
+        career:
+          type: boolean
+    BaseballStatsTypeRestObject:
+      type: object
+      properties:
+        name:
+          type: string
+        lookupParam:
+          type: string
+        isCounting:
+          type: boolean
+        label:
+          type: string
+        statGroups:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatGroup'
+        orgTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationType'
+        highLowTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/HighLowTypeEnum'
+        streakLevels:
+          type: array
+          items:
+            $ref: '#/components/schemas/StreakLevelEnum'
+    StatSearchConfigRestObject:
+      type: object
+      properties:
+        parameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchParamRestObject'
+        groupByTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchGroupByRestObject'
+        compareOverTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchGroupByRestObject'
+        situationCodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchSitCodeRestObject'
+        stats:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchStatRestObject'
+        aggregations:
+          type: array
+          items:
+            $ref: '#/components/schemas/AggregateSortTypeRestObject'
+        filterLevels:
+          type: array
+          items:
+            $ref: '#/components/schemas/FilterLevelEnumRestObject'
+        personFilters:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchPersonFilterRestObject'
+    GenericLookup:
+      type: string
+      enum:
+      - BAT_SIDE
+      - BATS
+      - DOUBLE_HEADER_SW
+      - DRAFT_TYPE
+      - GAMEDAY_SW
+      - HIT_HARDNESS
+      - HIT_TRAJECTORY
+      - IF_NECESSARY
+      - PITCH_CODE
+      - PITCH_HAND
+      - PITCH_TYPE
+      - PLAYER_STATUS
+      - REVIEW_REASON
+      - SIT_CODE
+      - SKY
+      - TIEBREAKER_SW
+      - TRANS_TYPE
+      - THROWS
+      - WIND_DIRECTION
+    StatSearchStatRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        description:
+          type: string
+        abbreviation:
+          type: string
+        sortStat:
+          type: string
+        statFields:
+          $ref: '#/components/schemas/StatFields'
+        statGroup:
+          type: string
+        filterLevels:
+          $ref: '#/components/schemas/FilterLevels'
+        isCounting:
+          type: boolean
+        isInstanceStat:
+          type: boolean
+        sortOrder:
+          type: string
+        units:
+          type: string
+        aggregation:
+          type: string
+        decimals:
+          type: integer
+          format: int32

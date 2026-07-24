@@ -1,0 +1,123 @@
+openapi: 3.0.1
+info:
+  title: Stats API Documentation Analytics Conference API
+  description: Official API for Major League Baseball.
+  version: 2.0.0
+servers:
+- url: https://statsapi.mlb.com
+  description: Production
+- url: https://beta-statsapi.mlb.com
+  description: Beta
+- url: https://qa-statsapi.mlb.com
+  description: QA
+- url: http://localhost:8080
+  description: Local
+tags:
+- name: Conference
+  description: The conference endpoint returns data specific to the PCL (Pacific Coast League) which was historically divided into separate conferences.
+paths:
+  /api/v1/conferences:
+    get:
+      tags:
+      - Conference
+      summary: View Conference Info
+      description: View info for all PCL conferences or by conferenceId.
+      operationId: conferences
+      parameters:
+      - name: conferenceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: season
+        in: query
+        description: Season of play
+        required: false
+        schema:
+          type: string
+      - name: includeInactive
+        in: query
+        required: false
+        schema:
+          type: boolean
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ConferencesRestObject'
+  /api/v1/conferences/{conferenceId}:
+    get:
+      tags:
+      - Conference
+      summary: View Conference Info
+      description: View info for all PCL conferences or by conferenceId.
+      operationId: conferences_1
+      parameters:
+      - name: conferenceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: season
+        in: query
+        description: Season of play
+        required: false
+        schema:
+          type: string
+      - name: includeInactive
+        in: query
+        required: false
+        schema:
+          type: boolean
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ConferencesRestObject'
+components:
+  schemas:
+    ConferencesRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        conferences:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConferenceRestObject'
+    ConferenceRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        link:
+          type: string

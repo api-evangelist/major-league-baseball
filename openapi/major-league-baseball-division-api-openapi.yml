@@ -1,0 +1,492 @@
+openapi: 3.0.1
+info:
+  title: Stats API Documentation Analytics Division API
+  description: Official API for Major League Baseball.
+  version: 2.0.0
+servers:
+- url: https://statsapi.mlb.com
+  description: Production
+- url: https://beta-statsapi.mlb.com
+  description: Beta
+- url: https://qa-statsapi.mlb.com
+  description: QA
+- url: http://localhost:8080
+  description: Local
+tags:
+- name: Division
+  description: Operations pertaining to divisions
+paths:
+  /api/v1/divisions:
+    get:
+      tags:
+      - Division
+      summary: Get division information
+      description: This endpoint allows you to pull divisions
+      operationId: divisions
+      parameters:
+      - name: divisionId
+        in: path
+        description: Unique Division Identifier
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: includeInactive
+        in: query
+        description: Whether or not to include inactive
+        required: false
+        schema:
+          type: boolean
+          default: false
+      - name: leagueId
+        in: query
+        description: Unique League Identifier
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: sportId
+        in: query
+        description: Top level organization of a sport
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: season
+        in: query
+        description: Season of play
+        required: false
+        schema:
+          type: string
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/DivisionsRestObject'
+  /api/v1/divisions/{divisionId}:
+    get:
+      tags:
+      - Division
+      summary: Get division information
+      description: This endpoint allows you to pull divisions
+      operationId: divisions_1
+      parameters:
+      - name: divisionId
+        in: path
+        description: Unique Division Identifier
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: includeInactive
+        in: query
+        description: Whether or not to include inactive
+        required: false
+        schema:
+          type: boolean
+          default: false
+      - name: leagueId
+        in: query
+        description: Unique League Identifier
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: sportId
+        in: query
+        description: Top level organization of a sport
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: season
+        in: query
+        description: Season of play
+        required: false
+        schema:
+          type: string
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/DivisionsRestObject'
+components:
+  schemas:
+    DivisionsRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        divisions:
+          type: array
+          items:
+            $ref: '#/components/schemas/DivisionRestObject'
+    SportRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        hydrations:
+          type: array
+          items:
+            type: string
+        id:
+          type: integer
+          format: int32
+        code:
+          type: string
+        link:
+          type: string
+        name:
+          type: string
+        abbreviation:
+          type: string
+        sortOrder:
+          type: integer
+          format: int32
+        deviceProperties:
+          $ref: '#/components/schemas/JsonNode'
+        isAffiliated:
+          type: boolean
+        ruleSettings:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsRestObject'
+        seasonState:
+          type: string
+        seasonDateInfo:
+          $ref: '#/components/schemas/SeasonRestObject'
+        activeStatus:
+          type: boolean
+    DivisionRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        season:
+          type: string
+        nameShort:
+          type: string
+        link:
+          type: string
+        abbreviation:
+          type: string
+        conference:
+          $ref: '#/components/schemas/ConferenceRestObject'
+        league:
+          $ref: '#/components/schemas/LeagueRestObject'
+        sport:
+          $ref: '#/components/schemas/SportRestObject'
+        hasWildcard:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+        numPlayoffTeams:
+          type: integer
+          format: int32
+        active:
+          type: boolean
+    GameTypeEnum:
+      type: string
+      enum:
+      - SPRING_TRAINING
+      - REGULAR_SEASON
+      - FIRST_ROUND
+      - DIVISION_SERIES
+      - LEAGUE_CHAMPIONSHIP_SERIES
+      - WORLD_SERIES
+      - CHAMPIONSHIP
+      - NINETEENTH_CENTURY_SERIES
+      - PLAYOFFS
+      - ALL_STAR
+      - INTRASQUAD
+      - EXHIBITION
+    GameTypeDatesRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        name:
+          type: string
+        shortName:
+          type: string
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        season:
+          type: string
+        roundRobin:
+          type: boolean
+        playoffs:
+          type: boolean
+        playoffRound:
+          type: integer
+          format: int32
+        league:
+          $ref: '#/components/schemas/LeagueRestObject'
+        sport:
+          $ref: '#/components/schemas/SportRestObject'
+        gameType:
+          $ref: '#/components/schemas/GameTypeEnum'
+    LeagueRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        link:
+          type: string
+        abbreviation:
+          type: string
+        nameShort:
+          type: string
+        seasonState:
+          type: string
+        hasWildCard:
+          type: boolean
+        hasSplitSeason:
+          type: boolean
+        numGames:
+          type: integer
+          format: int32
+        hasPlayoffPoints:
+          type: boolean
+        numTeams:
+          type: integer
+          format: int32
+        numWildcardTeams:
+          type: integer
+          format: int32
+        seasonDateInfo:
+          $ref: '#/components/schemas/SeasonRestObject'
+        season:
+          type: string
+        orgCode:
+          type: string
+        conferencesInUse:
+          type: boolean
+        divisionsInUse:
+          type: boolean
+        sport:
+          $ref: '#/components/schemas/SportRestObject'
+        timeZone:
+          $ref: '#/components/schemas/TimeZoneRestObject'
+        sortOrder:
+          type: integer
+          format: int32
+        active:
+          type: boolean
+        isAffiliated:
+          type: boolean
+        ruleSettings:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsRestObject'
+    SeasonRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        seasonId:
+          type: string
+        hasWildcard:
+          type: boolean
+        preSeasonStartDate:
+          type: string
+          format: date
+        preSeasonEndDate:
+          type: string
+          format: date
+        seasonStartDate:
+          type: string
+          format: date
+        springStartDate:
+          type: string
+          format: date
+        springEndDate:
+          type: string
+          format: date
+        regularSeasonStartDate:
+          type: string
+          format: date
+        lastDate1stHalf:
+          type: string
+          format: date
+        allStarDate:
+          type: string
+          format: date
+        firstDate2ndHalf:
+          type: string
+          format: date
+        regularSeasonEndDate:
+          type: string
+          format: date
+        postSeasonStartDate:
+          type: string
+          format: date
+        postSeasonEndDate:
+          type: string
+          format: date
+        seasonEndDate:
+          type: string
+          format: date
+        offseasonStartDate:
+          type: string
+          format: date
+        offSeasonEndDate:
+          type: string
+          format: date
+        numberOfGames:
+          type: integer
+          format: int32
+        tiesInUse:
+          type: boolean
+        olympicsParticipation:
+          type: boolean
+        conferencesInUse:
+          type: boolean
+        divisionsInUse:
+          type: boolean
+        gameTypeDates:
+          type: array
+          items:
+            $ref: '#/components/schemas/GameTypeDatesRestObject'
+        seasonLevelGamedayType:
+          type: string
+        gameLevelGamedayType:
+          type: string
+        qualifierPlateAppearances:
+          type: number
+          format: double
+        qualifierOutsPitched:
+          type: number
+          format: double
+    ConferenceRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        link:
+          type: string
+    JsonNode:
+      type: object
+    TimeZoneRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: string
+        offset:
+          type: integer
+          format: int32
+        tz:
+          type: string
+    RuleSettingsRestObject:
+      type: object
+      properties:
+        playSettingId:
+          type: integer
+          format: int32
+        settingId:
+          type: integer
+          format: int32
+        settingName:
+          type: string
+        settingDisplayName:
+          type: string
+        settingCategory:
+          type: string
+        settingCategoryCode:
+          type: string
+        settingDescription:
+          type: string
+        settingOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsOptionRestObject'
+        valueType:
+          type: string
+        settingValue:
+          type: object
+        settingScope:
+          type: string
+        priorityOverride:
+          type: integer
+          format: int32
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        inherited:
+          type: boolean
+        gameType:
+          type: string
+        allGameTypeStatus:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+    RuleSettingsOptionRestObject:
+      type: object
+      properties:
+        settingValueId:
+          type: integer
+          format: int32
+        displayName:
+          type: string
+        description:
+          type: string
+        activeBeginDate:
+          type: string
+          format: date
+        activeEndDate:
+          type: string
+          format: date
+        value:
+          type: object
+        sortOrder:
+          type: integer
+          format: int32

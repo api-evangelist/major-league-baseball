@@ -1,0 +1,109 @@
+openapi: 3.0.1
+info:
+  title: Stats API Documentation Analytics Skeletal API
+  description: Official API for Major League Baseball.
+  version: 2.0.0
+servers:
+- url: https://statsapi.mlb.com
+  description: Production
+- url: https://beta-statsapi.mlb.com
+  description: Beta
+- url: https://qa-statsapi.mlb.com
+  description: QA
+- url: http://localhost:8080
+  description: Local
+tags:
+- name: Skeletal
+  description: 'Operations pertaining to skeletal data '
+paths:
+  /api/v1/game/{gamePk}/{playId}/analytics/skeletalData/files:
+    get:
+      tags:
+      - Skeletal
+      summary: View Skeletal Data by playId and gameId
+      description: This endpoint allows you to pull chunked skeletal tracking data by gameId and playId
+      operationId: skeletalDataFileNames
+      parameters:
+      - name: gamePk
+        in: path
+        description: Unique Primary Key Representing a Game
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: playId
+        in: path
+        description: Unique play identifier
+        required: true
+        schema:
+          type: string
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SkeletalFileData'
+  /api/v1/game/{gamePk}/{playId}/analytics/skeletalData/chunked:
+    get:
+      tags:
+      - Skeletal
+      summary: View Skeletal Data by playId and gameId
+      description: This endpoint allows you to pull chunked skeletal tracking data by gameId and playId
+      operationId: skeletalChunked
+      parameters:
+      - name: gamePk
+        in: path
+        description: Unique Primary Key Representing a Game
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: playId
+        in: path
+        description: Unique play identifier
+        required: true
+        schema:
+          type: string
+      - name: fileName
+        in: query
+        description: Skeletal chunked file name
+        required: true
+        schema:
+          type: string
+      - name: fields
+        in: query
+        description: 'Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute'
+        required: false
+        schema:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+  schemas:
+    SkeletalFileData:
+      type: object
+      properties:
+        copyright:
+          type: string
+        fileNames:
+          type: array
+          items:
+            type: string
