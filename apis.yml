@@ -11,7 +11,18 @@ description: >-
   general-purpose self-service developer portal with terms or signup; the APIs
   are widely consumed but are formally intended for partner use.
 kind: company
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/major-league-baseball.png
 tags:
   - Analytics
   - Baseball
@@ -26,64 +37,341 @@ created: '2026-05-05'
 modified: '2026-05-16'
 specificationVersion: '0.19'
 apis:
-  - aid: major-league-baseball:mlb-stats-api
-    name: MLB Stats API
-    description: >-
-      The MLB Stats API is the modern statistics and game-data service operated
-      by Major League Baseball. It powers official scoreboards, gameday feeds,
-      and downstream applications with endpoints for schedule, live game state,
-      box scores, play-by-play, players, teams, standings, venues, divisions,
-      and statistical splits. Documentation is hosted at docs.statsapi.mlb.com
-      and access is gated through MLB's identity provider for partners.
-    humanURL: https://statsapi.mlb.com/
-    tags:
-      - Game Data
-      - Live Scores
-      - REST API
-      - Sports Statistics
-    properties:
-      - type: Documentation
-        url: https://docs.statsapi.mlb.com/
-      - type: APIReference
-        url: https://statsapi.mlb.com/
-  - aid: major-league-baseball:mlb-data-lookup-service
-    name: MLB Data Lookup Service API
-    description: >-
-      The MLB Data Lookup Service is the legacy public data service exposing
-      player search and details, hitting and pitching statistics, projections,
-      team lists and rosters, game type information, date ranges, transactions,
-      broadcast schedules, injury reports, and statistical leaderboards. The
-      base endpoint is lookup-service-prod.mlb.com, with requests formatted as
-      `/json/named.[endpoint].bam`.
-    humanURL: https://appac.github.io/mlb-data-api-docs/
-    tags:
-      - Legacy API
-      - Player Data
-      - Sports Statistics
-      - Team Data
-    properties:
-      - type: Documentation
-        url: https://appac.github.io/mlb-data-api-docs/
-      - type: APIReference
-        url: http://lookup-service-prod.mlb.com/
-  - aid: major-league-baseball:mlb-statcast-baseball-savant
-    name: MLB Statcast (Baseball Savant)
-    description: >-
-      Baseball Savant is MLB's public Statcast platform, surfacing pitch- and
-      tracking-level data captured by Statcast cameras and radar in every MLB
-      ballpark. It exposes leaderboards, search tools, visualizations, and
-      pitch-by-pitch detail for hitters, pitchers, and fielders, and is widely
-      scraped or queried for analytical workflows.
-    humanURL: https://baseballsavant.mlb.com/
-    tags:
-      - Pitch Tracking
-      - Sports Analytics
-      - Statcast
-    properties:
-      - type: Documentation
-        url: https://baseballsavant.mlb.com/
-      - type: Leaderboard
-        url: https://baseballsavant.mlb.com/statcast_leaderboard
+- aid: major-league-baseball:mlb-stats-api
+  name: MLB Stats API
+  description: >-
+    The MLB Stats API is the modern statistics and game-data service operated by Major League Baseball.
+    It powers official scoreboards, gameday feeds, and downstream applications with endpoints for schedule,
+    live game state, box scores, play-by-play, players, teams, standings, venues, divisions, and statistical
+    splits. Documentation is hosted at docs.statsapi.mlb.com and access is gated through MLB's identity
+    provider for partners.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Game Data
+  - Live Scores
+  - REST API
+  - Sports Statistics
+  properties:
+  - type: Documentation
+    url: https://docs.statsapi.mlb.com/
+  - type: APIReference
+    url: https://statsapi.mlb.com/
+- aid: major-league-baseball:mlb-data-lookup-service
+  name: MLB Data Lookup Service API
+  description: >-
+    The MLB Data Lookup Service is the legacy public data service exposing player search and details,
+    hitting and pitching statistics, projections, team lists and rosters, game type information, date
+    ranges, transactions, broadcast schedules, injury reports, and statistical leaderboards. The base
+    endpoint is lookup-service-prod.mlb.com, with requests formatted as `/json/named.[endpoint].bam`.
+  humanURL: https://appac.github.io/mlb-data-api-docs/
+  tags:
+  - Legacy API
+  - Player Data
+  - Sports Statistics
+  - Team Data
+  properties:
+  - type: Documentation
+    url: https://appac.github.io/mlb-data-api-docs/
+  - type: APIReference
+    url: http://lookup-service-prod.mlb.com/
+- aid: major-league-baseball:mlb-statcast-baseball-savant
+  name: MLB Statcast (Baseball Savant)
+  description: >-
+    Baseball Savant is MLB's public Statcast platform, surfacing pitch- and tracking-level data captured
+    by Statcast cameras and radar in every MLB ballpark. It exposes leaderboards, search tools, visualizations,
+    and pitch-by-pitch detail for hitters, pitchers, and fielders, and is widely scraped or queried for
+    analytical workflows.
+  humanURL: https://baseballsavant.mlb.com/
+  tags:
+  - Pitch Tracking
+  - Sports Analytics
+  - Statcast
+  properties:
+  - type: Documentation
+    url: https://baseballsavant.mlb.com/
+  - type: Leaderboard
+    url: https://baseballsavant.mlb.com/statcast_leaderboard
+- aid: major-league-baseball:major-league-baseball-analytics-api
+  name: Major League Baseball Analytics API
+  description: Operations pertaining to field tracking and analytics.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Analytics
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-analytics-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-attendance-api
+  name: Major League Baseball Attendance API
+  description: The attendance endpoints handle game and season attendance and openings numbers by team.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Attendance
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-attendance-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-awards-api
+  name: Major League Baseball Awards API
+  description: The awards endpoints allow users to lookup award information and recipients.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Awards
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-awards-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-bat-tracking-api
+  name: Major League Baseball Bat Tracking API
+  description: Operations pertaining to bat tracking data
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Bat Tracking
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-bat-tracking-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-biomechanics-api
+  name: Major League Baseball Biomechanics API
+  description: Operations pertaining to biomechanical data
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Biomechanics
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-biomechanics-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-broadcast-api
+  name: Major League Baseball Broadcast API
+  description: The broadcast endpoints return information pertaining to broadcasters.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Broadcast
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-broadcast-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-conference-api
+  name: Major League Baseball Conference API
+  description: >-
+    The conference endpoint returns data specific to the PCL (Pacific Coast League) which was historically
+    divided into separate conferences.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Conference
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-conference-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-config-api
+  name: Major League Baseball Config API
+  description: Config elements
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Config
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-config-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-division-api
+  name: Major League Baseball Division API
+  description: Operations pertaining to divisions
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Division
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-division-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-draft-api
+  name: Major League Baseball Draft API
+  description: Operations pertaining to MLB BaseballDraft
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Draft
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-draft-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-game-api
+  name: Major League Baseball Game API
+  description: Operations pertaining to games
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Game
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-game-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-game-pace-api
+  name: Major League Baseball Game Pace API
+  description: The Game Pace API from Major League Baseball — 1 operation(s) for game pace.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Game Pace
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-game-pace-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-high-low-api
+  name: Major League Baseball High/Low API
+  description: Operations pertaining to high/low stats
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - High/Low
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-high-low-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-homerun-derby-api
+  name: Major League Baseball Homerun Derby API
+  description: Operations pertaining to home run derby
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Homerun Derby
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-homerun-derby-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-job-api
+  name: Major League Baseball Job API
+  description: Operations pertaining to jobs
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Job
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-job-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-league-api
+  name: Major League Baseball League API
+  description: Operations pertaining to leagues
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - League
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-league-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-milestones-api
+  name: Major League Baseball Milestones API
+  description: Operations pertaining to milestones
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Milestones
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-milestones-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-person-api
+  name: Major League Baseball Person API
+  description: Operations pertaining to players
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Person
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-person-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-predictions-api
+  name: Major League Baseball Predictions API
+  description: The Predictions API from Major League Baseball — 2 operation(s) for predictions.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Predictions
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-predictions-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-reviews-api
+  name: Major League Baseball Reviews API
+  description: The Reviews API from Major League Baseball — 1 operation(s) for reviews.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Reviews
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-reviews-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-schedule-api
+  name: Major League Baseball Schedule API
+  description: Operations pertaining to schedules
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Schedule
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-schedule-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-season-api
+  name: Major League Baseball Season API
+  description: Operations pertaining to seasons
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Season
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-season-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-skeletal-api
+  name: Major League Baseball Skeletal API
+  description: Operations pertaining to skeletal data
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Skeletal
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-skeletal-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-sports-api
+  name: Major League Baseball Sports API
+  description: Operations pertaining to sports
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Sports
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-sports-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-standings-api
+  name: Major League Baseball Standings API
+  description: Operations pertaining to teams
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Standings
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-standings-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-stats-api
+  name: Major League Baseball Stats API
+  description: Operations pertaining to stats
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Stats
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-stats-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-streaks-api
+  name: Major League Baseball Streaks API
+  description: Endpoints for stats streaks
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Streaks
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-streaks-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-teams-api
+  name: Major League Baseball Teams API
+  description: Operations pertaining to teams
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-teams-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-transactions-api
+  name: Major League Baseball Transactions API
+  description: Operations pertaining to transactions
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-transactions-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-venues-api
+  name: Major League Baseball Venues API
+  description: Operations pertaining to venues
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Venues
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-venues-api-openapi.yml
+- aid: major-league-baseball:major-league-baseball-weather-api
+  name: Major League Baseball Weather API
+  description: The Weather API from Major League Baseball — 4 operation(s) for weather.
+  humanURL: https://statsapi.mlb.com/
+  tags:
+  - Weather
+  properties:
+  - type: OpenAPI
+    url: openapi/major-league-baseball-weather-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/major-league-baseball-agentic-access.yml
