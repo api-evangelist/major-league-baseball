@@ -1,0 +1,344 @@
+{
+  "item": [
+    {
+      "id": "7693aa33-bbdb-4ef5-98dd-19b5dc7b7821",
+      "name": "Predictions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "66b61218-8fac-46c6-bad3-6589a5b67ce2",
+          "name": "Get play-level predictions based on input scenarios",
+          "request": {
+            "name": "Get play-level predictions based on input scenarios",
+            "description": {
+              "content": "This endpoint allows you to get play-level predictions based on input scenarios",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "props",
+                "play",
+                "predictions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "batterId",
+                  "value": "<integer>",
+                  "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "pitcherId",
+                  "value": "<integer>",
+                  "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueId",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "batSide",
+                  "value": "<string>",
+                  "description": "Bat side of hitter"
+                },
+                {
+                  "disabled": false,
+                  "key": "pitchHand",
+                  "value": "<string>",
+                  "description": "Handedness of pitcher"
+                },
+                {
+                  "disabled": false,
+                  "key": "batterPosition",
+                  "value": "<string>",
+                  "description": "Position abbreviation. Format: SS, P, 1B, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "pitcherPosition",
+                  "value": "<string>",
+                  "description": "Position abbreviation. Format: SS, P, 1B, etc"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cf8faa0f-56ef-4d36-b9a4-bc9bf885c4b6",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "props",
+                    "play",
+                    "predictions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "batterId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pitcherId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "venueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "batSide",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pitchHand",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "batterPosition",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pitcherPosition",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "14cba8e5-c57d-4513-955f-561dad4f23e5",
+          "name": "Get play-level predictions based on input scenarios",
+          "request": {
+            "name": "Get play-level predictions based on input scenarios",
+            "description": {
+              "content": "This endpoint allows you to get play-level predictions based on input scenarios",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "props",
+                "play",
+                "predictions",
+                "adjust"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "batterId",
+                  "value": "<integer>",
+                  "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "pitcherId",
+                  "value": "<integer>",
+                  "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueId",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "batSide",
+                  "value": "<string>",
+                  "description": "Bat side of hitter"
+                },
+                {
+                  "disabled": false,
+                  "key": "pitchHand",
+                  "value": "<string>",
+                  "description": "Handedness of pitcher"
+                },
+                {
+                  "disabled": false,
+                  "key": "batterPosition",
+                  "value": "<string>",
+                  "description": "Position abbreviation. Format: SS, P, 1B, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "pitcherPosition",
+                  "value": "<string>",
+                  "description": "Position abbreviation. Format: SS, P, 1B, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<string>",
+                  "description": "Count for the at-bat (1-0, 2-2, etc.)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "daf7bab6-b508-4853-b4bd-eb7bea8cf43d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "props",
+                    "play",
+                    "predictions",
+                    "adjust"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "batterId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pitcherId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "venueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "batSide",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pitchHand",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "batterPosition",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pitcherPosition",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "count",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "864143c5-45d6-4a3b-8e56-7b1928d948c3",
+    "name": "Stats API Documentation Analytics Predictions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

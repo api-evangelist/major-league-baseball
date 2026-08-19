@@ -1,0 +1,108 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics High/Low API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "High/Low",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View high/low stats by player or team",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/highLow/:highLowType",
+            "params": [
+              {
+                "name": "highLowType",
+                "value": "",
+                "type": "path",
+                "description": "Type of high/low stats ('player', 'team', 'game')"
+              },
+              {
+                "name": "statGroup",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of  categories of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "sortStat",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of baseball stats to sort splits by."
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View high/low stats by player or team"
+        },
+        {
+          "info": {
+            "name": "View high/low stat types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/highLow/types"
+          },
+          "docs": "View high/low stat types"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,160 @@
+{
+  "item": [
+    {
+      "id": "232359fa-438f-48a6-8889-263ffb90a0d4",
+      "name": "Bat Tracking",
+      "description": {
+        "content": "Operations pertaining to bat tracking data ",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "69594241-2320-43c3-a4a3-fd8b4476fa42",
+          "name": "View Bat Tracking Data by playId and gameId",
+          "request": {
+            "name": "View Bat Tracking Data by playId and gameId",
+            "description": {
+              "content": "This endpoint allows you to pull bat tracking data by gameId and playId",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "batTracking",
+                "game",
+                ":gamePk",
+                ":playId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "gamePk",
+                  "description": "(Required) Unique Primary Key Representing a Game"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "playId",
+                  "description": "(Required) Unique play identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b3dc96b9-86de-4493-8417-1c81bed14bae",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "batTracking",
+                    "game",
+                    ":gamePk",
+                    ":playId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "gamePk",
+                      "description": "(Required) Unique Primary Key Representing a Game"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "playId",
+                      "description": "(Required) Unique play identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"units\": {},\n  \"gamePk\": 3302,\n  \"playId\": \"string\",\n  \"impact\": {\n    \"copyright\": \"string\",\n    \"attackAngle\": 8155.184393956892,\n    \"speed\": {\n      \"copyright\": \"string\",\n      \"before\": 2671.50625826081,\n      \"after\": 7916.744391987084\n    },\n    \"contactPoint\": {\n      \"copyright\": \"string\",\n      \"x\": 384.05789077542,\n      \"y\": 842.6941685049172,\n      \"z\": 2750.6529536956014,\n      \"timeStamp\": \"string\"\n    },\n    \"headPosition\": {\n      \"copyright\": \"string\",\n      \"x\": 4252.341208440758,\n      \"y\": 4460.243886025348,\n      \"z\": 9731.115642662937,\n      \"timeStamp\": \"string\"\n    },\n    \"handlePosition\": {\n      \"copyright\": \"string\",\n      \"x\": 5409.750651818102,\n      \"y\": 2381.521288089177,\n      \"z\": 8684.048154357923,\n      \"timeStamp\": \"string\"\n    },\n    \"timeStamp\": \"string\"\n  },\n  \"sweetSpot\": {\n    \"copyright\": \"string\",\n    \"axialOffset\": 9456.973633843716,\n    \"distanceFromHead\": 9793.481960065681,\n    \"speedBeforeImpact\": 2921.3683314793393,\n    \"radialOffset\": 1846.6220332525795\n  },\n  \"batPositions\": [\n    {\n      \"copyright\": \"string\",\n      \"positionId\": \"string\",\n      \"positions\": [\n        {\n          \"copyright\": \"string\",\n          \"code\": \"string\",\n          \"name\": \"string\",\n          \"type\": \"string\",\n          \"abbreviation\": \"string\"\n        },\n        {\n          \"copyright\": \"string\",\n          \"code\": \"string\",\n          \"name\": \"string\",\n          \"type\": \"string\",\n          \"abbreviation\": \"string\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"positionId\": \"string\",\n      \"positions\": [\n        {\n          \"copyright\": \"string\",\n          \"code\": \"string\",\n          \"name\": \"string\",\n          \"type\": \"string\",\n          \"abbreviation\": \"string\"\n        },\n        {\n          \"copyright\": \"string\",\n          \"code\": \"string\",\n          \"name\": \"string\",\n          \"type\": \"string\",\n          \"abbreviation\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9254775d-5dd3-4d90-84dc-76878c2b2e08",
+    "name": "Stats API Documentation Analytics Bat Tracking API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

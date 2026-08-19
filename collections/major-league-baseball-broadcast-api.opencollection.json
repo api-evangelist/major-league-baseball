@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Broadcast API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Broadcast",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Broadcasts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/broadcast",
+            "params": [
+              {
+                "name": "broadcasterIds",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Broadcasts"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,2814 @@
+{
+  "item": [
+    {
+      "id": "ebfb8793-aec2-4bbd-ba52-7541aa6b49a4",
+      "name": "Schedule",
+      "description": {
+        "content": "Operations pertaining to schedules",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5f0faec2-9b84-4697-a8ea-e74ffbc2a745",
+          "name": "postseason Schedule 1",
+          "request": {
+            "name": "postseason Schedule 1",
+            "description": {
+              "content": "This endpoint allows you to pull postseason schedules",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                "postseason"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "seriesNumber",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "useLatestGames",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "useFeaturedGame",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "publicFacing",
+                  "value": "<string>",
+                  "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "adfd1109-80a4-4f87-ade5-8d0d61d2738d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    "postseason"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seriesNumber",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "useLatestGames",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "useFeaturedGame",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "publicFacing",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"hydrations\": [\n    \"string\",\n    \"string\"\n  ],\n  \"totalItems\": 7310,\n  \"totalEvents\": 6374,\n  \"totalGames\": 3029,\n  \"totalGamesInProgress\": 4346,\n  \"wait\": 5467,\n  \"dates\": [\n    {\n      \"copyright\": \"string\",\n      \"date\": \"1999-09-11\",\n      \"totalItems\": 7533,\n      \"totalEvents\": 3748,\n      \"totalGames\": 8951,\n      \"totalGamesInProgress\": 3868,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"date\": \"1980-02-25\",\n      \"totalItems\": 3588,\n      \"totalEvents\": 8034,\n      \"totalGames\": 835,\n      \"totalGamesInProgress\": 237,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a52a57b1-d2c7-4c67-8a4a-a2b1f1d42ed7",
+          "name": "postseason Schedule",
+          "request": {
+            "name": "postseason Schedule",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                "postseason"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bfbcc7f3-3271-4e2f-a69d-494b36f67d1f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    "postseason"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ce4ac3c4-601f-4b45-a08f-e439fd9b06ed",
+          "name": "tracking Events Schedule",
+          "request": {
+            "name": "tracking Events Schedule",
+            "description": {
+              "content": "This endpoint allows you to pull schedules for tracking events",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                "trackingEvents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePk",
+                  "value": "<integer>",
+                  "description": "Unique Primary Key Representing a Game"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of Game. Format: YYYY-MM-DD"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "timecode",
+                  "value": "<string>",
+                  "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+                },
+                {
+                  "disabled": false,
+                  "key": "useLatestGames",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "publicFacing",
+                  "value": "<string>",
+                  "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c6cc6f0-e4e4-43ed-8d4c-6bd0cd04ca04",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    "trackingEvents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "calendarTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "eventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePk",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "eventIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "venueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "performerIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gameType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "timecode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "useLatestGames",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "opponentId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "publicFacing",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"hydrations\": [\n    \"string\",\n    \"string\"\n  ],\n  \"totalItems\": 2215,\n  \"totalEvents\": 6640,\n  \"totalGames\": 9972,\n  \"totalGamesInProgress\": 1709,\n  \"wait\": 8879,\n  \"dates\": [\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2026-04-05\",\n      \"totalItems\": 6972,\n      \"totalEvents\": 2607,\n      \"totalGames\": 2631,\n      \"totalGamesInProgress\": 6376,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2006-01-15\",\n      \"totalItems\": 8308,\n      \"totalEvents\": 2385,\n      \"totalGames\": 4281,\n      \"totalGamesInProgress\": 5195,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7f62c288-a4e1-45bd-8387-9cf76ab60661",
+          "name": "schedule Private",
+          "request": {
+            "name": "schedule Private",
+            "description": {
+              "content": "This endpoint allows you to pull schedules with authentication enforced and a \"no-cache\" cache-control policy",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                "private"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduleEventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of event types"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduleEventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of event types"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePk",
+                  "value": "<integer>",
+                  "description": "Unique Primary Key Representing a Game"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of Game. Format: YYYY-MM-DD"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "timecode",
+                  "value": "<string>",
+                  "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+                },
+                {
+                  "disabled": false,
+                  "key": "useLatestGames",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "publicFacing",
+                  "value": "<string>",
+                  "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "47c9df49-8c90-4c0f-8632-2ca3abd8b700",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    "private"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "calendarTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "eventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scheduleEventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePk",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "eventIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "venueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "performerIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gameType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "timecode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "useLatestGames",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "opponentId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "publicFacing",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"hydrations\": [\n    \"string\",\n    \"string\"\n  ],\n  \"totalItems\": 2215,\n  \"totalEvents\": 6640,\n  \"totalGames\": 9972,\n  \"totalGamesInProgress\": 1709,\n  \"wait\": 8879,\n  \"dates\": [\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2026-04-05\",\n      \"totalItems\": 6972,\n      \"totalEvents\": 2607,\n      \"totalGames\": 2631,\n      \"totalGamesInProgress\": 6376,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2006-01-15\",\n      \"totalItems\": 8308,\n      \"totalEvents\": 2385,\n      \"totalGames\": 4281,\n      \"totalGamesInProgress\": 5195,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6134d5ef-eb96-4a40-b25c-9fae5f32bb3d",
+          "name": "schedule Private 1",
+          "request": {
+            "name": "schedule Private 1",
+            "description": {
+              "content": "This endpoint allows you to pull schedules with authentication enforced and a \"no-cache\" cache-control policy",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                "private",
+                ":scheduleType"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduleEventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of event types"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduleEventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of event types"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePk",
+                  "value": "<integer>",
+                  "description": "Unique Primary Key Representing a Game"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of Game. Format: YYYY-MM-DD"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "timecode",
+                  "value": "<string>",
+                  "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+                },
+                {
+                  "disabled": false,
+                  "key": "useLatestGames",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "publicFacing",
+                  "value": "<string>",
+                  "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "425f189b-3267-450f-aa47-f2e9463682c2",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    "private",
+                    ":scheduleType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "calendarTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "eventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scheduleEventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePk",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "eventIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "venueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "performerIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gameType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "timecode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "useLatestGames",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "opponentId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "publicFacing",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"hydrations\": [\n    \"string\",\n    \"string\"\n  ],\n  \"totalItems\": 2215,\n  \"totalEvents\": 6640,\n  \"totalGames\": 9972,\n  \"totalGamesInProgress\": 1709,\n  \"wait\": 8879,\n  \"dates\": [\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2026-04-05\",\n      \"totalItems\": 6972,\n      \"totalEvents\": 2607,\n      \"totalGames\": 2631,\n      \"totalGamesInProgress\": 6376,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2006-01-15\",\n      \"totalItems\": 8308,\n      \"totalEvents\": 2385,\n      \"totalGames\": 4281,\n      \"totalGamesInProgress\": 5195,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f09fce91-15a5-409b-a447-e20a7652ad25",
+          "name": "tune In",
+          "request": {
+            "name": "tune In",
+            "description": {
+              "content": "This endpoint allows you to pull postseason schedules",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                "postseason",
+                "tuneIn"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Unique Primary Key Representing a Game"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5406272-0e18-4bf9-ae53-d553ba5c6794",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    "postseason",
+                    "tuneIn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"hydrations\": [\n    \"string\",\n    \"string\"\n  ],\n  \"totalItems\": 2215,\n  \"totalEvents\": 6640,\n  \"totalGames\": 9972,\n  \"totalGamesInProgress\": 1709,\n  \"wait\": 8879,\n  \"dates\": [\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2026-04-05\",\n      \"totalItems\": 6972,\n      \"totalEvents\": 2607,\n      \"totalGames\": 2631,\n      \"totalGamesInProgress\": 6376,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2006-01-15\",\n      \"totalItems\": 8308,\n      \"totalEvents\": 2385,\n      \"totalGames\": 4281,\n      \"totalGamesInProgress\": 5195,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b8c1e213-40e0-4e74-aa4d-75c1debaa568",
+          "name": "postseason Schedule Series",
+          "request": {
+            "name": "postseason Schedule Series",
+            "description": {
+              "content": "This endpoint allows you to pull postseason schedules",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                "postseason",
+                "series"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "seriesNumber",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of Game. Format: YYYY-MM-DD"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "useLatestGames",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "useFeaturedGame",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "52188c1f-e03e-45bd-b2f0-adf2f46cf234",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    "postseason",
+                    "series"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seriesNumber",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "useLatestGames",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "useFeaturedGame",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"totalItems\": 2159,\n  \"totalEvents\": 630,\n  \"totalGames\": 6919,\n  \"totalGamesInProgress\": 9170,\n  \"wait\": 729,\n  \"series\": [\n    {\n      \"copyright\": \"string\",\n      \"series\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortNumber\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isDefault\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gameType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"totalItems\": 7529,\n      \"totalGames\": 2629,\n      \"totalGamesInProgress\": 7368,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"sortOrder\": 1765\n    },\n    {\n      \"copyright\": \"string\",\n      \"series\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortNumber\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isDefault\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gameType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"totalItems\": 2230,\n      \"totalGames\": 8769,\n      \"totalGamesInProgress\": 5792,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"sortOrder\": 7122\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "21f9f38b-b75a-4c6b-9e08-57c4ddd36d90",
+          "name": "tie Games",
+          "request": {
+            "name": "tie Games",
+            "description": {
+              "content": "This endpoint allows you to pull tie game schedules for the given season",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                "games",
+                "tied"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "(Required) Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1769929b-f2eb-4c5d-98e7-346bbc4b9751",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    "games",
+                    "tied"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"hydrations\": [\n    \"string\",\n    \"string\"\n  ],\n  \"totalItems\": 2215,\n  \"totalEvents\": 6640,\n  \"totalGames\": 9972,\n  \"totalGamesInProgress\": 1709,\n  \"wait\": 8879,\n  \"dates\": [\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2026-04-05\",\n      \"totalItems\": 6972,\n      \"totalEvents\": 2607,\n      \"totalGames\": 2631,\n      \"totalGamesInProgress\": 6376,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2006-01-15\",\n      \"totalItems\": 8308,\n      \"totalEvents\": 2385,\n      \"totalGames\": 4281,\n      \"totalGamesInProgress\": 5195,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f58baf13-2f1c-4233-9e0a-56c08aa9b539",
+          "name": "schedule",
+          "request": {
+            "name": "schedule",
+            "description": {
+              "content": "View schedule info. This endpoint allows you to pull schedules",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduleEventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of event types"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduleEventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of event types"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePk",
+                  "value": "<integer>",
+                  "description": "Unique Primary Key Representing a Game"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of Game. Format: YYYY-MM-DD"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "timecode",
+                  "value": "<string>",
+                  "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+                },
+                {
+                  "disabled": false,
+                  "key": "useLatestGames",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "publicFacing",
+                  "value": "<string>",
+                  "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d524f108-6b3a-443b-80cd-704a616165fa",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "calendarTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "eventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scheduleEventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePk",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "eventIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "venueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "performerIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gameType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "timecode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "useLatestGames",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "opponentId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "publicFacing",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"hydrations\": [\n    \"string\",\n    \"string\"\n  ],\n  \"totalItems\": 2215,\n  \"totalEvents\": 6640,\n  \"totalGames\": 9972,\n  \"totalGamesInProgress\": 1709,\n  \"wait\": 8879,\n  \"dates\": [\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2026-04-05\",\n      \"totalItems\": 6972,\n      \"totalEvents\": 2607,\n      \"totalGames\": 2631,\n      \"totalGamesInProgress\": 6376,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2006-01-15\",\n      \"totalItems\": 8308,\n      \"totalEvents\": 2385,\n      \"totalGames\": 4281,\n      \"totalGamesInProgress\": 5195,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dc191242-fcd3-43fd-8d7d-18f7a416b2af",
+          "name": "schedule 1",
+          "request": {
+            "name": "schedule 1",
+            "description": {
+              "content": "View schedule info. This endpoint allows you to pull schedules",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "schedule",
+                ":scheduleType"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "calendarTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of calendar types"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduleEventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of event types"
+                },
+                {
+                  "disabled": false,
+                  "key": "scheduleEventTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of event types"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePk",
+                  "value": "<integer>",
+                  "description": "Unique Primary Key Representing a Game"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "eventIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-game event"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Unique Venue Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "performerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for non-team event performers"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of Game. Format: YYYY-MM-DD"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>",
+                  "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>",
+                  "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+                },
+                {
+                  "disabled": false,
+                  "key": "timecode",
+                  "value": "<string>",
+                  "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+                },
+                {
+                  "disabled": false,
+                  "key": "useLatestGames",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "opponentId",
+                  "value": "<integer>",
+                  "description": "A unique identifier for the opposing team. Must be used with Team ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "publicFacing",
+                  "value": "<string>",
+                  "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ffae4767-e341-44dd-a679-e616cbabe3f9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "schedule",
+                    ":scheduleType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "calendarTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "eventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scheduleEventTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePk",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "eventIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "venueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "performerIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gameType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "timecode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "useLatestGames",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "opponentId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "publicFacing",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"hydrations\": [\n    \"string\",\n    \"string\"\n  ],\n  \"totalItems\": 2215,\n  \"totalEvents\": 6640,\n  \"totalGames\": 9972,\n  \"totalGamesInProgress\": 1709,\n  \"wait\": 8879,\n  \"dates\": [\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2026-04-05\",\n      \"totalItems\": 6972,\n      \"totalEvents\": 2607,\n      \"totalGames\": 2631,\n      \"totalGamesInProgress\": 6376,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"date\": \"2006-01-15\",\n      \"totalItems\": 8308,\n      \"totalEvents\": 2385,\n      \"totalGames\": 4281,\n      \"totalGamesInProgress\": 5195,\n      \"games\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"events\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0f4b7db6-a033-46aa-807f-60752f078375",
+    "name": "Stats API Documentation Analytics Schedule API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

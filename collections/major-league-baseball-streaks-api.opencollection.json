@@ -1,0 +1,131 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Streaks API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Streaks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View streaks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/streaks",
+            "params": [
+              {
+                "name": "streakOrg",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "streakStat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "streakSpan",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "streakLevel",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "streakThreshold",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "inverse",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "startersOnly",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "statGroup",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "activeStreak",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not a player is active"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View streaks"
+        },
+        {
+          "info": {
+            "name": "View streaks parameter options",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/streaks/types"
+          },
+          "docs": "View streaks parameter options"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

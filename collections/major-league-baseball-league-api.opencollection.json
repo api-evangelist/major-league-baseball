@@ -1,0 +1,560 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics League API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "League",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View league info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/league",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "activeStatus",
+                "value": "",
+                "type": "query",
+                "description": "Flag for fetching leagues that are currently active (Y), inactive (N), pending (P), or all teams (B)"
+              }
+            ]
+          },
+          "docs": "View league info"
+        },
+        {
+          "info": {
+            "name": "Update league cache",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://statsapi.mlb.com/api/v1/league",
+            "params": [
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              }
+            ]
+          },
+          "docs": "Update league cache"
+        },
+        {
+          "info": {
+            "name": "View league info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/leagues",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "activeStatus",
+                "value": "",
+                "type": "query",
+                "description": "Flag for fetching leagues that are currently active (Y), inactive (N), pending (P), or all teams (B)"
+              }
+            ]
+          },
+          "docs": "View league info"
+        },
+        {
+          "info": {
+            "name": "Update league cache",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://statsapi.mlb.com/api/v1/leagues",
+            "params": [
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              }
+            ]
+          },
+          "docs": "Update league cache"
+        },
+        {
+          "info": {
+            "name": "All-Star write-ins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/league/:leagueId/allStarWriteIns",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "All-Star write-ins"
+        },
+        {
+          "info": {
+            "name": "All-Star write-ins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/leagues/:leagueId/allStarWriteIns",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "All-Star write-ins"
+        },
+        {
+          "info": {
+            "name": "All-Star final vote",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/league/:leagueId/allStarFinalVote",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "All-Star final vote"
+        },
+        {
+          "info": {
+            "name": "All-Star final vote",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/leagues/:leagueId/allStarFinalVote",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "All-Star final vote"
+        },
+        {
+          "info": {
+            "name": "All-Star Ballot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/league/allStarBallot",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "All-Star Ballot"
+        },
+        {
+          "info": {
+            "name": "All-Star Ballot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/league/:leagueId/allStarBallot",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "All-Star Ballot"
+        },
+        {
+          "info": {
+            "name": "All-Star Ballot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/leagues/allStarBallot",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "All-Star Ballot"
+        },
+        {
+          "info": {
+            "name": "All-Star Ballot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/leagues/:leagueId/allStarBallot",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "All-Star Ballot"
+        },
+        {
+          "info": {
+            "name": "View league info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/league/:leagueId",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "activeStatus",
+                "value": "",
+                "type": "query",
+                "description": "Flag for fetching leagues that are currently active (Y), inactive (N), pending (P), or all teams (B)"
+              }
+            ]
+          },
+          "docs": "View league info"
+        },
+        {
+          "info": {
+            "name": "View league info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/leagues/:leagueId",
+            "params": [
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "activeStatus",
+                "value": "",
+                "type": "query",
+                "description": "Flag for fetching leagues that are currently active (Y), inactive (N), pending (P), or all teams (B)"
+              }
+            ]
+          },
+          "docs": "View league info"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

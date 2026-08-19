@@ -1,0 +1,402 @@
+{
+  "item": [
+    {
+      "id": "b840ed50-4d10-4c14-b32f-3d3ec94d257c",
+      "name": "Standings",
+      "description": {
+        "content": "Operations pertaining to teams",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e992347f-5431-4f2e-ada3-f06d72945d48",
+          "name": "View standings for a league",
+          "request": {
+            "name": "View standings for a league",
+            "description": {
+              "content": "This endpoint allows you to pull standings",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "standings",
+                ":standingsType"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "standingsTypes",
+                  "value": "<string>",
+                  "description": "Type of season. Available types in /api/v1/standingsTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "standingsTypes",
+                  "value": "<string>",
+                  "description": "Type of season. Available types in /api/v1/standingsTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of Game. Format: YYYY-MM-DD"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeMLB",
+                  "value": "<boolean>",
+                  "description": "Determines whether to include major league teams when using the 'BY_ORGANIZATION' standings type"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "standingsType",
+                  "description": "(Required) Type of season. Available types in /api/v1/standingsTypes"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fa7b29bf-0d8a-4c9f-b4d7-070a65738e2b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "standings",
+                    ":standingsType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "standingsTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "includeMLB",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "standingsType",
+                      "description": "(Required) Type of season. Available types in /api/v1/standingsTypes"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"lastUpdated\": \"1993-10-28T14:39:33.677Z\",\n  \"records\": [\n    {\n      \"copyright\": \"string\",\n      \"hydrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"standingsType\": \"string\",\n      \"league\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameShort\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonState\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasWildCard\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasSplitSeason\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasPlayoffPoints\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numWildcardTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonDateInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"orgCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferencesInUse\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionsInUse\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"timeZone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isAffiliated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ruleSettings\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"division\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameShort\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasWildcard\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numPlayoffTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"conference\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"sport\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isAffiliated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ruleSettings\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonState\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonDateInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"activeStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"organization\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeague\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"xrefIds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"allStarStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"venue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springVenue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fileCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"triCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"locationName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstYearOfPlay\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchise\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamStats\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roster\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamLeaders\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"content\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"social\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"record\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"playoffInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"homeAway\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamDesignation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchiseName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clubName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"location\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"placeholder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"lastUpdated\": \"1981-02-13T16:47:56.347Z\",\n      \"aggregateRecord\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"streak\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clinchIndicator\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferenceRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeagueRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wildCardRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sportRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gamesPlayed\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wildCardGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeagueGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sportGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferenceGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueRecord\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastUpdated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"records\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"probabilites\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"teamRecords\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"hydrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"standingsType\": \"string\",\n      \"league\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameShort\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonState\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasWildCard\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasSplitSeason\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasPlayoffPoints\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numWildcardTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonDateInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"orgCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferencesInUse\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionsInUse\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"timeZone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isAffiliated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ruleSettings\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"division\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameShort\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasWildcard\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numPlayoffTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"conference\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"sport\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isAffiliated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ruleSettings\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonState\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonDateInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"activeStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"organization\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeague\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"xrefIds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"allStarStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"venue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springVenue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fileCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"triCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"locationName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstYearOfPlay\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchise\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamStats\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roster\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamLeaders\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"content\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"social\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"record\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"playoffInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"homeAway\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamDesignation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchiseName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clubName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"location\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"placeholder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"lastUpdated\": \"1979-04-05T19:41:03.477Z\",\n      \"aggregateRecord\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"streak\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clinchIndicator\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferenceRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeagueRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wildCardRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sportRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gamesPlayed\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wildCardGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeagueGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sportGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferenceGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueRecord\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastUpdated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"records\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"probabilites\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"teamRecords\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dd915f72-bdb7-4ca4-8de4-1db5a2f7f9ec",
+          "name": "View standings for a league",
+          "request": {
+            "name": "View standings for a league",
+            "description": {
+              "content": "This endpoint allows you to pull standings",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "standings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "standingsTypes",
+                  "value": "<string>",
+                  "description": "Type of season. Available types in /api/v1/standingsTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "standingsTypes",
+                  "value": "<string>",
+                  "description": "Type of season. Available types in /api/v1/standingsTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "Date of Game. Format: YYYY-MM-DD"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamId",
+                  "value": "<integer>",
+                  "description": "Unique Team Identifier. Format: 141, 147, etc"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeMLB",
+                  "value": "<boolean>",
+                  "description": "Determines whether to include major league teams when using the 'BY_ORGANIZATION' standings type"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "standingsType",
+                  "description": "(Required) Type of season. Available types in /api/v1/standingsTypes"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e4a16109-2674-4cc4-ab2c-993393e93154",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "standings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "standingsTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "teamId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "includeMLB",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "standingsType",
+                      "description": "(Required) Type of season. Available types in /api/v1/standingsTypes"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"lastUpdated\": \"2011-03-12T08:04:22.936Z\",\n  \"records\": [\n    {\n      \"copyright\": \"string\",\n      \"hydrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"standingsType\": \"string\",\n      \"league\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameShort\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonState\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasWildCard\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasSplitSeason\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasPlayoffPoints\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numWildcardTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonDateInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"orgCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferencesInUse\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionsInUse\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"timeZone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isAffiliated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ruleSettings\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"division\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameShort\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasWildcard\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numPlayoffTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"conference\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"sport\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isAffiliated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ruleSettings\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonState\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonDateInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"activeStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"organization\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeague\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"xrefIds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"allStarStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"venue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springVenue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fileCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"triCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"locationName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstYearOfPlay\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchise\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamStats\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roster\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamLeaders\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"content\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"social\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"record\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"playoffInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"homeAway\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamDesignation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchiseName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clubName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"location\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"placeholder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"lastUpdated\": \"2013-02-19T22:39:23.509Z\",\n      \"aggregateRecord\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"streak\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clinchIndicator\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferenceRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeagueRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wildCardRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sportRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gamesPlayed\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wildCardGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeagueGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sportGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferenceGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueRecord\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastUpdated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"records\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"probabilites\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"teamRecords\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    },\n    {\n      \"copyright\": \"string\",\n      \"hydrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"standingsType\": \"string\",\n      \"league\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameShort\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonState\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasWildCard\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasSplitSeason\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasPlayoffPoints\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numWildcardTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonDateInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"orgCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferencesInUse\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionsInUse\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"timeZone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isAffiliated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ruleSettings\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"division\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameShort\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hasWildcard\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"numPlayoffTeams\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"conference\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"sport\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sortOrder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isAffiliated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ruleSettings\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonState\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"seasonDateInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"activeStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"organization\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeague\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"xrefIds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"allStarStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"venue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springVenue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fileCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"triCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"locationName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstYearOfPlay\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchise\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamStats\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roster\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamLeaders\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"content\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"social\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"record\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"playoffInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"homeAway\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamDesignation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchiseName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clubName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"location\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"placeholder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"lastUpdated\": \"1947-02-16T12:50:31.476Z\",\n      \"aggregateRecord\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"streak\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clinchIndicator\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferenceRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeagueRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wildCardRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sportRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gamesPlayed\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wildCardGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeagueGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sportGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"divisionGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conferenceGamesBack\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leagueRecord\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastUpdated\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"records\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"probabilites\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"teamRecords\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "71e38026-40b5-4c65-94be-08a3d4a3d567",
+    "name": "Stats API Documentation Analytics Standings API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

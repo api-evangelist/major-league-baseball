@@ -1,0 +1,3856 @@
+{
+  "item": [
+    {
+      "id": "0fe98c17-c37a-43c9-ba74-4a43bb176024",
+      "name": "Config",
+      "description": {
+        "content": "Config elements",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "885e91a1-82e2-427e-bcbe-3c356d037823",
+          "name": "List all job types",
+          "request": {
+            "name": "List all job types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "jobTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3c21b4a3-da02-4895-9215-21d648d03d51",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "jobTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"job\": \"string\",\n    \"sortOrder\": 4843\n  },\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"job\": \"string\",\n    \"sortOrder\": 6854\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bf9893d1-5ef5-4a42-9893-83134c1db3b1",
+          "name": "update Job Types",
+          "request": {
+            "name": "update Job Types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "jobTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b3a11ac6-9e45-440f-9261-5822a205b9ca",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "jobTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a01aea15-c56f-4390-b494-abca6aa01024",
+          "name": "List all status types",
+          "request": {
+            "name": "List all status types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "gameStatus"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "570a11a2-3d6c-4516-a8a0-cc81ebe18b82",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "gameStatus"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\"\n  },\n  {\n    \"copyright\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ad367bb7-13c2-432a-ac2e-c008f1c18a40",
+          "name": "Clear all status types",
+          "request": {
+            "name": "Clear all status types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "gameStatus"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "091108ac-9a96-4e41-bb64-63de38743ed9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "gameStatus"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "54b34039-633d-4b8b-b7cf-ab5a84a52401",
+          "name": "List all wind direction options",
+          "request": {
+            "name": "List all wind direction options",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "windDirection"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1dee6ec5-694c-4f86-8d6f-502622b858bb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "windDirection"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ef08d0af-603b-494c-971a-76a14a2e8a46",
+          "name": "List all weather trajectories",
+          "request": {
+            "name": "List all weather trajectories",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "weatherTrajectoryConfidences"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "852158dd-cf6a-4bbf-a7fd-876dbb39de83",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "weatherTrajectoryConfidences"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"value\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"value\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3e5f2d8d-e82c-4eb0-a91c-46c850761943",
+          "name": "View available violationType options",
+          "request": {
+            "name": "View available violationType options",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "violationTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "942d9299-00ec-407f-a30f-c8252fdf0e0a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "violationTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"violation_type_desc\": \"string\",\n    \"violationTypeCode\": \"string\",\n    \"eventType\": \"string\",\n    \"eventTypeCode\": \"string\",\n    \"parentId\": 7036,\n    \"violatorCode\": \"string\"\n  },\n  {\n    \"violation_type_desc\": \"string\",\n    \"violationTypeCode\": \"string\",\n    \"eventType\": \"string\",\n    \"eventTypeCode\": \"string\",\n    \"parentId\": 83,\n    \"violatorCode\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "98c08216-05e8-423e-a73a-3df5d7a541e6",
+          "name": "List all hit trajectories",
+          "request": {
+            "name": "List all hit trajectories",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "transactionTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6725386c-6ced-48db-a0bc-fba81709b412",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "transactionTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d1c5d7f6-b540-4967-984e-eafffe11b8d0",
+          "name": "List all tracking versions",
+          "request": {
+            "name": "List all tracking versions",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "trackingVersions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2b4da62f-74fd-4dde-9052-21f4632b20ed",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "trackingVersions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"STATCAST_2023_12_CAM\",\n  \"PITCH_FX\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9d0cfe30-2539-45d1-906a-98626d2a12ed",
+          "name": "List all tracking vendors",
+          "request": {
+            "name": "List all tracking vendors",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "trackingVendors"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2b28f21c-d768-48f0-b71b-e2697f5ce02f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "trackingVendors"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"HAWKEYE\",\n  \"CHYRONHEGO\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "06c93c7f-2e6d-4acf-bde8-2d495555b9be",
+          "name": "List stat search stats",
+          "request": {
+            "name": "List stat search stats",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "stats",
+                "search",
+                "stats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Categories of filters for stat search",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3b988526-5581-44a1-85ec-042c5e359838",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "stats",
+                    "search",
+                    "stats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Categories of filters for stat search",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"description\": \"string\",\n    \"abbreviation\": \"string\",\n    \"sortStat\": \"string\",\n    \"statFields\": {\n      \"copyright\": \"string\",\n      \"standard\": false,\n      \"advanced\": false,\n      \"tracking\": true,\n      \"expected\": false\n    },\n    \"statGroup\": \"string\",\n    \"filterLevels\": {\n      \"copyright\": \"string\",\n      \"pitch\": true,\n      \"atBat\": false,\n      \"inning\": false,\n      \"game\": false,\n      \"season\": false,\n      \"career\": true\n    },\n    \"isCounting\": true,\n    \"isInstanceStat\": false,\n    \"sortOrder\": \"string\",\n    \"units\": \"string\",\n    \"aggregation\": \"string\",\n    \"decimals\": 5184\n  },\n  {\n    \"copyright\": \"string\",\n    \"description\": \"string\",\n    \"abbreviation\": \"string\",\n    \"sortStat\": \"string\",\n    \"statFields\": {\n      \"copyright\": \"string\",\n      \"standard\": true,\n      \"advanced\": true,\n      \"tracking\": false,\n      \"expected\": true\n    },\n    \"statGroup\": \"string\",\n    \"filterLevels\": {\n      \"copyright\": \"string\",\n      \"pitch\": false,\n      \"atBat\": false,\n      \"inning\": false,\n      \"game\": false,\n      \"season\": true,\n      \"career\": false\n    },\n    \"isCounting\": false,\n    \"isInstanceStat\": true,\n    \"sortOrder\": \"string\",\n    \"units\": \"string\",\n    \"aggregation\": \"string\",\n    \"decimals\": 5176\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "92f031ba-0fe2-481c-9e35-c971c1694c56",
+          "name": "List stat search parameters",
+          "request": {
+            "name": "List stat search parameters",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "stats",
+                "search",
+                "params"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Categories of filters for stat search",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1fa6b562-dd0c-43dd-a41d-036beb1f2404",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "stats",
+                    "search",
+                    "params"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Categories of filters for stat search",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"filterLevel\": \"string\",\n    \"hitting\": false,\n    \"pitching\": true,\n    \"fielding\": true,\n    \"catching\": true,\n    \"running\": false\n  },\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"filterLevel\": \"string\",\n    \"hitting\": false,\n    \"pitching\": false,\n    \"fielding\": false,\n    \"catching\": true,\n    \"running\": false\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ac242d66-45c4-4e36-b54c-892bf54c3b3a",
+          "name": "List groupBy types",
+          "request": {
+            "name": "List groupBy types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "stats",
+                "search",
+                "groupByTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Categories of filters for stat search",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d2eb2b5a-2a45-4f95-ba7e-3da7954041d1",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "stats",
+                    "search",
+                    "groupByTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Categories of filters for stat search",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"BATTER\",\n  \"RUNNER_SECOND\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "74b057d0-6cf3-490d-9547-4c3978d10b8c",
+          "name": "Stats Search Config Endpoint",
+          "request": {
+            "name": "Stats Search Config Endpoint",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "stats",
+                "search",
+                "config"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Categories of filters for stat search",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Category of statistic to return. Available types in /api/v1/statGroups",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bb27be24-40d5-4ab7-870e-4f7fd21c4463",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "stats",
+                    "search",
+                    "config"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Categories of filters for stat search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Category of statistic to return. Available types in /api/v1/statGroups",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"parameters\": [\n    {\n      \"copyright\": \"string\",\n      \"code\": \"string\",\n      \"filterLevel\": \"string\",\n      \"hitting\": false,\n      \"pitching\": false,\n      \"fielding\": true,\n      \"catching\": false,\n      \"running\": true\n    },\n    {\n      \"copyright\": \"string\",\n      \"code\": \"string\",\n      \"filterLevel\": \"string\",\n      \"hitting\": true,\n      \"pitching\": true,\n      \"fielding\": true,\n      \"catching\": false,\n      \"running\": false\n    }\n  ],\n  \"groupByTypes\": [\n    {\n      \"copyright\": \"string\",\n      \"code\": \"string\",\n      \"description\": \"string\",\n      \"filterLevel\": \"string\",\n      \"hitting\": false,\n      \"pitching\": true,\n      \"fielding\": false,\n      \"catching\": false,\n      \"running\": true\n    },\n    {\n      \"copyright\": \"string\",\n      \"code\": \"string\",\n      \"description\": \"string\",\n      \"filterLevel\": \"string\",\n      \"hitting\": false,\n      \"pitching\": false,\n      \"fielding\": true,\n      \"catching\": true,\n      \"running\": true\n    }\n  ],\n  \"compareOverTypes\": [\n    {\n      \"copyright\": \"string\",\n      \"code\": \"string\",\n      \"description\": \"string\",\n      \"filterLevel\": \"string\",\n      \"hitting\": false,\n      \"pitching\": true,\n      \"fielding\": false,\n      \"catching\": false,\n      \"running\": true\n    },\n    {\n      \"copyright\": \"string\",\n      \"code\": \"string\",\n      \"description\": \"string\",\n      \"filterLevel\": \"string\",\n      \"hitting\": false,\n      \"pitching\": true,\n      \"fielding\": true,\n      \"catching\": false,\n      \"running\": false\n    }\n  ],\n  \"situationCodes\": [\n    {\n      \"copyright\": \"string\",\n      \"sitCode\": \"string\",\n      \"description\": \"string\",\n      \"navigationMenu\": \"string\",\n      \"category\": \"string\",\n      \"hitting\": false,\n      \"pitching\": false,\n      \"fielding\": false,\n      \"catching\": false,\n      \"running\": true\n    },\n    {\n      \"copyright\": \"string\",\n      \"sitCode\": \"string\",\n      \"description\": \"string\",\n      \"navigationMenu\": \"string\",\n      \"category\": \"string\",\n      \"hitting\": false,\n      \"pitching\": true,\n      \"fielding\": true,\n      \"catching\": false,\n      \"running\": false\n    }\n  ],\n  \"stats\": [\n    {\n      \"copyright\": \"string\",\n      \"description\": \"string\",\n      \"abbreviation\": \"string\",\n      \"sortStat\": \"string\",\n      \"statFields\": {\n        \"copyright\": \"string\",\n        \"standard\": true,\n        \"advanced\": true,\n        \"tracking\": true,\n        \"expected\": true\n      },\n      \"statGroup\": \"string\",\n      \"filterLevels\": {\n        \"copyright\": \"string\",\n        \"pitch\": false,\n        \"atBat\": false,\n        \"inning\": false,\n        \"game\": false,\n        \"season\": false,\n        \"career\": true\n      },\n      \"isCounting\": false,\n      \"isInstanceStat\": false,\n      \"sortOrder\": \"string\",\n      \"units\": \"string\",\n      \"aggregation\": \"string\",\n      \"decimals\": 9724\n    },\n    {\n      \"copyright\": \"string\",\n      \"description\": \"string\",\n      \"abbreviation\": \"string\",\n      \"sortStat\": \"string\",\n      \"statFields\": {\n        \"copyright\": \"string\",\n        \"standard\": true,\n        \"advanced\": true,\n        \"tracking\": false,\n        \"expected\": true\n      },\n      \"statGroup\": \"string\",\n      \"filterLevels\": {\n        \"copyright\": \"string\",\n        \"pitch\": true,\n        \"atBat\": true,\n        \"inning\": true,\n        \"game\": true,\n        \"season\": true,\n        \"career\": false\n      },\n      \"isCounting\": false,\n      \"isInstanceStat\": false,\n      \"sortOrder\": \"string\",\n      \"units\": \"string\",\n      \"aggregation\": \"string\",\n      \"decimals\": 5024\n    }\n  ],\n  \"aggregations\": [\n    {\n      \"copyright\": \"string\",\n      \"code\": \"string\",\n      \"description\": \"string\"\n    },\n    {\n      \"copyright\": \"string\",\n      \"code\": \"string\",\n      \"description\": \"string\"\n    }\n  ],\n  \"filterLevels\": [\n    {\n      \"copyright\": \"string\",\n      \"name\": \"string\",\n      \"scope\": 9292\n    },\n    {\n      \"copyright\": \"string\",\n      \"name\": \"string\",\n      \"scope\": 5632\n    }\n  ],\n  \"personFilters\": [\n    {\n      \"copyright\": \"string\",\n      \"name\": \"string\",\n      \"personStatGroup\": [\n        {\n          \"copyright\": \"string\",\n          \"person\": \"string\",\n          \"primaryStatGroups\": {\n            \"copyright\": \"string\",\n            \"hitting\": true,\n            \"pitching\": false,\n            \"fielding\": false,\n            \"catching\": true,\n            \"running\": true\n          },\n          \"supportedStatGroups\": {\n            \"copyright\": \"string\",\n            \"hitting\": true,\n            \"pitching\": true,\n            \"fielding\": false,\n            \"catching\": true,\n            \"running\": true\n          }\n        },\n        {\n          \"copyright\": \"string\",\n          \"person\": \"string\",\n          \"primaryStatGroups\": {\n            \"copyright\": \"string\",\n            \"hitting\": false,\n            \"pitching\": false,\n            \"fielding\": false,\n            \"catching\": false,\n            \"running\": true\n          },\n          \"supportedStatGroups\": {\n            \"copyright\": \"string\",\n            \"hitting\": false,\n            \"pitching\": true,\n            \"fielding\": false,\n            \"catching\": false,\n            \"running\": true\n          }\n        }\n      ],\n      \"primaryFilterLevel\": \"string\",\n      \"secondaryFilterLevel\": \"string\"\n    },\n    {\n      \"copyright\": \"string\",\n      \"name\": \"string\",\n      \"personStatGroup\": [\n        {\n          \"copyright\": \"string\",\n          \"person\": \"string\",\n          \"primaryStatGroups\": {\n            \"copyright\": \"string\",\n            \"hitting\": true,\n            \"pitching\": false,\n            \"fielding\": true,\n            \"catching\": false,\n            \"running\": true\n          },\n          \"supportedStatGroups\": {\n            \"copyright\": \"string\",\n            \"hitting\": false,\n            \"pitching\": true,\n            \"fielding\": true,\n            \"catching\": false,\n            \"running\": true\n          }\n        },\n        {\n          \"copyright\": \"string\",\n          \"person\": \"string\",\n          \"primaryStatGroups\": {\n            \"copyright\": \"string\",\n            \"hitting\": true,\n            \"pitching\": false,\n            \"fielding\": false,\n            \"catching\": true,\n            \"running\": false\n          },\n          \"supportedStatGroups\": {\n            \"copyright\": \"string\",\n            \"hitting\": true,\n            \"pitching\": false,\n            \"fielding\": false,\n            \"catching\": true,\n            \"running\": false\n          }\n        }\n      ],\n      \"primaryFilterLevel\": \"string\",\n      \"secondaryFilterLevel\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f7dd8fdb-e4cd-44b5-b73d-738a66dfea15",
+          "name": "List all statcast position types",
+          "request": {
+            "name": "List all statcast position types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "statcastPositionTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9ee42d08-e009-4c48-aa9f-3a77d2277950",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "statcastPositionTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"positionId\": 8179,\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"positionId\": 4995,\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7ea4bcfc-e953-44c4-8248-ce1d4317db37",
+          "name": "List all stat types",
+          "request": {
+            "name": "List all stat types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "statTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5a1224da-90fc-4598-86cd-1dbaac999c34",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "statTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"AT_GAME_START\",\n  \"HOME_AND_AWAY_PLAYOFFS\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "107699f4-8221-48a2-9dc0-fed030f976f9",
+          "name": "List all stat groups",
+          "request": {
+            "name": "List all stat groups",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "statGroups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "79fc2d63-2288-4551-b3af-b4e852f2f9fe",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "statGroups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"<string>\",\n  \"<string>\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "89ed816a-0e45-4ff8-8d7a-2e58db715a8e",
+          "name": "List all stat fields",
+          "request": {
+            "name": "List all stat fields",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "statFields"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9d8093a3-e116-49db-b844-36c66a825cd7",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "statFields"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"TRACKING\",\n  \"RANKING\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ff1033b3-fa5a-4f03-9912-b2cc5c7acb86",
+          "name": "List all standings types",
+          "request": {
+            "name": "List all standings types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "standingsTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ea824fd1-4ed2-4eff-bef8-5399737f43b4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "standingsTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"DIVISION_LEADERS\",\n  \"SECOND_HALF\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "91bd043d-50a0-4f9e-838b-eec4a167e527",
+          "name": "List all stat fields",
+          "request": {
+            "name": "List all stat fields",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "sortModifiers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67c60aa7-506e-4649-b40a-718207bb4b06",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "sortModifiers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "80cfdceb-c8b5-43db-a446-f232f901456c",
+          "name": "List all sky options",
+          "request": {
+            "name": "List all sky options",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "sky"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4956477a-d5c0-4096-90da-c1a062d11420",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "sky"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "25851322-023e-4147-95ee-a40f1e53abcf",
+          "name": "List all situation codes",
+          "request": {
+            "name": "List all situation codes",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "situationCodes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Season of play",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Category of statistic to return. Available types in /api/v1/statGroups",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1d9d1665-9b60-4191-a2b0-c11c7ec8a2fa",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "situationCodes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Season of play",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Category of statistic to return. Available types in /api/v1/statGroups",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"sortOrder\": 2331,\n    \"navigationMenu\": \"string\",\n    \"description\": \"string\",\n    \"team\": true,\n    \"batting\": true,\n    \"fielding\": true,\n    \"pitching\": false\n  },\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"sortOrder\": 4555,\n    \"navigationMenu\": \"string\",\n    \"description\": \"string\",\n    \"team\": true,\n    \"batting\": true,\n    \"fielding\": false,\n    \"pitching\": false\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "de24171a-e220-4f8c-b958-75aa3dcdc61a",
+          "name": "List all possible schedule types",
+          "request": {
+            "name": "List all possible schedule types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "scheduleTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "20240488-b454-478f-81ea-0f2cd6423745",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "scheduleTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"GAMESCHEDULE\",\n  \"GAMESCHEDULE\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "24a3afdc-8e00-4c60-9b18-4402799efb66",
+          "name": "List all event types",
+          "request": {
+            "name": "List all event types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "scheduleEventTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3d93c2d6-8f7d-403f-bf31-d648225eef93",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "scheduleEventTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"name\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"code\": \"string\",\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8c04e8fd-e72a-428c-9c7f-f04dbd3bd66f",
+          "name": "List runner detail types",
+          "request": {
+            "name": "List runner detail types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "runnerDetailTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aafbb4b7-e7e9-4477-b2e0-0f05e343240c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "runnerDetailTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"PICKOFF_1B\",\n  \"DEFENSIVE_INDIFFERENCE\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cff8c3d0-3905-4b1a-a40e-b049f6296a43",
+          "name": "List all ruleSettings",
+          "request": {
+            "name": "List all ruleSettings",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "ruleSettings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d04f0daf-1ed6-4cd9-82da-8008e9aa9819",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "ruleSettings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"playSettingId\": 8235,\n    \"settingId\": 2445,\n    \"settingName\": \"string\",\n    \"settingDisplayName\": \"string\",\n    \"settingCategory\": \"string\",\n    \"settingCategoryCode\": \"string\",\n    \"settingDescription\": \"string\",\n    \"settingOptions\": [\n      {\n        \"settingValueId\": 4808,\n        \"displayName\": \"string\",\n        \"description\": \"string\",\n        \"activeBeginDate\": \"1992-05-18\",\n        \"activeEndDate\": \"1975-11-23\",\n        \"value\": {},\n        \"sortOrder\": 6965\n      },\n      {\n        \"settingValueId\": 1876,\n        \"displayName\": \"string\",\n        \"description\": \"string\",\n        \"activeBeginDate\": \"1992-12-12\",\n        \"activeEndDate\": \"1957-11-27\",\n        \"value\": {},\n        \"sortOrder\": 8867\n      }\n    ],\n    \"valueType\": \"string\",\n    \"settingValue\": {},\n    \"settingScope\": \"string\",\n    \"priorityOverride\": 8472,\n    \"startDate\": \"2000-11-11\",\n    \"endDate\": \"2022-04-30\",\n    \"inherited\": false,\n    \"gameType\": \"string\",\n    \"allGameTypeStatus\": false,\n    \"sortOrder\": 9177\n  },\n  {\n    \"playSettingId\": 470,\n    \"settingId\": 7561,\n    \"settingName\": \"string\",\n    \"settingDisplayName\": \"string\",\n    \"settingCategory\": \"string\",\n    \"settingCategoryCode\": \"string\",\n    \"settingDescription\": \"string\",\n    \"settingOptions\": [\n      {\n        \"settingValueId\": 3893,\n        \"displayName\": \"string\",\n        \"description\": \"string\",\n        \"activeBeginDate\": \"1971-09-02\",\n        \"activeEndDate\": \"1991-06-01\",\n        \"value\": {},\n        \"sortOrder\": 6126\n      },\n      {\n        \"settingValueId\": 3503,\n        \"displayName\": \"string\",\n        \"description\": \"string\",\n        \"activeBeginDate\": \"1953-10-09\",\n        \"activeEndDate\": \"1973-05-21\",\n        \"value\": {},\n        \"sortOrder\": 2324\n      }\n    ],\n    \"valueType\": \"string\",\n    \"settingValue\": {},\n    \"settingScope\": \"string\",\n    \"priorityOverride\": 5482,\n    \"startDate\": \"2025-12-04\",\n    \"endDate\": \"1983-08-28\",\n    \"inherited\": true,\n    \"gameType\": \"string\",\n    \"allGameTypeStatus\": false,\n    \"sortOrder\": 6797\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4a36fd87-dd8c-4cdf-8bc6-62d715a29fdd",
+          "name": "List all possible roster types",
+          "request": {
+            "name": "List all possible roster types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "rosterTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "93c7ce35-0ea0-4b72-bce8-10a00c58d4fc",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "rosterTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"NON_ROSTER_INVITEES\",\n  \"FORTY_MAN\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0f647df5-1432-4719-853d-21437495e312",
+          "name": "List all roof types",
+          "request": {
+            "name": "List all roof types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "roofTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e1e5b7f0-f4e1-43e4-8775-25e628b4733b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "roofTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"value\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"value\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b17c6f1a-b760-435a-ac5d-0b3b9c915b56",
+          "name": "List all replay review reasons",
+          "request": {
+            "name": "List all replay review reasons",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "reviewReasons"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ed6ec2dc-d87b-45bd-a845-a7218bc0b0da",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "reviewReasons"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "160cc9fc-a6b5-49e7-9e6b-2d8c9ffad576",
+          "name": "List all possible positions",
+          "request": {
+            "name": "List all possible positions",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "positions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0265b2f5-6cab-4fa8-9ab7-fcd636e2debb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "positions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"RIGHT_HANDED_PITCHER\",\n  \"UTLITY\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "902d98ae-1530-4702-812f-840fb444443a",
+          "name": "List all player status codes",
+          "request": {
+            "name": "List all player status codes",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "playerStatusCodes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cc61dc18-1a06-47af-a74c-39dab077c37b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "playerStatusCodes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5914776b-5e97-44cb-8317-278fcdab765c",
+          "name": "List all possible platforms",
+          "request": {
+            "name": "List all possible platforms",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "platforms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bd130778-6713-4a1f-804d-fb0f46429c8d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "platforms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"XBOX_360\",\n  \"IOS_TABLET\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5dc5a6bb-6083-447d-9122-178424578683",
+          "name": "List all pitch classification types",
+          "request": {
+            "name": "List all pitch classification types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "pitchTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9e14abf4-1040-4dc1-8581-2f07e7455808",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "pitchTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "70529cb5-dc4f-43e8-9c1a-6da631f021c0",
+          "name": "List all pitch codes",
+          "request": {
+            "name": "List all pitch codes",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "pitchCodes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7bc40f55-2f54-4579-9547-573535ce6b5a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "pitchCodes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6fd2af34-c6ee-432e-8ab0-a879fc7b655f",
+          "name": "List all possible performer types",
+          "request": {
+            "name": "List all possible performer types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "performerTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f4f3de1b-1ce9-4554-b12e-26343c7bafe9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "performerTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\"\n  },\n  {\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dc985b20-9e0b-447d-9991-1eb9df72b664",
+          "name": "List all possible metrics",
+          "request": {
+            "name": "List all possible metrics",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0d3f5430-7a05-4e13-af39-9a1c473dc964",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\"\n  },\n  {\n    \"copyright\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1d13b581-b1a3-437b-a77e-570b9063c9d9",
+          "name": "View all lookup values",
+          "request": {
+            "name": "View all lookup values",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "lookup",
+                "values",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c084d495-78ac-41fb-9cee-c231d754ccb4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "lookup",
+                    "values",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "39283fb0-0c65-4501-9c30-959c7e04529c",
+          "name": "List all logical event types",
+          "request": {
+            "name": "List all logical event types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "logicalEvents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "239631b0-fa23-4e20-a859-04d5e069879c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "logicalEvents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b9d921a-a7cc-4e1b-b53b-d6c2994aa0dc",
+          "name": "List all possible player league leader types",
+          "request": {
+            "name": "List all possible player league leader types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "leagueLeaderTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d4bef2f3-e1dd-4d43-bd05-2b14ccfb5033",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "leagueLeaderTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"displayName\": \"string\"\n  },\n  {\n    \"displayName\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "566859cc-cc72-4741-9ed1-e8552f5428b0",
+          "name": "List all support languages",
+          "request": {
+            "name": "List all support languages",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "languages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aea68f70-4155-4624-b6e6-0fcf46dbfddf",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "languages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"GERMAN\",\n  \"ITALIAN\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "07349119-6f21-4be4-90cb-eb6bb3139dcd",
+          "name": "List all hit trajectories",
+          "request": {
+            "name": "List all hit trajectories",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "hitTrajectories"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1901cb67-7578-4730-b496-114784a19665",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "hitTrajectories"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "590b5a9d-c7f3-4bfc-b153-46bf42bf0d89",
+          "name": "List groupBy types",
+          "request": {
+            "name": "List groupBy types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "groupByTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e1270e4e-f829-48fe-ac39-e8bbaa43c021",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "groupByTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"BATTER\",\n  \"RUNNER_SECOND\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "629dc06f-de4a-4722-bce2-310a474a2d3c",
+          "name": "List all gameday types",
+          "request": {
+            "name": "List all gameday types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "gamedayTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c42a2e50-0745-4095-be60-2d40b1976550",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "gamedayTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"copyright\": \"string\",\n    \"base\": \"GAMEDAY_SW\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"copyright\": \"string\",\n    \"base\": \"SIT_CODE\",\n    \"code\": \"string\",\n    \"description\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1df208be-5467-4114-bf7d-f8a834b8d4a9",
+          "name": "List all game types",
+          "request": {
+            "name": "List all game types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "gameTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "Unique League Identifier",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Season of play",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c09b53b4-63bf-4866-b442-2466611d6360",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "gameTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "Unique League Identifier",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "Season of play",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"CHAMPIONSHIP\",\n  \"FIRST_ROUND\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "09e2fe24-8779-4da7-b178-907ecee427cb",
+          "name": "List fielder detail types",
+          "request": {
+            "name": "List fielder detail types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "fielderDetailTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0c61cf7c-7531-4a98-9526-32cdc969c5ca",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "fielderDetailTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"OUT_NUMBER\",\n  \"OUT_NUMBER\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d7240dc4-b06b-48ee-bd9c-d72f7c4a7df9",
+          "name": "List all event types",
+          "request": {
+            "name": "List all event types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "eventTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json;charset=UTF-8"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ddac267f-cd58-473c-8de2-4253eca172b1",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "eventTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json;charset=UTF-8"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3e2228f2-9ff1-4c11-882c-726c281a3213",
+          "name": "List all possible event status types",
+          "request": {
+            "name": "List all possible event status types",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "eventStatus"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7e62b06c-eadf-49d6-ae5c-1db9d17ff341",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "eventStatus"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"code\": \"string\",\n    \"startTimeTBD\": true,\n    \"abstractGameState\": \"string\",\n    \"detailedState\": \"string\"\n  },\n  {\n    \"code\": \"string\",\n    \"startTimeTBD\": false,\n    \"abstractGameState\": \"string\",\n    \"detailedState\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "975b114d-c68b-4d32-bc25-268610338dbd",
+          "name": "List all tracking vendors",
+          "request": {
+            "name": "List all tracking vendors",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "coachingVideoTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f08a9f30-6824-4751-af72-d57c66d08634",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "coachingVideoTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  \"string\",\n  \"string\"\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "73370bf8-e6a3-4c46-8307-da4c1c606ec7",
+          "name": "List all baseball stats",
+          "request": {
+            "name": "List all baseball stats",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "baseballStats"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a20eb6dc-6ac6-4bf3-90cd-54ae5e23ce82",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "baseballStats"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"lookupParam\": \"string\",\n    \"isCounting\": false,\n    \"label\": \"string\",\n    \"statGroups\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"orgTypes\": [\n      \"TEAM\",\n      \"DIVISION\"\n    ],\n    \"highLowTypes\": [\n      \"PLAYER\",\n      \"PLAYER\"\n    ],\n    \"streakLevels\": [\n      \"AT_BAT\",\n      \"GAME\"\n    ]\n  },\n  {\n    \"name\": \"string\",\n    \"lookupParam\": \"string\",\n    \"isCounting\": false,\n    \"label\": \"string\",\n    \"statGroups\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"orgTypes\": [\n      \"LEAGUE\",\n      \"LEAGUE_LIST\"\n    ],\n    \"highLowTypes\": [\n      \"GAME\",\n      \"GAME\"\n    ],\n    \"streakLevels\": [\n      \"AT_BAT\",\n      \"GAME\"\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "49018190-22ce-4147-8c31-3df96b8b3604",
+    "name": "Stats API Documentation Analytics Config API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

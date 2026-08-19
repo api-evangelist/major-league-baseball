@@ -1,0 +1,140 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Standings API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Standings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View standings for a league",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/standings/:standingsType",
+            "params": [
+              {
+                "name": "standingsType",
+                "value": "",
+                "type": "path",
+                "description": "Type of season. Available types in /api/v1/standingsTypes"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "standingsTypes",
+                "value": "",
+                "type": "query",
+                "description": "Type of season. Available types in /api/v1/standingsTypes"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "includeMLB",
+                "value": "",
+                "type": "query",
+                "description": "Determines whether to include major league teams when using the 'BY_ORGANIZATION' standings type"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull standings"
+        },
+        {
+          "info": {
+            "name": "View standings for a league",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/standings",
+            "params": [
+              {
+                "name": "standingsType",
+                "value": "",
+                "type": "path",
+                "description": "Type of season. Available types in /api/v1/standingsTypes"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "standingsTypes",
+                "value": "",
+                "type": "query",
+                "description": "Type of season. Available types in /api/v1/standingsTypes"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "includeMLB",
+                "value": "",
+                "type": "query",
+                "description": "Determines whether to include major league teams when using the 'BY_ORGANIZATION' standings type"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull standings"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

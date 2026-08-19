@@ -1,0 +1,133 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Game Pace API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Game Pace",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View time of game info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/gamePace",
+            "params": [
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique Team identifiers"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "leagueListId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League List Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique venue identifiers"
+              },
+              {
+                "name": "excludeVenueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique venue identifiers"
+              },
+              {
+                "name": "excludeGamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "orgType",
+                "value": "",
+                "type": "query",
+                "description": "Organization level. Format: T(Team), L(League), S(Sport)"
+              },
+              {
+                "name": "includeChildren",
+                "value": "",
+                "type": "query",
+                "description": "Determines weather to include results from an organization's children (ex. a sport would also include results for the teams and leagues)"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View time of game info"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

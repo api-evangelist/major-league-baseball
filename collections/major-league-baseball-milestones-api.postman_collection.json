@@ -1,0 +1,410 @@
+{
+  "item": [
+    {
+      "id": "9e0f1b2b-cffc-4e02-a720-d3460313650f",
+      "name": "Milestones",
+      "description": {
+        "content": "Operations pertaining to milestones",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5e23a7f0-8112-4b2a-85ab-2407f9c57372",
+          "name": "View pending and achieved milestones.",
+          "request": {
+            "name": "View pending and achieved milestones.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "milestones"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "orgType",
+                  "value": "<string>",
+                  "description": "Organization level. Format: T(Team), L(League), S(Sport)"
+                },
+                {
+                  "disabled": false,
+                  "key": "achievementStatuses",
+                  "value": "{\"achievementTypeId\":\"<integer>\",\"achievementTypeCode\":\"<string>\",\"achievementTypeDesc\":\"<string>\",\"achievementTypeText\":\"<string>\"}",
+                  "description": "Comma delimited list of milestone achievement types"
+                },
+                {
+                  "disabled": false,
+                  "key": "achievementStatuses",
+                  "value": "{\"achievementTypeId\":\"<integer>\",\"achievementTypeCode\":\"<string>\",\"achievementTypeDesc\":\"<string>\",\"achievementTypeText\":\"<string>\"}",
+                  "description": "Comma delimited list of milestone achievement types"
+                },
+                {
+                  "disabled": false,
+                  "key": "milestoneTypes",
+                  "value": "{\"milestoneTypeId\":\"<integer>\",\"milestoneTypeCode\":\"<string>\",\"milestoneTypeText\":\"<string>\"}",
+                  "description": "Comma delimited list of milestone types"
+                },
+                {
+                  "disabled": false,
+                  "key": "milestoneTypes",
+                  "value": "{\"milestoneTypeId\":\"<integer>\",\"milestoneTypeCode\":\"<string>\",\"milestoneTypeText\":\"<string>\"}",
+                  "description": "Comma delimited list of milestone types"
+                },
+                {
+                  "disabled": false,
+                  "key": "isLastAchievement",
+                  "value": "<boolean>",
+                  "description": "Filters out milestones that have already been surpassed."
+                },
+                {
+                  "disabled": false,
+                  "key": "milestoneStatistics",
+                  "value": "{\"statisticId\":\"<integer>\",\"statisticText\":\"<string>\",\"statisticDesc\":\"<string>\",\"category\":\"<string>\",\"isStatcastStatus\":\"<boolean>\",\"isStandardStatus\":\"<boolean>\",\"sortOrder\":\"<integer>\"}",
+                  "description": "Comma delimited list of milestone statistics"
+                },
+                {
+                  "disabled": false,
+                  "key": "milestoneStatistics",
+                  "value": "{\"statisticId\":\"<integer>\",\"statisticText\":\"<string>\",\"statisticDesc\":\"<string>\",\"category\":\"<string>\",\"isStatcastStatus\":\"<boolean>\",\"isStandardStatus\":\"<boolean>\",\"sortOrder\":\"<integer>\"}",
+                  "description": "Comma delimited list of milestone statistics"
+                },
+                {
+                  "disabled": false,
+                  "key": "milestoneValues",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of milestone values"
+                },
+                {
+                  "disabled": false,
+                  "key": "milestoneValues",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of milestone values"
+                },
+                {
+                  "disabled": false,
+                  "key": "playerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for players"
+                },
+                {
+                  "disabled": false,
+                  "key": "playerIds",
+                  "value": "<integer>",
+                  "description": "A unique identifier for players"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique Team identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "teamIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique Team identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique league identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique league identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "statGroup",
+                  "value": "<string>",
+                  "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique venue identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique venue identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "gamePks",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of unique primary keys"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>",
+                  "description": "Number of results to return"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bb1658b2-5f86-4d8f-b4a6-1cfbb3192e21",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "milestones"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "orgType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "achievementStatuses",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "milestoneTypes",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "isLastAchievement",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "milestoneStatistics",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "milestoneValues",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "playerIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "teamIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "statGroup",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "venueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gamePks",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"milestones\": [\n    {\n      \"copyright\": \"string\",\n      \"milestoneAchievementId\": 7382,\n      \"milestoneProjectionId\": 1771,\n      \"projectionValue\": 7704,\n      \"projectionRank\": 6058,\n      \"currentValue\": 9110,\n      \"achievementValue\": 1089,\n      \"achievementRank\": 6511,\n      \"achievementDate\": \"1985-02-05\",\n      \"isLastAchievementStatus\": true,\n      \"gameId\": 953,\n      \"playId\": \"string\",\n      \"atBatNumber\": 3757,\n      \"pitchNumber\": 7257,\n      \"player\": {\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fullName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"primaryNumber\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"birthDate\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currentAge\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"birthCity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"birthStateProvince\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"birthCountry\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nationality\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"height\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"weight\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alternateCaptain\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"captain\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rookie\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currentTeam\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"primaryPosition\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"social\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"useName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"useLastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"middleName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"boxscoreName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nickName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gender\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameMatrilineal\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isPlayer\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isVerified\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"draftYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deathDate\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deathCity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deathStateProvince\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deathCountry\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"pronunciation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastPlayedDate\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"otherNames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"education\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"photos\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"stats\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"awards\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"draft\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"additionalBio\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rosterEntries\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"jobEntries\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"mlbDebutDate\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"batSide\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"pitchHand\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"note\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameFirstLast\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameTitle\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"namePrefix\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameSuffix\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameSlug\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstLastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastFirstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastInitName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"initLastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fullFMLName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fullLFMName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"strikeZoneTop\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"strikeZoneBottom\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alumniLastSeason\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"drafts\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"transactions\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"articles\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"videos\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"mixedFeed\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"relatives\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"xrefIds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nicknames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"team\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeague\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"xrefIds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"allStarStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"venue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springVenue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fileCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"triCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"locationName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstYearOfPlay\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchise\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamStats\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roster\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamLeaders\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"content\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"social\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"record\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"playoffInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"homeAway\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamDesignation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchiseName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clubName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"location\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"placeholder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"organizationId\": 2270,\n      \"achievementStatus\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"achievementStatusId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"achievementStatusCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"achievementStatusDesc\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"achievementStatusText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"milestoneRule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneRuleId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneValue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gameTypeCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"orgType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneDuration\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneStatistic\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"ruleCount\": 8969,\n      \"statDifference\": 704\n    },\n    {\n      \"copyright\": \"string\",\n      \"milestoneAchievementId\": 6900,\n      \"milestoneProjectionId\": 8044,\n      \"projectionValue\": 2694,\n      \"projectionRank\": 5691,\n      \"currentValue\": 7147,\n      \"achievementValue\": 3628,\n      \"achievementRank\": 2630,\n      \"achievementDate\": \"2006-08-19\",\n      \"isLastAchievementStatus\": true,\n      \"gameId\": 7643,\n      \"playId\": \"string\",\n      \"atBatNumber\": 8008,\n      \"pitchNumber\": 7294,\n      \"player\": {\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fullName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"primaryNumber\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"birthDate\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currentAge\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"birthCity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"birthStateProvince\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"birthCountry\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nationality\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"height\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"weight\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alternateCaptain\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"captain\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rookie\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"currentTeam\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"primaryPosition\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"social\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"useName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"useLastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"middleName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"boxscoreName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nickName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gender\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameMatrilineal\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isPlayer\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isVerified\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"draftYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deathDate\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deathCity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deathStateProvince\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deathCountry\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"pronunciation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastPlayedDate\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"otherNames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"education\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"photos\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"stats\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"awards\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"draft\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"additionalBio\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rosterEntries\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"jobEntries\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"mlbDebutDate\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"batSide\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"pitchHand\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"note\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameFirstLast\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameTitle\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"namePrefix\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameSuffix\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nameSlug\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstLastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastFirstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastInitName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"initLastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fullFMLName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fullLFMName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"strikeZoneTop\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"strikeZoneBottom\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alumniLastSeason\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"drafts\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"transactions\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"articles\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"videos\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"mixedFeed\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"relatives\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"xrefIds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nicknames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"team\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springLeague\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"xrefIds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"allStarStatus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"link\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"season\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"venue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"springVenue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"fileCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"abbreviation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"triCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"locationName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstYearOfPlay\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"league\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"division\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sport\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"conference\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchise\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamStats\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roster\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamLeaders\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousGameSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nextSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"previousSchedule\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"content\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"deviceProperties\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"social\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"record\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"playoffInfo\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"homeAway\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"teamDesignation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"parentOrgId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"franchiseName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"clubName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"location\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"placeholder\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"organizationId\": 9501,\n      \"achievementStatus\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"achievementStatusId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"achievementStatusCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"achievementStatusDesc\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"achievementStatusText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"milestoneRule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneRuleId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneValue\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneRank\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gameTypeCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"orgType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneDuration\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"milestoneStatistic\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"ruleCount\": 6491,\n      \"statDifference\": 3768\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fbef9e74-d623-4ba8-8373-67e97b87a280",
+          "name": "View available milestoneType options",
+          "request": {
+            "name": "View available milestoneType options",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "milestoneLookups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ffe65ad5-93eb-43f2-b720-e2c45036e270",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "milestoneLookups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3e56bd9a-84dc-4acc-aeb1-1b212928fbfc",
+    "name": "Stats API Documentation Analytics Milestones API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

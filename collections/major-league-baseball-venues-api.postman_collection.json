@@ -1,0 +1,536 @@
+{
+  "item": [
+    {
+      "id": "1f083cfa-0841-4e58-a7f1-ac8a05426131",
+      "name": "Venues",
+      "description": {
+        "content": "Operations pertaining to venues",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "001c5c2b-637e-4d87-bafa-010c95b60a8c",
+          "name": "View venue info",
+          "request": {
+            "name": "View venue info",
+            "description": {
+              "content": "This endpoint allows you to pull venues",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "venues"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique venue identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique venue identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique league identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique league identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "active",
+                  "value": "<boolean>",
+                  "description": "Whether or not a player is active"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeEvents",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of top level organizations of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of top level organizations of a sport"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "venueId",
+                  "description": "(Required) Unique Venue Identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8c801e5f-8160-4b86-a1fa-af6c63c26e7a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "venues"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "venueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gameType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "active",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeEvents",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportIds",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "venueId",
+                      "description": "(Required) Unique Venue Identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"venues\": [\n    {\n      \"copyright\": \"string\",\n      \"hydrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"id\": 5326,\n      \"name\": \"string\",\n      \"link\": \"string\",\n      \"location\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address2\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address3\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address4\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"city\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"state\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"stateAbbrev\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"defaultCoordinates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"coordinates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"timeZone\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"offset\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tz\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"fieldInfo\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"capacity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"turfType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roofType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leftLine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"left\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leftCenter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"center\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rightCenter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"right\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rightLine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"relatedApplications\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"images\": {\n        \"key_0\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"key_1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"social\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"twitter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"facebook\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"instagram\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"vine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"periscope\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tumblr\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"youtube\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"pinterest\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"googleplus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"snapchat\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"website\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hashtags\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"relatedVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"parentVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"residentVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"menu\": {},\n      \"schedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"nextSchedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"previousSchedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"metadata\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"capacity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"startYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"endYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"types\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"appEnabled\": true,\n      \"xrefIds\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"trackingVersion\": \"STATCAST_2017_COMBINED_RADAR_20\",\n      \"coachingVideo\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"ruleSettings\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"active\": true,\n      \"season\": \"string\"\n    },\n    {\n      \"copyright\": \"string\",\n      \"hydrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"id\": 5493,\n      \"name\": \"string\",\n      \"link\": \"string\",\n      \"location\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address2\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address3\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address4\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"city\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"state\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"stateAbbrev\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"defaultCoordinates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"coordinates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"timeZone\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"offset\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tz\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"fieldInfo\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"capacity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"turfType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roofType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leftLine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"left\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leftCenter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"center\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rightCenter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"right\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rightLine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"relatedApplications\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"images\": {\n        \"key_0\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"key_1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"key_2\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"key_3\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"social\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"twitter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"facebook\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"instagram\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"vine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"periscope\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tumblr\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"youtube\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"pinterest\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"googleplus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"snapchat\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"website\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hashtags\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"relatedVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"parentVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"residentVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"menu\": {},\n      \"schedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"nextSchedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"previousSchedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"metadata\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"capacity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"startYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"endYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"types\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"appEnabled\": false,\n      \"xrefIds\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"trackingVersion\": \"STATCAST_2023_12_CAM\",\n      \"coachingVideo\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"ruleSettings\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"active\": false,\n      \"season\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "13c683d6-7faa-49c0-ad5a-0c22b20712fe",
+          "name": "View venue info",
+          "request": {
+            "name": "View venue info",
+            "description": {
+              "content": "This endpoint allows you to pull venues",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "venues",
+                ":venueId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique venue identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "venueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique venue identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique league identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of Unique league identifiers"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameType",
+                  "value": "<string>",
+                  "description": "Type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "gameTypes",
+                  "value": "<string>",
+                  "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "seasons",
+                  "value": "<string>",
+                  "description": "Comma delimited list of Seasons of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "active",
+                  "value": "<boolean>",
+                  "description": "Whether or not a player is active"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeEvents",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of top level organizations of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportIds",
+                  "value": "<integer>",
+                  "description": "Comma delimited list of top level organizations of a sport"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "venueId",
+                  "description": "(Required) Unique Venue Identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2e1b4d8c-4431-4f6a-b215-7dd97fcd19bd",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "venues",
+                    ":venueId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "venueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "gameType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "gameTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "seasons",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "active",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeEvents",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportIds",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "venueId",
+                      "description": "(Required) Unique Venue Identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"venues\": [\n    {\n      \"copyright\": \"string\",\n      \"hydrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"id\": 9102,\n      \"name\": \"string\",\n      \"link\": \"string\",\n      \"location\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address2\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address3\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address4\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"city\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"state\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"stateAbbrev\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"defaultCoordinates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"coordinates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"timeZone\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"offset\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tz\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"fieldInfo\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"capacity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"turfType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roofType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leftLine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"left\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leftCenter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"center\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rightCenter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"right\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rightLine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"relatedApplications\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"images\": {\n        \"key_0\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"key_1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"key_2\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"social\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"twitter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"facebook\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"instagram\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"vine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"periscope\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tumblr\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"youtube\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"pinterest\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"googleplus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"snapchat\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"website\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hashtags\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"relatedVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"parentVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"residentVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"menu\": {},\n      \"schedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"nextSchedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"previousSchedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"metadata\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"capacity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"startYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"endYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"types\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"appEnabled\": true,\n      \"xrefIds\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"trackingVersion\": \"STATCAST_2015_RADAR_ONLY_20\",\n      \"coachingVideo\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"ruleSettings\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"active\": true,\n      \"season\": \"string\"\n    },\n    {\n      \"copyright\": \"string\",\n      \"hydrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"id\": 1266,\n      \"name\": \"string\",\n      \"link\": \"string\",\n      \"location\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address2\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address3\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"address4\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"city\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"state\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"stateAbbrev\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"defaultCoordinates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"coordinates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phone\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"timeZone\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"offset\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tz\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"fieldInfo\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"capacity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"turfType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"roofType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leftLine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"left\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"leftCenter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"center\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rightCenter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"right\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"rightLine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"relatedApplications\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"images\": {\n        \"key_0\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"key_1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"social\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"twitter\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"facebook\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"instagram\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"vine\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"periscope\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tumblr\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"youtube\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"pinterest\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"googleplus\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"snapchat\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"website\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hashtags\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"relatedVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"parentVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"residentVenues\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/VenueRestObject detected>\"\n        }\n      ],\n      \"menu\": {},\n      \"schedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"nextSchedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"previousSchedule\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"hydrations\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalItems\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalEvents\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGames\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"totalGamesInProgress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"wait\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dates\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"metadata\": {\n        \"copyright\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"active\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"capacity\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"startYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"endYear\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"types\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"appEnabled\": true,\n      \"xrefIds\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"trackingVersion\": \"STATCAST_2015_RADAR_ONLY_20\",\n      \"coachingVideo\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"ruleSettings\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"active\": true,\n      \"season\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fe598a28-b00a-4147-8389-18f5d769e866",
+    "name": "Stats API Documentation Analytics Venues API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

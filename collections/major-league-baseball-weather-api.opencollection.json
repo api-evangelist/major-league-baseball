@@ -1,0 +1,130 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Weather API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Weather",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get full weather for a venue.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/weather/venues/:venueId/full",
+            "params": [
+              {
+                "name": "venueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing full weather for a specific venue."
+        },
+        {
+          "info": {
+            "name": "Get basic weather for a venue.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/weather/venues/:venueId/basic",
+            "params": [
+              {
+                "name": "venueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing basic weather for a specific venue."
+        },
+        {
+          "info": {
+            "name": "Get the raw field weather data.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/weather/game/:gamePk/:playId",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "playId",
+                "value": "",
+                "type": "path",
+                "description": "Unique identifier for a play within a game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing weather for the current play."
+        },
+        {
+          "info": {
+            "name": "Get the weather forecast for a game.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/weather/game/:gamePk/forecast/:roofType",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "roofType",
+                "value": "",
+                "type": "path",
+                "description": "Venue roof type"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing the weather forecast for a specific game."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,122 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Awards API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Awards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "awardRecipients",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/awards/:awardId/recipients",
+            "params": [
+              {
+                "name": "awardId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Award Identifier. Available awards in /api/v1/awards"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View recipients of an award"
+        },
+        {
+          "info": {
+            "name": "awards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/awards",
+            "params": [
+              {
+                "name": "awardId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Award Identifier. Available awards in /api/v1/awards"
+              },
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View awards info"
+        },
+        {
+          "info": {
+            "name": "awards_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/awards/:awardId",
+            "params": [
+              {
+                "name": "awardId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Award Identifier. Available awards in /api/v1/awards"
+              },
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View awards info"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

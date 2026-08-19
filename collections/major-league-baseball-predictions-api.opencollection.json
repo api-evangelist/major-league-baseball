@@ -1,0 +1,134 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Predictions API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Predictions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get play-level predictions based on input scenarios",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/props/play/predictions",
+            "params": [
+              {
+                "name": "batterId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "pitcherId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "venueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "batSide",
+                "value": "",
+                "type": "query",
+                "description": "Bat side of hitter"
+              },
+              {
+                "name": "pitchHand",
+                "value": "",
+                "type": "query",
+                "description": "Handedness of pitcher"
+              },
+              {
+                "name": "batterPosition",
+                "value": "",
+                "type": "query",
+                "description": "Position abbreviation. Format: SS, P, 1B, etc"
+              },
+              {
+                "name": "pitcherPosition",
+                "value": "",
+                "type": "query",
+                "description": "Position abbreviation. Format: SS, P, 1B, etc"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to get play-level predictions based on input scenarios"
+        },
+        {
+          "info": {
+            "name": "Get play-level predictions based on input scenarios",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/props/play/predictions/adjust",
+            "params": [
+              {
+                "name": "batterId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "pitcherId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "venueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "batSide",
+                "value": "",
+                "type": "query",
+                "description": "Bat side of hitter"
+              },
+              {
+                "name": "pitchHand",
+                "value": "",
+                "type": "query",
+                "description": "Handedness of pitcher"
+              },
+              {
+                "name": "batterPosition",
+                "value": "",
+                "type": "query",
+                "description": "Position abbreviation. Format: SS, P, 1B, etc"
+              },
+              {
+                "name": "pitcherPosition",
+                "value": "",
+                "type": "query",
+                "description": "Position abbreviation. Format: SS, P, 1B, etc"
+              },
+              {
+                "name": "count",
+                "value": "",
+                "type": "query",
+                "description": "Count for the at-bat (1-0, 2-2, etc.)"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to get play-level predictions based on input scenarios"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

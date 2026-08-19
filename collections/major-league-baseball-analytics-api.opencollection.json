@@ -1,0 +1,566 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Analytics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the field tracking data for a specific play. ",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/:guid/contextMetricsAverages",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "guid",
+                "value": "",
+                "type": "path",
+                "description": "Unique identifier for a play within a game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing raw coordinate data and refined calculated metrics.<br/><br/>This responses can be very large, so it is strongly recommended that you pass \"Accept-Encoding: gzip\" as a header to have the responses compressed."
+        },
+        {
+          "info": {
+            "name": "Get the field tracking data for a specific play. ",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/:guid/contextMetricsAverages",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "guid",
+                "value": "",
+                "type": "path",
+                "description": "Unique identifier for a play within a game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing raw coordinate data and refined calculated metrics.<br/><br/>This responses can be very large, so it is strongly recommended that you pass \"Accept-Encoding: gzip\" as a header to have the responses compressed."
+        },
+        {
+          "info": {
+            "name": "Get the field tracking data for a specific play. ",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/:guid/homeRunBallparks",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "guid",
+                "value": "",
+                "type": "path",
+                "description": "Unique identifier for a play within a game"
+              },
+              {
+                "name": "isHomeRunParks",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing raw coordinate data and refined calculated metrics.<br/><br/>This responses can be very large, so it is strongly recommended that you pass \"Accept-Encoding: gzip\" as a header to have the responses compressed."
+        },
+        {
+          "info": {
+            "name": "Get the field tracking data for a specific play. ",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/:guid/contextMetrics",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "guid",
+                "value": "",
+                "type": "path",
+                "description": "Unique identifier for a play within a game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing raw coordinate data and refined calculated metrics.<br/><br/>This responses can be very large, so it is strongly recommended that you pass \"Accept-Encoding: gzip\" as a header to have the responses compressed."
+        },
+        {
+          "info": {
+            "name": "Tracking data by play/guid",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/:guid/analytics",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "guid",
+                "value": "",
+                "type": "path",
+                "description": "Unique identifier for a play within a game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Returns a json file containing raw coordinate data and refined calculated metrics.<br/><br/>This responses can be very large, so it is strongly recommended that you pass \"Accept-Encoding: gzip\" as a header to have the responses compressed."
+        },
+        {
+          "info": {
+            "name": "Get play GUIDs by game",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/guids",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "gameModeId",
+                "value": "",
+                "type": "query",
+                "description": "Statcast game mode. Format: 0 = Batting Practive, 1 = Warmup 2 = Live"
+              },
+              {
+                "name": "isPitch",
+                "value": "",
+                "type": "query",
+                "description": "If there was a pitch"
+              },
+              {
+                "name": "isHit",
+                "value": "",
+                "type": "query",
+                "description": "If there was a hit ball tracked"
+              },
+              {
+                "name": "isPickoff",
+                "value": "",
+                "type": "query",
+                "description": "If there was a pickoff"
+              },
+              {
+                "name": "hasUpdates",
+                "value": "",
+                "type": "query",
+                "description": "True if updated by an auditor"
+              },
+              {
+                "name": "since",
+                "value": "",
+                "type": "query",
+                "description": "Returns all data that was created after the specified timestamp. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "updatedSince",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastPlayTime",
+                "value": "",
+                "type": "query",
+                "description": "Returns all data that was created after the specified timestamp. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastMetricsUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "The last time the metrics were built for this play"
+              },
+              {
+                "name": "lastAuditUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastVideoUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "The last time SportyBot video was updated"
+              }
+            ]
+          },
+          "docs": "This endpoint returns Statcast data for all plays in a specific game."
+        },
+        {
+          "info": {
+            "name": "Get the last pitch for a list of games",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/lastPitch",
+            "params": [
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Get the last pitch for a list of games"
+        },
+        {
+          "info": {
+            "name": "Tracking data by date/time",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/analytics/guids",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "gameModeId",
+                "value": "",
+                "type": "query",
+                "description": "Statcast game mode. Format: 0 = Batting Practive, 1 = Warmup 2 = Live"
+              },
+              {
+                "name": "isPitch",
+                "value": "",
+                "type": "query",
+                "description": "If there was a pitch"
+              },
+              {
+                "name": "isHit",
+                "value": "",
+                "type": "query",
+                "description": "If there was a hit ball tracked"
+              },
+              {
+                "name": "isPickoff",
+                "value": "",
+                "type": "query",
+                "description": "If there was a pickoff"
+              },
+              {
+                "name": "isNonStatcast",
+                "value": "",
+                "type": "query",
+                "description": "If non statcast games need to be included"
+              },
+              {
+                "name": "gamedayType",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the level of Gameday (tracking, play-by-play, linescore, etc...)"
+              },
+              {
+                "name": "hasUpdates",
+                "value": "",
+                "type": "query",
+                "description": "True if updated by an auditor"
+              },
+              {
+                "name": "lastPlayTime",
+                "value": "",
+                "type": "query",
+                "description": "Returns all data that was created after the specified timestamp. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastMetricsUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastAuditUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastVideoUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "The last time SportyBot video was updated"
+              },
+              {
+                "name": "gameDate",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sortBy",
+                "value": "",
+                "type": "query",
+                "description": "Sort the set of data by the specified field"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              }
+            ]
+          },
+          "docs": "Tracking data by date/time"
+        },
+        {
+          "info": {
+            "name": "Get tracking metadata for games",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/analytics/game",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "gameModeId",
+                "value": "",
+                "type": "query",
+                "description": "Statcast game mode. Format: 0 = Batting Practive, 1 = Warmup 2 = Live"
+              },
+              {
+                "name": "isPitch",
+                "value": "",
+                "type": "query",
+                "description": "If there was a pitch"
+              },
+              {
+                "name": "isHit",
+                "value": "",
+                "type": "query",
+                "description": "If there was a hit ball tracked"
+              },
+              {
+                "name": "isPickoff",
+                "value": "",
+                "type": "query",
+                "description": "If there was a pickoff"
+              },
+              {
+                "name": "isNonStatcast",
+                "value": "",
+                "type": "query",
+                "description": "If non statcast games need to be included"
+              },
+              {
+                "name": "gamedayType",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the level of Gameday (tracking, play-by-play, linescore, etc...)"
+              },
+              {
+                "name": "hasUpdates",
+                "value": "",
+                "type": "query",
+                "description": "True if updated by an auditor"
+              },
+              {
+                "name": "lastPlayTime",
+                "value": "",
+                "type": "query",
+                "description": "Returns all data that was created after the specified timestamp. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastVideoUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "The last time SportyBot video was updated"
+              },
+              {
+                "name": "lastUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastMetricsUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "lastAuditUpdatedTime",
+                "value": "",
+                "type": "query",
+                "description": "Return data updated since a specified date. Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "gameDate",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sortBy",
+                "value": "",
+                "type": "query",
+                "description": "Sort the set of data by the specified field"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              }
+            ]
+          },
+          "docs": "Get tracking metadata for games"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

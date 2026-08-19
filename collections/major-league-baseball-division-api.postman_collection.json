@@ -1,0 +1,330 @@
+{
+  "item": [
+    {
+      "id": "e47f5ca0-d3b0-4d16-8740-e13becad3818",
+      "name": "Division",
+      "description": {
+        "content": "Operations pertaining to divisions",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ec6bc63a-5dcf-4943-9f72-a238f49dd27b",
+          "name": "Get division information",
+          "request": {
+            "name": "Get division information",
+            "description": {
+              "content": "This endpoint allows you to pull divisions",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "divisions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "includeInactive",
+                  "value": "false",
+                  "description": "Whether or not to include inactive"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "divisionId",
+                  "description": "(Required) Unique Division Identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "32a6c5ec-7ff1-43aa-93f6-bfba1087a9f1",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "divisions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "includeInactive",
+                      "value": "false"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "divisionId",
+                      "description": "(Required) Unique Division Identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"divisions\": [\n    {\n      \"copyright\": \"string\",\n      \"id\": 4635,\n      \"name\": \"string\",\n      \"season\": \"string\",\n      \"nameShort\": \"string\",\n      \"link\": \"string\",\n      \"abbreviation\": \"string\",\n      \"conference\": {\n        \"copyright\": \"string\",\n        \"id\": 3638,\n        \"name\": \"string\",\n        \"link\": \"string\"\n      },\n      \"league\": {\n        \"copyright\": \"string\",\n        \"id\": 559,\n        \"name\": \"string\",\n        \"link\": \"string\",\n        \"abbreviation\": \"string\",\n        \"nameShort\": \"string\",\n        \"seasonState\": \"string\",\n        \"hasWildCard\": false,\n        \"hasSplitSeason\": true,\n        \"numGames\": 1751,\n        \"hasPlayoffPoints\": true,\n        \"numTeams\": 2697,\n        \"numWildcardTeams\": 6570,\n        \"seasonDateInfo\": {\n          \"copyright\": \"string\",\n          \"seasonId\": \"string\",\n          \"hasWildcard\": true,\n          \"preSeasonStartDate\": \"1998-05-17\",\n          \"preSeasonEndDate\": \"2011-02-25\",\n          \"seasonStartDate\": \"1953-12-28\",\n          \"springStartDate\": \"1995-12-01\",\n          \"springEndDate\": \"1996-06-07\",\n          \"regularSeasonStartDate\": \"2006-05-18\",\n          \"lastDate1stHalf\": \"2026-07-21\",\n          \"allStarDate\": \"2011-02-21\",\n          \"firstDate2ndHalf\": \"2016-08-06\",\n          \"regularSeasonEndDate\": \"1987-01-24\",\n          \"postSeasonStartDate\": \"1988-07-27\",\n          \"postSeasonEndDate\": \"2007-09-21\",\n          \"seasonEndDate\": \"2006-11-30\",\n          \"offseasonStartDate\": \"2013-05-26\",\n          \"offSeasonEndDate\": \"1976-03-06\",\n          \"numberOfGames\": 1759,\n          \"tiesInUse\": false,\n          \"olympicsParticipation\": false,\n          \"conferencesInUse\": false,\n          \"divisionsInUse\": false,\n          \"gameTypeDates\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonLevelGamedayType\": \"string\",\n          \"gameLevelGamedayType\": \"string\",\n          \"qualifierPlateAppearances\": 1679.515406388802,\n          \"qualifierOutsPitched\": 5673.7852584894445\n        },\n        \"season\": \"string\",\n        \"orgCode\": \"string\",\n        \"conferencesInUse\": false,\n        \"divisionsInUse\": true,\n        \"sport\": {\n          \"copyright\": \"string\",\n          \"hydrations\": [\n            \"string\",\n            \"string\"\n          ],\n          \"id\": 8753,\n          \"code\": \"string\",\n          \"link\": \"string\",\n          \"name\": \"string\",\n          \"abbreviation\": \"string\",\n          \"sortOrder\": 2990,\n          \"deviceProperties\": {},\n          \"isAffiliated\": false,\n          \"ruleSettings\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonState\": \"string\",\n          \"seasonDateInfo\": {\n            \"copyright\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"hasWildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"preSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"preSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"springStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"springEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regularSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"lastDate1stHalf\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"allStarDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"firstDate2ndHalf\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regularSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"postSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"postSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"offseasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"offSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberOfGames\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"tiesInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"olympicsParticipation\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"conferencesInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"divisionsInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"gameTypeDates\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonLevelGamedayType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"gameLevelGamedayType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"qualifierPlateAppearances\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"qualifierOutsPitched\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"activeStatus\": false\n        },\n        \"timeZone\": {\n          \"copyright\": \"string\",\n          \"id\": \"string\",\n          \"offset\": 5836,\n          \"tz\": \"string\"\n        },\n        \"sortOrder\": 3868,\n        \"active\": false,\n        \"isAffiliated\": true,\n        \"ruleSettings\": [\n          {\n            \"playSettingId\": 5144,\n            \"settingId\": 4752,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 6337,\n            \"startDate\": \"1977-03-31\",\n            \"endDate\": \"1982-03-02\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": true,\n            \"sortOrder\": 1647\n          },\n          {\n            \"playSettingId\": 8175,\n            \"settingId\": 8216,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 5761,\n            \"startDate\": \"2004-03-27\",\n            \"endDate\": \"2014-10-04\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": true,\n            \"sortOrder\": 2792\n          }\n        ]\n      },\n      \"sport\": {\n        \"copyright\": \"string\",\n        \"hydrations\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": 7823,\n        \"code\": \"string\",\n        \"link\": \"string\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"sortOrder\": 8878,\n        \"deviceProperties\": {},\n        \"isAffiliated\": false,\n        \"ruleSettings\": [\n          {\n            \"playSettingId\": 4338,\n            \"settingId\": 4235,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 8659,\n            \"startDate\": \"1981-09-15\",\n            \"endDate\": \"1963-04-02\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": true,\n            \"sortOrder\": 9918\n          },\n          {\n            \"playSettingId\": 2506,\n            \"settingId\": 2193,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 8485,\n            \"startDate\": \"2019-08-05\",\n            \"endDate\": \"1971-11-09\",\n            \"inherited\": false,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": false,\n            \"sortOrder\": 4845\n          }\n        ],\n        \"seasonState\": \"string\",\n        \"seasonDateInfo\": {\n          \"copyright\": \"string\",\n          \"seasonId\": \"string\",\n          \"hasWildcard\": true,\n          \"preSeasonStartDate\": \"1993-09-12\",\n          \"preSeasonEndDate\": \"1962-04-09\",\n          \"seasonStartDate\": \"1955-07-19\",\n          \"springStartDate\": \"1981-08-05\",\n          \"springEndDate\": \"1949-07-19\",\n          \"regularSeasonStartDate\": \"1987-01-16\",\n          \"lastDate1stHalf\": \"1946-10-16\",\n          \"allStarDate\": \"1986-05-11\",\n          \"firstDate2ndHalf\": \"1956-06-03\",\n          \"regularSeasonEndDate\": \"1946-11-21\",\n          \"postSeasonStartDate\": \"1959-10-11\",\n          \"postSeasonEndDate\": \"1961-07-29\",\n          \"seasonEndDate\": \"1973-11-11\",\n          \"offseasonStartDate\": \"2016-03-20\",\n          \"offSeasonEndDate\": \"1970-06-03\",\n          \"numberOfGames\": 693,\n          \"tiesInUse\": true,\n          \"olympicsParticipation\": true,\n          \"conferencesInUse\": true,\n          \"divisionsInUse\": false,\n          \"gameTypeDates\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonLevelGamedayType\": \"string\",\n          \"gameLevelGamedayType\": \"string\",\n          \"qualifierPlateAppearances\": 5593.89833742513,\n          \"qualifierOutsPitched\": 7557.294325887324\n        },\n        \"activeStatus\": false\n      },\n      \"hasWildcard\": false,\n      \"sortOrder\": 8519,\n      \"numPlayoffTeams\": 8167,\n      \"active\": false\n    },\n    {\n      \"copyright\": \"string\",\n      \"id\": 7423,\n      \"name\": \"string\",\n      \"season\": \"string\",\n      \"nameShort\": \"string\",\n      \"link\": \"string\",\n      \"abbreviation\": \"string\",\n      \"conference\": {\n        \"copyright\": \"string\",\n        \"id\": 9887,\n        \"name\": \"string\",\n        \"link\": \"string\"\n      },\n      \"league\": {\n        \"copyright\": \"string\",\n        \"id\": 2282,\n        \"name\": \"string\",\n        \"link\": \"string\",\n        \"abbreviation\": \"string\",\n        \"nameShort\": \"string\",\n        \"seasonState\": \"string\",\n        \"hasWildCard\": false,\n        \"hasSplitSeason\": true,\n        \"numGames\": 3628,\n        \"hasPlayoffPoints\": true,\n        \"numTeams\": 9325,\n        \"numWildcardTeams\": 5962,\n        \"seasonDateInfo\": {\n          \"copyright\": \"string\",\n          \"seasonId\": \"string\",\n          \"hasWildcard\": true,\n          \"preSeasonStartDate\": \"2002-03-08\",\n          \"preSeasonEndDate\": \"1962-12-31\",\n          \"seasonStartDate\": \"1994-08-12\",\n          \"springStartDate\": \"1953-05-10\",\n          \"springEndDate\": \"1955-06-25\",\n          \"regularSeasonStartDate\": \"1983-05-21\",\n          \"lastDate1stHalf\": \"2004-07-01\",\n          \"allStarDate\": \"1952-11-14\",\n          \"firstDate2ndHalf\": \"2014-06-27\",\n          \"regularSeasonEndDate\": \"2021-12-24\",\n          \"postSeasonStartDate\": \"1968-11-27\",\n          \"postSeasonEndDate\": \"2011-06-12\",\n          \"seasonEndDate\": \"1952-09-05\",\n          \"offseasonStartDate\": \"1975-01-19\",\n          \"offSeasonEndDate\": \"1966-06-10\",\n          \"numberOfGames\": 3218,\n          \"tiesInUse\": true,\n          \"olympicsParticipation\": true,\n          \"conferencesInUse\": false,\n          \"divisionsInUse\": true,\n          \"gameTypeDates\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonLevelGamedayType\": \"string\",\n          \"gameLevelGamedayType\": \"string\",\n          \"qualifierPlateAppearances\": 4603.473854597198,\n          \"qualifierOutsPitched\": 5730.764894177621\n        },\n        \"season\": \"string\",\n        \"orgCode\": \"string\",\n        \"conferencesInUse\": true,\n        \"divisionsInUse\": false,\n        \"sport\": {\n          \"copyright\": \"string\",\n          \"hydrations\": [\n            \"string\",\n            \"string\"\n          ],\n          \"id\": 310,\n          \"code\": \"string\",\n          \"link\": \"string\",\n          \"name\": \"string\",\n          \"abbreviation\": \"string\",\n          \"sortOrder\": 5207,\n          \"deviceProperties\": {},\n          \"isAffiliated\": false,\n          \"ruleSettings\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonState\": \"string\",\n          \"seasonDateInfo\": {\n            \"copyright\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"hasWildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"preSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"preSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"springStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"springEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regularSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"lastDate1stHalf\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"allStarDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"firstDate2ndHalf\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regularSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"postSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"postSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"offseasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"offSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberOfGames\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"tiesInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"olympicsParticipation\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"conferencesInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"divisionsInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"gameTypeDates\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonLevelGamedayType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"gameLevelGamedayType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"qualifierPlateAppearances\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"qualifierOutsPitched\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"activeStatus\": false\n        },\n        \"timeZone\": {\n          \"copyright\": \"string\",\n          \"id\": \"string\",\n          \"offset\": 7830,\n          \"tz\": \"string\"\n        },\n        \"sortOrder\": 8392,\n        \"active\": true,\n        \"isAffiliated\": true,\n        \"ruleSettings\": [\n          {\n            \"playSettingId\": 2037,\n            \"settingId\": 7237,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 4051,\n            \"startDate\": \"1993-12-30\",\n            \"endDate\": \"1977-09-17\",\n            \"inherited\": false,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": true,\n            \"sortOrder\": 2992\n          },\n          {\n            \"playSettingId\": 9009,\n            \"settingId\": 9497,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 1053,\n            \"startDate\": \"1988-12-12\",\n            \"endDate\": \"1952-08-20\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": true,\n            \"sortOrder\": 9164\n          }\n        ]\n      },\n      \"sport\": {\n        \"copyright\": \"string\",\n        \"hydrations\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": 393,\n        \"code\": \"string\",\n        \"link\": \"string\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"sortOrder\": 3659,\n        \"deviceProperties\": {},\n        \"isAffiliated\": true,\n        \"ruleSettings\": [\n          {\n            \"playSettingId\": 2004,\n            \"settingId\": 523,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 1179,\n            \"startDate\": \"1975-11-09\",\n            \"endDate\": \"1967-10-21\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": false,\n            \"sortOrder\": 1631\n          },\n          {\n            \"playSettingId\": 5810,\n            \"settingId\": 2220,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 3797,\n            \"startDate\": \"1969-07-31\",\n            \"endDate\": \"2010-10-08\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": false,\n            \"sortOrder\": 1793\n          }\n        ],\n        \"seasonState\": \"string\",\n        \"seasonDateInfo\": {\n          \"copyright\": \"string\",\n          \"seasonId\": \"string\",\n          \"hasWildcard\": false,\n          \"preSeasonStartDate\": \"1961-06-18\",\n          \"preSeasonEndDate\": \"1970-05-20\",\n          \"seasonStartDate\": \"2009-02-02\",\n          \"springStartDate\": \"2013-07-11\",\n          \"springEndDate\": \"1966-11-15\",\n          \"regularSeasonStartDate\": \"1965-10-26\",\n          \"lastDate1stHalf\": \"2000-11-16\",\n          \"allStarDate\": \"2016-10-09\",\n          \"firstDate2ndHalf\": \"1983-09-22\",\n          \"regularSeasonEndDate\": \"1997-07-28\",\n          \"postSeasonStartDate\": \"1961-08-30\",\n          \"postSeasonEndDate\": \"1950-10-05\",\n          \"seasonEndDate\": \"1983-01-02\",\n          \"offseasonStartDate\": \"2011-03-07\",\n          \"offSeasonEndDate\": \"1972-08-23\",\n          \"numberOfGames\": 3080,\n          \"tiesInUse\": true,\n          \"olympicsParticipation\": true,\n          \"conferencesInUse\": false,\n          \"divisionsInUse\": true,\n          \"gameTypeDates\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonLevelGamedayType\": \"string\",\n          \"gameLevelGamedayType\": \"string\",\n          \"qualifierPlateAppearances\": 8128.282246245637,\n          \"qualifierOutsPitched\": 8468.599334290511\n        },\n        \"activeStatus\": false\n      },\n      \"hasWildcard\": false,\n      \"sortOrder\": 6764,\n      \"numPlayoffTeams\": 1680,\n      \"active\": true\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5fbfe745-dcad-4b34-807a-8bf9f3511ebb",
+          "name": "Get division information",
+          "request": {
+            "name": "Get division information",
+            "description": {
+              "content": "This endpoint allows you to pull divisions",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "divisions",
+                ":divisionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "includeInactive",
+                  "value": "false",
+                  "description": "Whether or not to include inactive"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "divisionId",
+                  "description": "(Required) Unique Division Identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a13d3deb-cefc-4f2e-8cc8-746e5f0df20c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "divisions",
+                    ":divisionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "includeInactive",
+                      "value": "false"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "divisionId",
+                      "description": "(Required) Unique Division Identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"divisions\": [\n    {\n      \"copyright\": \"string\",\n      \"id\": 2929,\n      \"name\": \"string\",\n      \"season\": \"string\",\n      \"nameShort\": \"string\",\n      \"link\": \"string\",\n      \"abbreviation\": \"string\",\n      \"conference\": {\n        \"copyright\": \"string\",\n        \"id\": 5272,\n        \"name\": \"string\",\n        \"link\": \"string\"\n      },\n      \"league\": {\n        \"copyright\": \"string\",\n        \"id\": 7646,\n        \"name\": \"string\",\n        \"link\": \"string\",\n        \"abbreviation\": \"string\",\n        \"nameShort\": \"string\",\n        \"seasonState\": \"string\",\n        \"hasWildCard\": false,\n        \"hasSplitSeason\": true,\n        \"numGames\": 6420,\n        \"hasPlayoffPoints\": true,\n        \"numTeams\": 1446,\n        \"numWildcardTeams\": 1022,\n        \"seasonDateInfo\": {\n          \"copyright\": \"string\",\n          \"seasonId\": \"string\",\n          \"hasWildcard\": true,\n          \"preSeasonStartDate\": \"1987-01-26\",\n          \"preSeasonEndDate\": \"1949-03-02\",\n          \"seasonStartDate\": \"2004-02-19\",\n          \"springStartDate\": \"1986-11-02\",\n          \"springEndDate\": \"2009-01-16\",\n          \"regularSeasonStartDate\": \"2017-12-09\",\n          \"lastDate1stHalf\": \"2002-08-16\",\n          \"allStarDate\": \"2005-02-16\",\n          \"firstDate2ndHalf\": \"1993-06-04\",\n          \"regularSeasonEndDate\": \"1981-06-16\",\n          \"postSeasonStartDate\": \"1955-03-28\",\n          \"postSeasonEndDate\": \"1969-08-02\",\n          \"seasonEndDate\": \"1984-06-18\",\n          \"offseasonStartDate\": \"2021-12-25\",\n          \"offSeasonEndDate\": \"2012-07-20\",\n          \"numberOfGames\": 4503,\n          \"tiesInUse\": false,\n          \"olympicsParticipation\": true,\n          \"conferencesInUse\": true,\n          \"divisionsInUse\": false,\n          \"gameTypeDates\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonLevelGamedayType\": \"string\",\n          \"gameLevelGamedayType\": \"string\",\n          \"qualifierPlateAppearances\": 2647.153993583733,\n          \"qualifierOutsPitched\": 7170.42689564464\n        },\n        \"season\": \"string\",\n        \"orgCode\": \"string\",\n        \"conferencesInUse\": true,\n        \"divisionsInUse\": true,\n        \"sport\": {\n          \"copyright\": \"string\",\n          \"hydrations\": [\n            \"string\",\n            \"string\"\n          ],\n          \"id\": 5098,\n          \"code\": \"string\",\n          \"link\": \"string\",\n          \"name\": \"string\",\n          \"abbreviation\": \"string\",\n          \"sortOrder\": 8214,\n          \"deviceProperties\": {},\n          \"isAffiliated\": true,\n          \"ruleSettings\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonState\": \"string\",\n          \"seasonDateInfo\": {\n            \"copyright\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"hasWildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"preSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"preSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"springStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"springEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regularSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"lastDate1stHalf\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"allStarDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"firstDate2ndHalf\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regularSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"postSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"postSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"offseasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"offSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberOfGames\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"tiesInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"olympicsParticipation\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"conferencesInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"divisionsInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"gameTypeDates\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonLevelGamedayType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"gameLevelGamedayType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"qualifierPlateAppearances\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"qualifierOutsPitched\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"activeStatus\": false\n        },\n        \"timeZone\": {\n          \"copyright\": \"string\",\n          \"id\": \"string\",\n          \"offset\": 1428,\n          \"tz\": \"string\"\n        },\n        \"sortOrder\": 5735,\n        \"active\": true,\n        \"isAffiliated\": true,\n        \"ruleSettings\": [\n          {\n            \"playSettingId\": 5093,\n            \"settingId\": 4950,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 9604,\n            \"startDate\": \"1985-02-19\",\n            \"endDate\": \"1981-07-26\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": true,\n            \"sortOrder\": 6893\n          },\n          {\n            \"playSettingId\": 2617,\n            \"settingId\": 8952,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 4879,\n            \"startDate\": \"1972-03-01\",\n            \"endDate\": \"1983-04-13\",\n            \"inherited\": false,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": true,\n            \"sortOrder\": 3177\n          }\n        ]\n      },\n      \"sport\": {\n        \"copyright\": \"string\",\n        \"hydrations\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": 2031,\n        \"code\": \"string\",\n        \"link\": \"string\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"sortOrder\": 6155,\n        \"deviceProperties\": {},\n        \"isAffiliated\": false,\n        \"ruleSettings\": [\n          {\n            \"playSettingId\": 7958,\n            \"settingId\": 2105,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 9588,\n            \"startDate\": \"1990-07-13\",\n            \"endDate\": \"1986-05-10\",\n            \"inherited\": false,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": false,\n            \"sortOrder\": 9706\n          },\n          {\n            \"playSettingId\": 2608,\n            \"settingId\": 9005,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 6973,\n            \"startDate\": \"1993-08-30\",\n            \"endDate\": \"2019-05-21\",\n            \"inherited\": false,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": true,\n            \"sortOrder\": 7328\n          }\n        ],\n        \"seasonState\": \"string\",\n        \"seasonDateInfo\": {\n          \"copyright\": \"string\",\n          \"seasonId\": \"string\",\n          \"hasWildcard\": true,\n          \"preSeasonStartDate\": \"1985-01-07\",\n          \"preSeasonEndDate\": \"1991-08-12\",\n          \"seasonStartDate\": \"2014-06-08\",\n          \"springStartDate\": \"1958-04-09\",\n          \"springEndDate\": \"1954-08-16\",\n          \"regularSeasonStartDate\": \"2026-07-19\",\n          \"lastDate1stHalf\": \"2001-08-27\",\n          \"allStarDate\": \"1968-03-20\",\n          \"firstDate2ndHalf\": \"1958-06-27\",\n          \"regularSeasonEndDate\": \"2026-05-02\",\n          \"postSeasonStartDate\": \"1951-04-02\",\n          \"postSeasonEndDate\": \"1948-05-31\",\n          \"seasonEndDate\": \"1989-04-27\",\n          \"offseasonStartDate\": \"1978-02-27\",\n          \"offSeasonEndDate\": \"2025-08-11\",\n          \"numberOfGames\": 306,\n          \"tiesInUse\": false,\n          \"olympicsParticipation\": true,\n          \"conferencesInUse\": true,\n          \"divisionsInUse\": false,\n          \"gameTypeDates\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonLevelGamedayType\": \"string\",\n          \"gameLevelGamedayType\": \"string\",\n          \"qualifierPlateAppearances\": 8449.671662140188,\n          \"qualifierOutsPitched\": 6076.18078487611\n        },\n        \"activeStatus\": false\n      },\n      \"hasWildcard\": true,\n      \"sortOrder\": 9649,\n      \"numPlayoffTeams\": 2122,\n      \"active\": false\n    },\n    {\n      \"copyright\": \"string\",\n      \"id\": 216,\n      \"name\": \"string\",\n      \"season\": \"string\",\n      \"nameShort\": \"string\",\n      \"link\": \"string\",\n      \"abbreviation\": \"string\",\n      \"conference\": {\n        \"copyright\": \"string\",\n        \"id\": 2714,\n        \"name\": \"string\",\n        \"link\": \"string\"\n      },\n      \"league\": {\n        \"copyright\": \"string\",\n        \"id\": 315,\n        \"name\": \"string\",\n        \"link\": \"string\",\n        \"abbreviation\": \"string\",\n        \"nameShort\": \"string\",\n        \"seasonState\": \"string\",\n        \"hasWildCard\": false,\n        \"hasSplitSeason\": false,\n        \"numGames\": 6873,\n        \"hasPlayoffPoints\": true,\n        \"numTeams\": 3900,\n        \"numWildcardTeams\": 6531,\n        \"seasonDateInfo\": {\n          \"copyright\": \"string\",\n          \"seasonId\": \"string\",\n          \"hasWildcard\": true,\n          \"preSeasonStartDate\": \"1984-01-22\",\n          \"preSeasonEndDate\": \"1962-01-25\",\n          \"seasonStartDate\": \"2004-03-14\",\n          \"springStartDate\": \"1963-02-28\",\n          \"springEndDate\": \"1993-08-25\",\n          \"regularSeasonStartDate\": \"2010-07-11\",\n          \"lastDate1stHalf\": \"2014-12-22\",\n          \"allStarDate\": \"1957-01-03\",\n          \"firstDate2ndHalf\": \"1999-06-28\",\n          \"regularSeasonEndDate\": \"1957-10-13\",\n          \"postSeasonStartDate\": \"1987-02-05\",\n          \"postSeasonEndDate\": \"1973-10-04\",\n          \"seasonEndDate\": \"1986-05-05\",\n          \"offseasonStartDate\": \"1985-12-24\",\n          \"offSeasonEndDate\": \"1974-11-05\",\n          \"numberOfGames\": 5865,\n          \"tiesInUse\": false,\n          \"olympicsParticipation\": true,\n          \"conferencesInUse\": false,\n          \"divisionsInUse\": true,\n          \"gameTypeDates\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonLevelGamedayType\": \"string\",\n          \"gameLevelGamedayType\": \"string\",\n          \"qualifierPlateAppearances\": 9225.19978510622,\n          \"qualifierOutsPitched\": 6968.5895204947465\n        },\n        \"season\": \"string\",\n        \"orgCode\": \"string\",\n        \"conferencesInUse\": false,\n        \"divisionsInUse\": true,\n        \"sport\": {\n          \"copyright\": \"string\",\n          \"hydrations\": [\n            \"string\",\n            \"string\"\n          ],\n          \"id\": 2439,\n          \"code\": \"string\",\n          \"link\": \"string\",\n          \"name\": \"string\",\n          \"abbreviation\": \"string\",\n          \"sortOrder\": 4601,\n          \"deviceProperties\": {},\n          \"isAffiliated\": false,\n          \"ruleSettings\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonState\": \"string\",\n          \"seasonDateInfo\": {\n            \"copyright\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"hasWildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"preSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"preSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"springStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"springEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regularSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"lastDate1stHalf\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"allStarDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"firstDate2ndHalf\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regularSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"postSeasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"postSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"offseasonStartDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"offSeasonEndDate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberOfGames\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"tiesInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"olympicsParticipation\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"conferencesInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"divisionsInUse\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"gameTypeDates\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"seasonLevelGamedayType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"gameLevelGamedayType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"qualifierPlateAppearances\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"qualifierOutsPitched\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"activeStatus\": false\n        },\n        \"timeZone\": {\n          \"copyright\": \"string\",\n          \"id\": \"string\",\n          \"offset\": 792,\n          \"tz\": \"string\"\n        },\n        \"sortOrder\": 5156,\n        \"active\": false,\n        \"isAffiliated\": true,\n        \"ruleSettings\": [\n          {\n            \"playSettingId\": 8830,\n            \"settingId\": 2936,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 3316,\n            \"startDate\": \"2016-07-05\",\n            \"endDate\": \"2024-07-31\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": false,\n            \"sortOrder\": 8643\n          },\n          {\n            \"playSettingId\": 3875,\n            \"settingId\": 6685,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 6608,\n            \"startDate\": \"2020-06-28\",\n            \"endDate\": \"1947-03-12\",\n            \"inherited\": false,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": false,\n            \"sortOrder\": 8887\n          }\n        ]\n      },\n      \"sport\": {\n        \"copyright\": \"string\",\n        \"hydrations\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": 4403,\n        \"code\": \"string\",\n        \"link\": \"string\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"sortOrder\": 2740,\n        \"deviceProperties\": {},\n        \"isAffiliated\": false,\n        \"ruleSettings\": [\n          {\n            \"playSettingId\": 301,\n            \"settingId\": 6006,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 6489,\n            \"startDate\": \"2020-07-20\",\n            \"endDate\": \"1977-08-03\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": false,\n            \"sortOrder\": 2875\n          },\n          {\n            \"playSettingId\": 1333,\n            \"settingId\": 5272,\n            \"settingName\": \"string\",\n            \"settingDisplayName\": \"string\",\n            \"settingCategory\": \"string\",\n            \"settingCategoryCode\": \"string\",\n            \"settingDescription\": \"string\",\n            \"settingOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"valueType\": \"string\",\n            \"settingValue\": {},\n            \"settingScope\": \"string\",\n            \"priorityOverride\": 6051,\n            \"startDate\": \"1999-02-06\",\n            \"endDate\": \"2022-10-13\",\n            \"inherited\": true,\n            \"gameType\": \"string\",\n            \"allGameTypeStatus\": false,\n            \"sortOrder\": 3385\n          }\n        ],\n        \"seasonState\": \"string\",\n        \"seasonDateInfo\": {\n          \"copyright\": \"string\",\n          \"seasonId\": \"string\",\n          \"hasWildcard\": false,\n          \"preSeasonStartDate\": \"1976-03-26\",\n          \"preSeasonEndDate\": \"1993-01-17\",\n          \"seasonStartDate\": \"1999-10-15\",\n          \"springStartDate\": \"2014-03-15\",\n          \"springEndDate\": \"1949-12-15\",\n          \"regularSeasonStartDate\": \"1969-03-05\",\n          \"lastDate1stHalf\": \"1971-05-26\",\n          \"allStarDate\": \"1971-10-31\",\n          \"firstDate2ndHalf\": \"1973-12-19\",\n          \"regularSeasonEndDate\": \"1983-06-10\",\n          \"postSeasonStartDate\": \"2000-07-25\",\n          \"postSeasonEndDate\": \"1965-08-07\",\n          \"seasonEndDate\": \"2014-07-22\",\n          \"offseasonStartDate\": \"2020-01-26\",\n          \"offSeasonEndDate\": \"2003-10-20\",\n          \"numberOfGames\": 4293,\n          \"tiesInUse\": true,\n          \"olympicsParticipation\": true,\n          \"conferencesInUse\": true,\n          \"divisionsInUse\": false,\n          \"gameTypeDates\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"seasonLevelGamedayType\": \"string\",\n          \"gameLevelGamedayType\": \"string\",\n          \"qualifierPlateAppearances\": 446.92714927314523,\n          \"qualifierOutsPitched\": 8446.143765281631\n        },\n        \"activeStatus\": false\n      },\n      \"hasWildcard\": false,\n      \"sortOrder\": 2829,\n      \"numPlayoffTeams\": 1226,\n      \"active\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "914d0885-079d-4a1a-9114-7a0002a1f68e",
+    "name": "Stats API Documentation Analytics Division API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

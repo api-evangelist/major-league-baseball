@@ -1,0 +1,168 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Homerun Derby API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Homerun Derby",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View a home run derby object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/homeRunDerby/:gamePk/pool",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull home run derby information"
+        },
+        {
+          "info": {
+            "name": "View a home run derby object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/homeRunDerby/pool",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull home run derby information"
+        },
+        {
+          "info": {
+            "name": "View a home run derby object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/homeRunDerby/:gamePk",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull home run derby information"
+        },
+        {
+          "info": {
+            "name": "View a home run derby object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/homeRunDerby",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull home run derby information"
+        },
+        {
+          "info": {
+            "name": "View a home run derby object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/homeRunDerby/:gamePk/bracket",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull home run derby information"
+        },
+        {
+          "info": {
+            "name": "View a home run derby object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/homeRunDerby/bracket",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull home run derby information"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

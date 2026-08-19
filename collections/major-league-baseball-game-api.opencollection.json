@@ -1,0 +1,462 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Game API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Game",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get game play By Play",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:game_pk/playByPlay",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "inclusiveTimecode",
+                "value": "",
+                "type": "query",
+                "description": "True to include plays that happen before or at the specified timecode"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull the play by play of a game"
+        },
+        {
+          "info": {
+            "name": "Get game linescore",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:game_pk/linescore",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "inclusiveTimecode",
+                "value": "",
+                "type": "query",
+                "description": "True to include plays that happen before or at the specified timecode"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull the linescore for a game"
+        },
+        {
+          "info": {
+            "name": "Get game color feed.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:game_pk/feed/color",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This API can return very large payloads.  It is STRONGLY recommended that clients ask for diffs and use \"Accept-Encoding: gzip\" header."
+        },
+        {
+          "info": {
+            "name": "Retrieve all of the color timestamps for a game.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:game_pk/feed/color/timestamps",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              }
+            ]
+          },
+          "docs": "This can be used for replaying games.  Endpoint returns all of the timecodes that can be used with diffs for /v1/game/{game_pk}/feed/color"
+        },
+        {
+          "info": {
+            "name": "Retrieve all content for a game.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:game_pk/content",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "highlightLimit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              }
+            ]
+          },
+          "docs": "Retrieve all content for a game."
+        },
+        {
+          "info": {
+            "name": "Get game boxscore.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:game_pk/boxscore",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "inclusiveTimecode",
+                "value": "",
+                "type": "query",
+                "description": "True to include plays that happen before or at the specified timecode"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull a boxscore"
+        },
+        {
+          "info": {
+            "name": "Get game info with metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/withMetrics",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Get game info with metrics"
+        },
+        {
+          "info": {
+            "name": "Get the win probability for this game",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/winProbability",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "inclusiveTimecode",
+                "value": "",
+                "type": "query",
+                "description": "True to include plays that happen before or at the specified timecode"
+              }
+            ]
+          },
+          "docs": "Get the win probability for this game"
+        },
+        {
+          "info": {
+            "name": "Get the context metrics for this game based on its current state",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/contextMetrics",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Get the context metrics for this game based on its current state"
+        },
+        {
+          "info": {
+            "name": "View a game change log",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/changes",
+            "params": [
+              {
+                "name": "updatedSince",
+                "value": "",
+                "type": "query",
+                "description": "Format: YYYY-MM-DDTHH:MM:SSZ"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View a game change log"
+        },
+        {
+          "info": {
+            "name": "Get live game status.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1.1/game/:game_pk/feed/live",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "inclusiveTimecode",
+                "value": "",
+                "type": "query",
+                "description": "True to include plays that happen before or at the specified timecode"
+              }
+            ]
+          },
+          "docs": "This API can return very large payloads.  It is STRONGLY recommended that clients ask for diffs and use \"Accept-Encoding: gzip\" header."
+        },
+        {
+          "info": {
+            "name": "Retrieve all of the play timestamps for a game.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1.1/game/:game_pk/feed/live/timestamps",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              }
+            ]
+          },
+          "docs": "This can be used for replaying games.  Endpoint returns all of the timecodes that can be used with diffs for /v1/game/{game_pk}/feed/live"
+        },
+        {
+          "info": {
+            "name": "Get live game status.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1.1/game/:game_pk/feed/live/diffPatch",
+            "params": [
+              {
+                "name": "game_pk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "startTimecode",
+                "value": "",
+                "type": "query",
+                "description": "Start time code will give you everything since that time. Format: MMDDYYYY_HHMMSS"
+              },
+              {
+                "name": "endTimecode",
+                "value": "",
+                "type": "query",
+                "description": "End time code will give you a snapshot at that specific time. Format: MMDDYYYY_HHMMSS"
+              }
+            ]
+          },
+          "docs": "This endpoint allows comparison of game files and shows any differences/discrepancies between the two<br/><br/><b>Diff/Patch System:</b> startTimecode and endTimecode can be used for getting diffs.<br/>Expected usage:  <br/> 1) Request full payload by not passing startTimecode or endTimecode.  This will return the most recent game state.<br/> 2) Find the latest timecode in this response.  <br/> 3) Wait X seconds<br/> 4) Use the timecode from 2 as the startTimecode.  This will give you a diff of "
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

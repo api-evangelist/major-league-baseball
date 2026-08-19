@@ -1,0 +1,138 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Milestones API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Milestones",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View pending and achieved milestones.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/milestones",
+            "params": [
+              {
+                "name": "orgType",
+                "value": "",
+                "type": "query",
+                "description": "Organization level. Format: T(Team), L(League), S(Sport)"
+              },
+              {
+                "name": "achievementStatuses",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of milestone achievement types"
+              },
+              {
+                "name": "milestoneTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of milestone types"
+              },
+              {
+                "name": "isLastAchievement",
+                "value": "",
+                "type": "query",
+                "description": "Filters out milestones that have already been surpassed."
+              },
+              {
+                "name": "milestoneStatistics",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of milestone statistics"
+              },
+              {
+                "name": "milestoneValues",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of milestone values"
+              },
+              {
+                "name": "playerIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for players"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique Team identifiers"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "statGroup",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique venue identifiers"
+              },
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View pending and achieved milestones."
+        },
+        {
+          "info": {
+            "name": "View available milestoneType options",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/milestoneLookups"
+          },
+          "docs": "View available milestoneType options"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

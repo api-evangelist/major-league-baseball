@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Biomechanics API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Biomechanics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View Biomechanical data by playId and gameId filtered by player positionId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/game/:gamePk/:playId/analytics/biomechanics/:positionId",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "playId",
+                "value": "",
+                "type": "path",
+                "description": "Unique play identifier"
+              },
+              {
+                "name": "positionId",
+                "value": "",
+                "type": "path",
+                "description": "Position number. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull biomechanical tracking data by gameId and playId filtered by player positionId"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

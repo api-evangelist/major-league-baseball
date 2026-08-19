@@ -1,0 +1,1003 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Teams API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View all team alumni",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/alumni",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View all team alumni"
+        },
+        {
+          "info": {
+            "name": "updateAlumni",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/alumni",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "View stats for an individual team. ",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/stats",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "stats",
+                "value": "",
+                "type": "query",
+                "description": "Type of statistics. Format: Individual, Team, Career, etc. Available types in /api/v1/statTypes"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "sortStat",
+                "value": "",
+                "type": "query",
+                "description": "Baseball stat to sort splits by."
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "groupBy",
+                "value": "",
+                "type": "query",
+                "description": "Group stats by PLAYER, TEAM, SEASON, VENUE, SPORT or STAT_GROUP"
+              },
+              {
+                "name": "opposingTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "opposingPlayerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team"
+              },
+              {
+                "name": "sitCodes",
+                "value": "",
+                "type": "query",
+                "description": "Situation code for a given stat split."
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View stats for an individual team. "
+        },
+        {
+          "info": {
+            "name": "View a teams info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/roster",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "rosterType",
+                "value": "",
+                "type": "path",
+                "description": "Type of roster. Available types in /api/v1/rosterTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull teams"
+        },
+        {
+          "info": {
+            "name": "View a teams info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/roster/:rosterType",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "rosterType",
+                "value": "",
+                "type": "path",
+                "description": "Type of roster. Available types in /api/v1/rosterTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull teams"
+        },
+        {
+          "info": {
+            "name": "View all coaches for a team",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/personnel",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View all coaches for a team"
+        },
+        {
+          "info": {
+            "name": "View team stat leaders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/leaders",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "leaderCategories",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "leaderGameTypes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "expand",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "playerPool",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View team stat leaders"
+        },
+        {
+          "info": {
+            "name": "View historical records for a list of teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/history",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique Team identifiers"
+              },
+              {
+                "name": "startSeason",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (used with end date optionally). Example: '2018' or '2018.2'"
+              },
+              {
+                "name": "endSeason",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (used with start date optionally). Format: '2018' or '2018.2'"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View historical records for a list of teams"
+        },
+        {
+          "info": {
+            "name": "View historical records for a list of teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/history",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique Team identifiers"
+              },
+              {
+                "name": "startSeason",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (used with end date optionally). Example: '2018' or '2018.2'"
+              },
+              {
+                "name": "endSeason",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (used with start date optionally). Format: '2018' or '2018.2'"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View historical records for a list of teams"
+        },
+        {
+          "info": {
+            "name": "View all coaches for a team",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/coaches",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View all coaches for a team"
+        },
+        {
+          "info": {
+            "name": "View team and affiliate teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId/affiliates",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View team and affiliate teams"
+        },
+        {
+          "info": {
+            "name": "View team and affiliate teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/affiliates",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View team and affiliate teams"
+        },
+        {
+          "info": {
+            "name": "View a teams stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/stats",
+            "params": [
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "stats",
+                "value": "",
+                "type": "query",
+                "description": "Type of statistics. Format: Individual, Team, Career, etc. Available types in /api/v1/statTypes"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "sortStat",
+                "value": "",
+                "type": "query",
+                "description": "Baseball stat to sort splits by."
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "daysBack",
+                "value": "",
+                "type": "query",
+                "description": "Returns results from the last 'X' days (Starting from yesterday)."
+              },
+              {
+                "name": "sitCodes",
+                "value": "",
+                "type": "query",
+                "description": "Situation code for a given stat split."
+              },
+              {
+                "name": "combineSits",
+                "value": "",
+                "type": "query",
+                "description": "If true, gathers stats where all of the situational criteria are met. If false, returns stats where any of the situational criteria are met. Default: false"
+              },
+              {
+                "name": "opposingTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View a teams stats"
+        },
+        {
+          "info": {
+            "name": "View leaders for team stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/stats/leaders",
+            "params": [
+              {
+                "name": "leaderCategories",
+                "value": "",
+                "type": "query",
+                "description": "TBD"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "stats",
+                "value": "",
+                "type": "query",
+                "description": "Type of statistics. Format: Individual, Team, Career, etc. Available types in /api/v1/statTypes"
+              },
+              {
+                "name": "statType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "statGroup",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "daysBack",
+                "value": "",
+                "type": "query",
+                "description": "Returns results from the last 'X' days (Starting from yesterday)."
+              },
+              {
+                "name": "sitCodes",
+                "value": "",
+                "type": "query",
+                "description": "Situation code for a given stat split."
+              },
+              {
+                "name": "opposingTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View leaders for team stats"
+        },
+        {
+          "info": {
+            "name": "View info for all teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "divisionId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Division Identifier"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "activeStatus",
+                "value": "",
+                "type": "query",
+                "description": "Flag for fetching teams that are currently active (Y), inactive (N), pending (P), or all teams (B)"
+              },
+              {
+                "name": "leagueListId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League List Identifier"
+              },
+              {
+                "name": "allStarStatuses",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull teams"
+        },
+        {
+          "info": {
+            "name": "View info for all teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/teams/:teamId",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "divisionId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Division Identifier"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "activeStatus",
+                "value": "",
+                "type": "query",
+                "description": "Flag for fetching teams that are currently active (Y), inactive (N), pending (P), or all teams (B)"
+              },
+              {
+                "name": "leagueListId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League List Identifier"
+              },
+              {
+                "name": "allStarStatuses",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull teams"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

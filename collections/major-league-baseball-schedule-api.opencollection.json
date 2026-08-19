@@ -1,0 +1,991 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Schedule API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Schedule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "postseasonSchedule_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/postseason",
+            "params": [
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "seriesNumber",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "useLatestGames",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "useFeaturedGame",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "publicFacing",
+                "value": "",
+                "type": "query",
+                "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull postseason schedules"
+        },
+        {
+          "info": {
+            "name": "postseasonSchedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/postseason",
+            "params": [
+              {
+                "name": "season",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "trackingEventsSchedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/trackingEvents",
+            "params": [
+              {
+                "name": "calendarTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of calendar types"
+              },
+              {
+                "name": "eventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "eventIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-game event"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "performerIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-team event performers"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "useLatestGames",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "opponentId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "publicFacing",
+                "value": "",
+                "type": "query",
+                "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull schedules for tracking events"
+        },
+        {
+          "info": {
+            "name": "schedulePrivate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/private",
+            "params": [
+              {
+                "name": "calendarTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of calendar types"
+              },
+              {
+                "name": "eventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+              },
+              {
+                "name": "scheduleEventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of event types"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "eventIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-game event"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "performerIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-team event performers"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "useLatestGames",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "opponentId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "publicFacing",
+                "value": "",
+                "type": "query",
+                "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull schedules with authentication enforced and a \"no-cache\" cache-control policy"
+        },
+        {
+          "info": {
+            "name": "schedulePrivate_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/private/:scheduleType",
+            "params": [
+              {
+                "name": "calendarTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of calendar types"
+              },
+              {
+                "name": "eventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+              },
+              {
+                "name": "scheduleEventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of event types"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "eventIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-game event"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "performerIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-team event performers"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "useLatestGames",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "opponentId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "publicFacing",
+                "value": "",
+                "type": "query",
+                "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull schedules with authentication enforced and a \"no-cache\" cache-control policy"
+        },
+        {
+          "info": {
+            "name": "tuneIn",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/postseason/tuneIn",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull postseason schedules"
+        },
+        {
+          "info": {
+            "name": "postseasonScheduleSeries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/postseason/series",
+            "params": [
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "seriesNumber",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "useLatestGames",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "useFeaturedGame",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull postseason schedules"
+        },
+        {
+          "info": {
+            "name": "tieGames",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/games/tied",
+            "params": [
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull tie game schedules for the given season"
+        },
+        {
+          "info": {
+            "name": "schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule",
+            "params": [
+              {
+                "name": "calendarTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of calendar types"
+              },
+              {
+                "name": "eventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+              },
+              {
+                "name": "scheduleEventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of event types"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "eventIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-game event"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "performerIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-team event performers"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "useLatestGames",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "opponentId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "publicFacing",
+                "value": "",
+                "type": "query",
+                "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View schedule info. This endpoint allows you to pull schedules"
+        },
+        {
+          "info": {
+            "name": "schedule_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/schedule/:scheduleType",
+            "params": [
+              {
+                "name": "calendarTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of calendar types"
+              },
+              {
+                "name": "eventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of events. <b>Note: Don't Use. This will be deprecated in favor of calendarTypes</b>"
+              },
+              {
+                "name": "scheduleEventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of event types"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "eventIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-game event"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "performerIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for non-team event performers"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query",
+                "description": "Use this parameter to return a snapshot of the data at the specified time. Format: YYYYMMDD_HHMMSS"
+              },
+              {
+                "name": "useLatestGames",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "opponentId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "publicFacing",
+                "value": "",
+                "type": "query",
+                "description": "Return public, non-public or all games. Format: Public Facing = 'Y', Non-Public Facing = 'N', All = 'A'"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "View schedule info. This endpoint allows you to pull schedules"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

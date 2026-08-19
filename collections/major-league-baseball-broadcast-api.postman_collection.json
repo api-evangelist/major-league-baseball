@@ -1,0 +1,139 @@
+{
+  "item": [
+    {
+      "id": "86799cd0-a849-4019-afaa-3d9221bdc5f2",
+      "name": "Broadcast",
+      "description": {
+        "content": "The broadcast endpoints return information pertaining to broadcasters.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e0b3e35b-6c40-480d-99e9-9791c6436d92",
+          "name": "Get Broadcasts",
+          "request": {
+            "name": "Get Broadcasts",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "broadcast"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "broadcasterIds",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "broadcasterIds",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9a8860fd-cb05-4cfa-8e00-a0321c914d3c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "broadcast"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "broadcasterIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "broadcasterIds",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 3379,\n    \"name\": \"string\",\n    \"type\": \"string\",\n    \"site\": \"string\",\n    \"language\": \"string\",\n    \"copyright\": \"string\",\n    \"homeAway\": \"string\",\n    \"isNational\": true,\n    \"sourceUrl\": \"string\",\n    \"callSign\": \"string\",\n    \"videoResolution\": {\n      \"code\": \"string\",\n      \"resolutionShort\": \"string\",\n      \"resolutionFull\": \"string\"\n    }\n  },\n  {\n    \"id\": 1411,\n    \"name\": \"string\",\n    \"type\": \"string\",\n    \"site\": \"string\",\n    \"language\": \"string\",\n    \"copyright\": \"string\",\n    \"homeAway\": \"string\",\n    \"isNational\": true,\n    \"sourceUrl\": \"string\",\n    \"callSign\": \"string\",\n    \"videoResolution\": {\n      \"code\": \"string\",\n      \"resolutionShort\": \"string\",\n      \"resolutionFull\": \"string\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "41498dde-fb68-4759-89e0-d37a2b40f483",
+    "name": "Stats API Documentation Analytics Broadcast API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

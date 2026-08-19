@@ -1,0 +1,178 @@
+{
+  "item": [
+    {
+      "id": "1482708d-a133-4309-a3da-9c74b156c95c",
+      "name": "Biomechanics",
+      "description": {
+        "content": "Operations pertaining to biomechanical data ",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "780662f0-0af2-486b-9cb5-b6e6858789d6",
+          "name": "View Biomechanical data by playId and gameId filtered by player positionId",
+          "request": {
+            "name": "View Biomechanical data by playId and gameId filtered by player positionId",
+            "description": {
+              "content": "This endpoint allows you to pull biomechanical tracking data by gameId and playId filtered by player positionId",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "game",
+                ":gamePk",
+                ":playId",
+                "analytics",
+                "biomechanics",
+                ":positionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "gamePk",
+                  "description": "(Required) Unique Primary Key Representing a Game"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "playId",
+                  "description": "(Required) Unique play identifier"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "positionId",
+                  "description": "(Required) Position number. Format: 1, 2, 3, etc"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67e0ec82-7123-4ae3-ab15-2bf5bef201eb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "game",
+                    ":gamePk",
+                    ":playId",
+                    "analytics",
+                    "biomechanics",
+                    ":positionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "gamePk",
+                      "description": "(Required) Unique Primary Key Representing a Game"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "playId",
+                      "description": "(Required) Unique play identifier"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "positionId",
+                      "description": "(Required) Position number. Format: 1, 2, 3, etc"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"skeletalData\": {\n    \"copyright\": \"string\",\n    \"frames\": [\n      {\n        \"copyright\": \"string\",\n        \"positions\": [\n          {\n            \"copyright\": \"string\",\n            \"code\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"abbreviation\": \"string\"\n          },\n          {\n            \"copyright\": \"string\",\n            \"code\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"abbreviation\": \"string\"\n          }\n        ],\n        \"timeStamp\": \"string\"\n      },\n      {\n        \"copyright\": \"string\",\n        \"positions\": [\n          {\n            \"copyright\": \"string\",\n            \"code\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"abbreviation\": \"string\"\n          },\n          {\n            \"copyright\": \"string\",\n            \"code\": \"string\",\n            \"name\": \"string\",\n            \"type\": \"string\",\n            \"abbreviation\": \"string\"\n          }\n        ],\n        \"timeStamp\": \"string\"\n      }\n    ],\n    \"jointMetaData\": {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8e3ef093-4d31-43d9-af09-763ce31447a9",
+    "name": "Stats API Documentation Analytics Biomechanics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

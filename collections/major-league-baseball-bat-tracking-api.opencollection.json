@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Bat Tracking API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Bat Tracking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View Bat Tracking Data by playId and gameId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/batTracking/game/:gamePk/:playId",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "path",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "playId",
+                "value": "",
+                "type": "path",
+                "description": "Unique play identifier"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull bat tracking data by gameId and playId"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

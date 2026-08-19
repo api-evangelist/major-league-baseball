@@ -1,0 +1,715 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Config API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Config",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all job types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/jobTypes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all job types"
+        },
+        {
+          "info": {
+            "name": "updateJobTypes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://statsapi.mlb.com/api/v1/jobTypes"
+          }
+        },
+        {
+          "info": {
+            "name": "List all status types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/gameStatus"
+          },
+          "docs": "List all status types"
+        },
+        {
+          "info": {
+            "name": "Clear all status types",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://statsapi.mlb.com/api/v1/gameStatus"
+          },
+          "docs": "Clear all status types"
+        },
+        {
+          "info": {
+            "name": "List all wind direction options",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/windDirection",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all wind direction options"
+        },
+        {
+          "info": {
+            "name": "List all weather trajectories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/weatherTrajectoryConfidences"
+          },
+          "docs": "List all weather trajectories"
+        },
+        {
+          "info": {
+            "name": "View available violationType options",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/violationTypes"
+          },
+          "docs": "View available violationType options"
+        },
+        {
+          "info": {
+            "name": "List all hit trajectories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/transactionTypes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all hit trajectories"
+        },
+        {
+          "info": {
+            "name": "List all tracking versions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/trackingVersions"
+          },
+          "docs": "List all tracking versions"
+        },
+        {
+          "info": {
+            "name": "List all tracking vendors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/trackingVendors"
+          },
+          "docs": "List all tracking vendors"
+        },
+        {
+          "info": {
+            "name": "List stat search stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/search/stats",
+            "params": [
+              {
+                "name": "Categories of filters for stat search",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List stat search stats"
+        },
+        {
+          "info": {
+            "name": "List stat search parameters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/search/params",
+            "params": [
+              {
+                "name": "Categories of filters for stat search",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List stat search parameters"
+        },
+        {
+          "info": {
+            "name": "List groupBy types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/search/groupByTypes",
+            "params": [
+              {
+                "name": "Categories of filters for stat search",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List groupBy types"
+        },
+        {
+          "info": {
+            "name": "Stats Search Config Endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/search/config",
+            "params": [
+              {
+                "name": "Categories of filters for stat search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Category of statistic to return. Available types in /api/v1/statGroups",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Stats Search Config Endpoint"
+        },
+        {
+          "info": {
+            "name": "List all statcast position types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/statcastPositionTypes"
+          },
+          "docs": "List all statcast position types"
+        },
+        {
+          "info": {
+            "name": "List all stat types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/statTypes"
+          },
+          "docs": "List all stat types"
+        },
+        {
+          "info": {
+            "name": "List all stat groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/statGroups"
+          },
+          "docs": "List all stat groups"
+        },
+        {
+          "info": {
+            "name": "List all stat fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/statFields"
+          },
+          "docs": "List all stat fields"
+        },
+        {
+          "info": {
+            "name": "List all standings types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/standingsTypes"
+          },
+          "docs": "List all standings types"
+        },
+        {
+          "info": {
+            "name": "List all stat fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/sortModifiers"
+          },
+          "docs": "List all stat fields"
+        },
+        {
+          "info": {
+            "name": "List all sky options",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/sky",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all sky options"
+        },
+        {
+          "info": {
+            "name": "List all situation codes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/situationCodes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Season of play",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Category of statistic to return. Available types in /api/v1/statGroups",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all situation codes"
+        },
+        {
+          "info": {
+            "name": "List all possible schedule types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/scheduleTypes"
+          },
+          "docs": "List all possible schedule types"
+        },
+        {
+          "info": {
+            "name": "List all event types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/scheduleEventTypes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all event types"
+        },
+        {
+          "info": {
+            "name": "List runner detail types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/runnerDetailTypes"
+          },
+          "docs": "List runner detail types"
+        },
+        {
+          "info": {
+            "name": "List all ruleSettings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/ruleSettings"
+          },
+          "docs": "List all ruleSettings"
+        },
+        {
+          "info": {
+            "name": "List all possible roster types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/rosterTypes"
+          },
+          "docs": "List all possible roster types"
+        },
+        {
+          "info": {
+            "name": "List all roof types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/roofTypes"
+          },
+          "docs": "List all roof types"
+        },
+        {
+          "info": {
+            "name": "List all replay review reasons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/reviewReasons",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all replay review reasons"
+        },
+        {
+          "info": {
+            "name": "List all possible positions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/positions"
+          },
+          "docs": "List all possible positions"
+        },
+        {
+          "info": {
+            "name": "List all player status codes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/playerStatusCodes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all player status codes"
+        },
+        {
+          "info": {
+            "name": "List all possible platforms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/platforms"
+          },
+          "docs": "List all possible platforms"
+        },
+        {
+          "info": {
+            "name": "List all pitch classification types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/pitchTypes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all pitch classification types"
+        },
+        {
+          "info": {
+            "name": "List all pitch codes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/pitchCodes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all pitch codes"
+        },
+        {
+          "info": {
+            "name": "List all possible performer types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/performerTypes"
+          },
+          "docs": "List all possible performer types"
+        },
+        {
+          "info": {
+            "name": "List all possible metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/metrics"
+          },
+          "docs": "List all possible metrics"
+        },
+        {
+          "info": {
+            "name": "View all lookup values",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/lookup/values/all"
+          },
+          "docs": "View all lookup values"
+        },
+        {
+          "info": {
+            "name": "List all logical event types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/logicalEvents",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all logical event types"
+        },
+        {
+          "info": {
+            "name": "List all possible player league leader types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/leagueLeaderTypes"
+          },
+          "docs": "List all possible player league leader types"
+        },
+        {
+          "info": {
+            "name": "List all support languages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/languages"
+          },
+          "docs": "List all support languages"
+        },
+        {
+          "info": {
+            "name": "List all hit trajectories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/hitTrajectories",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all hit trajectories"
+        },
+        {
+          "info": {
+            "name": "List groupBy types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/groupByTypes"
+          },
+          "docs": "List groupBy types"
+        },
+        {
+          "info": {
+            "name": "List all gameday types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/gamedayTypes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all gameday types"
+        },
+        {
+          "info": {
+            "name": "List all game types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/gameTypes",
+            "params": [
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "Unique League Identifier",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Season of play",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all game types"
+        },
+        {
+          "info": {
+            "name": "List fielder detail types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/fielderDetailTypes"
+          },
+          "docs": "List fielder detail types"
+        },
+        {
+          "info": {
+            "name": "List all event types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/eventTypes",
+            "params": [
+              {
+                "name": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all event types"
+        },
+        {
+          "info": {
+            "name": "List all possible event status types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/eventStatus"
+          },
+          "docs": "List all possible event status types"
+        },
+        {
+          "info": {
+            "name": "List all tracking vendors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/coachingVideoTypes"
+          },
+          "docs": "List all tracking vendors"
+        },
+        {
+          "info": {
+            "name": "List all baseball stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/baseballStats"
+          },
+          "docs": "List all baseball stats"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

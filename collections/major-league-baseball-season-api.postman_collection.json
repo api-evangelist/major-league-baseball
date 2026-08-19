@@ -1,0 +1,464 @@
+{
+  "item": [
+    {
+      "id": "6ec3da31-a298-4d38-8b24-bb55ad228e7a",
+      "name": "Season",
+      "description": {
+        "content": "Operations pertaining to seasons",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "68fe865c-2f96-466f-9e08-651ff2bbe9fc",
+          "name": "View all seasons",
+          "request": {
+            "name": "View all seasons",
+            "description": {
+              "content": "This endpoint allows you to view all seasons for a given Division, League or Sport. One of the following parameters must be present: `divisionId`, `leagueId` or `sportId`.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "seasons",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "divisionId",
+                  "value": "<integer>",
+                  "description": "Unique Division Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "leagueId",
+                  "value": "<integer>",
+                  "description": "Unique League Identifier"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "withGameTypeDates",
+                  "value": "<boolean>",
+                  "description": "Retrieve dates for each game type"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "42e71f1b-929c-4083-8b3c-e67dec6a0644",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "seasons",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "divisionId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "leagueId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "withGameTypeDates",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"seasons\": [\n    {\n      \"copyright\": \"string\",\n      \"seasonId\": \"string\",\n      \"hasWildcard\": true,\n      \"preSeasonStartDate\": \"2002-06-02\",\n      \"preSeasonEndDate\": \"2006-12-20\",\n      \"seasonStartDate\": \"1998-11-18\",\n      \"springStartDate\": \"1973-05-08\",\n      \"springEndDate\": \"1950-08-13\",\n      \"regularSeasonStartDate\": \"1973-04-10\",\n      \"lastDate1stHalf\": \"1976-03-10\",\n      \"allStarDate\": \"1987-06-08\",\n      \"firstDate2ndHalf\": \"2013-05-09\",\n      \"regularSeasonEndDate\": \"1972-02-07\",\n      \"postSeasonStartDate\": \"1998-05-24\",\n      \"postSeasonEndDate\": \"1976-03-21\",\n      \"seasonEndDate\": \"2015-04-18\",\n      \"offseasonStartDate\": \"2010-10-14\",\n      \"offSeasonEndDate\": \"2012-09-13\",\n      \"numberOfGames\": 7094,\n      \"tiesInUse\": true,\n      \"olympicsParticipation\": false,\n      \"conferencesInUse\": true,\n      \"divisionsInUse\": false,\n      \"gameTypeDates\": [\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1987-10-12\",\n          \"endDate\": \"1996-06-11\",\n          \"season\": \"string\",\n          \"roundRobin\": false,\n          \"playoffs\": false,\n          \"playoffRound\": 1465,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 6152,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": false,\n            \"hasSplitSeason\": false,\n            \"numGames\": 7231,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 3580,\n            \"numWildcardTeams\": 4778,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": true,\n            \"divisionsInUse\": false,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 119,\n            \"active\": true,\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 8594,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 5278,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": true\n          },\n          \"gameType\": \"INTRASQUAD\"\n        },\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1992-09-13\",\n          \"endDate\": \"2022-09-20\",\n          \"season\": \"string\",\n          \"roundRobin\": false,\n          \"playoffs\": true,\n          \"playoffRound\": 8629,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 6733,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": false,\n            \"hasSplitSeason\": true,\n            \"numGames\": 1261,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 9629,\n            \"numWildcardTeams\": 3143,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": true,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 209,\n            \"active\": false,\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 5473,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 6633,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": true\n          },\n          \"gameType\": \"DIVISION_SERIES\"\n        }\n      ],\n      \"seasonLevelGamedayType\": \"string\",\n      \"gameLevelGamedayType\": \"string\",\n      \"qualifierPlateAppearances\": 7222.0060812863385,\n      \"qualifierOutsPitched\": 7006.674158477076\n    },\n    {\n      \"copyright\": \"string\",\n      \"seasonId\": \"string\",\n      \"hasWildcard\": true,\n      \"preSeasonStartDate\": \"1990-02-21\",\n      \"preSeasonEndDate\": \"1987-04-05\",\n      \"seasonStartDate\": \"1956-03-28\",\n      \"springStartDate\": \"1967-01-25\",\n      \"springEndDate\": \"1956-04-07\",\n      \"regularSeasonStartDate\": \"2018-05-16\",\n      \"lastDate1stHalf\": \"1952-11-10\",\n      \"allStarDate\": \"1981-03-10\",\n      \"firstDate2ndHalf\": \"2007-05-02\",\n      \"regularSeasonEndDate\": \"1969-01-19\",\n      \"postSeasonStartDate\": \"1952-08-07\",\n      \"postSeasonEndDate\": \"1965-02-14\",\n      \"seasonEndDate\": \"1995-02-26\",\n      \"offseasonStartDate\": \"1954-05-01\",\n      \"offSeasonEndDate\": \"1947-01-10\",\n      \"numberOfGames\": 4194,\n      \"tiesInUse\": false,\n      \"olympicsParticipation\": true,\n      \"conferencesInUse\": false,\n      \"divisionsInUse\": true,\n      \"gameTypeDates\": [\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"2014-02-08\",\n          \"endDate\": \"1952-01-24\",\n          \"season\": \"string\",\n          \"roundRobin\": true,\n          \"playoffs\": true,\n          \"playoffRound\": 9100,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 3237,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": true,\n            \"hasSplitSeason\": false,\n            \"numGames\": 4893,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 2687,\n            \"numWildcardTeams\": 7207,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": false,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 6083,\n            \"active\": false,\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 7767,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 8125,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": true\n          },\n          \"gameType\": \"WORLD_SERIES\"\n        },\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1975-06-16\",\n          \"endDate\": \"1969-12-06\",\n          \"season\": \"string\",\n          \"roundRobin\": true,\n          \"playoffs\": false,\n          \"playoffRound\": 3717,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 2567,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": false,\n            \"hasSplitSeason\": false,\n            \"numGames\": 563,\n            \"hasPlayoffPoints\": false,\n            \"numTeams\": 4007,\n            \"numWildcardTeams\": 7387,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": true,\n            \"divisionsInUse\": true,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 5257,\n            \"active\": true,\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 8672,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 4133,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": true\n          },\n          \"gameType\": \"WORLD_SERIES\"\n        }\n      ],\n      \"seasonLevelGamedayType\": \"string\",\n      \"gameLevelGamedayType\": \"string\",\n      \"qualifierPlateAppearances\": 3981.408759090821,\n      \"qualifierOutsPitched\": 2178.586933691877\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d971cd00-c2af-42f6-8c19-278db2e6eb0c",
+          "name": "View season info",
+          "request": {
+            "name": "View season info",
+            "description": {
+              "content": "This endpoint returns season info for a specific sport. The `sportId` parameter is required.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "seasons"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "(Required) Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "withGameTypeDates",
+                  "value": "<boolean>",
+                  "description": "Retrieve dates for each game type"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "seasonId",
+                  "description": "(Required) Season of play"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "69028233-34b0-4294-9ff5-10d5f84f7e41",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "seasons"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "withGameTypeDates",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "seasonId",
+                      "description": "(Required) Season of play"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"seasons\": [\n    {\n      \"copyright\": \"string\",\n      \"seasonId\": \"string\",\n      \"hasWildcard\": false,\n      \"preSeasonStartDate\": \"1960-05-06\",\n      \"preSeasonEndDate\": \"1964-03-01\",\n      \"seasonStartDate\": \"2006-07-29\",\n      \"springStartDate\": \"2018-10-26\",\n      \"springEndDate\": \"1952-10-13\",\n      \"regularSeasonStartDate\": \"1977-09-11\",\n      \"lastDate1stHalf\": \"1995-02-10\",\n      \"allStarDate\": \"1988-04-11\",\n      \"firstDate2ndHalf\": \"1998-11-27\",\n      \"regularSeasonEndDate\": \"1985-07-01\",\n      \"postSeasonStartDate\": \"1972-04-21\",\n      \"postSeasonEndDate\": \"1999-02-13\",\n      \"seasonEndDate\": \"1957-11-06\",\n      \"offseasonStartDate\": \"1973-11-10\",\n      \"offSeasonEndDate\": \"1995-12-09\",\n      \"numberOfGames\": 8382,\n      \"tiesInUse\": false,\n      \"olympicsParticipation\": false,\n      \"conferencesInUse\": false,\n      \"divisionsInUse\": false,\n      \"gameTypeDates\": [\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1950-10-07\",\n          \"endDate\": \"1962-05-08\",\n          \"season\": \"string\",\n          \"roundRobin\": true,\n          \"playoffs\": false,\n          \"playoffRound\": 5328,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 2649,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": false,\n            \"hasSplitSeason\": false,\n            \"numGames\": 2369,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 6572,\n            \"numWildcardTeams\": 1155,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": true,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 4892,\n            \"active\": false,\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 4263,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 9959,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": false\n          },\n          \"gameType\": \"SPRING_TRAINING\"\n        },\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1970-12-21\",\n          \"endDate\": \"2004-12-27\",\n          \"season\": \"string\",\n          \"roundRobin\": true,\n          \"playoffs\": true,\n          \"playoffRound\": 9499,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 3930,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": true,\n            \"hasSplitSeason\": false,\n            \"numGames\": 4050,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 51,\n            \"numWildcardTeams\": 9498,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": true,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 7223,\n            \"active\": false,\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 582,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 6564,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": true\n          },\n          \"gameType\": \"SPRING_TRAINING\"\n        }\n      ],\n      \"seasonLevelGamedayType\": \"string\",\n      \"gameLevelGamedayType\": \"string\",\n      \"qualifierPlateAppearances\": 3082.7888438610694,\n      \"qualifierOutsPitched\": 1252.5425450085804\n    },\n    {\n      \"copyright\": \"string\",\n      \"seasonId\": \"string\",\n      \"hasWildcard\": false,\n      \"preSeasonStartDate\": \"1985-09-29\",\n      \"preSeasonEndDate\": \"2011-09-23\",\n      \"seasonStartDate\": \"1999-03-06\",\n      \"springStartDate\": \"1957-11-15\",\n      \"springEndDate\": \"2008-08-11\",\n      \"regularSeasonStartDate\": \"1960-06-29\",\n      \"lastDate1stHalf\": \"1990-10-17\",\n      \"allStarDate\": \"1979-08-13\",\n      \"firstDate2ndHalf\": \"2003-03-29\",\n      \"regularSeasonEndDate\": \"1960-08-05\",\n      \"postSeasonStartDate\": \"1965-07-10\",\n      \"postSeasonEndDate\": \"1947-05-18\",\n      \"seasonEndDate\": \"1965-09-06\",\n      \"offseasonStartDate\": \"1969-01-22\",\n      \"offSeasonEndDate\": \"2026-07-01\",\n      \"numberOfGames\": 7969,\n      \"tiesInUse\": true,\n      \"olympicsParticipation\": true,\n      \"conferencesInUse\": true,\n      \"divisionsInUse\": false,\n      \"gameTypeDates\": [\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"2018-05-12\",\n          \"endDate\": \"1976-05-07\",\n          \"season\": \"string\",\n          \"roundRobin\": false,\n          \"playoffs\": false,\n          \"playoffRound\": 5271,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 7206,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": true,\n            \"hasSplitSeason\": false,\n            \"numGames\": 6816,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 5113,\n            \"numWildcardTeams\": 4860,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": false,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 6990,\n            \"active\": false,\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 1061,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 3128,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": true\n          },\n          \"gameType\": \"PLAYOFFS\"\n        },\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1964-06-11\",\n          \"endDate\": \"1997-04-17\",\n          \"season\": \"string\",\n          \"roundRobin\": false,\n          \"playoffs\": true,\n          \"playoffRound\": 8204,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 7603,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": true,\n            \"hasSplitSeason\": false,\n            \"numGames\": 5822,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 7540,\n            \"numWildcardTeams\": 8829,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": false,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 3035,\n            \"active\": false,\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 3032,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 6735,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": false\n          },\n          \"gameType\": \"WORLD_SERIES\"\n        }\n      ],\n      \"seasonLevelGamedayType\": \"string\",\n      \"gameLevelGamedayType\": \"string\",\n      \"qualifierPlateAppearances\": 4799.2420815307105,\n      \"qualifierOutsPitched\": 5933.5929303843095\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4bdd3937-32e4-4ec5-8204-b775707b046d",
+          "name": "View season info",
+          "request": {
+            "name": "View season info",
+            "description": {
+              "content": "This endpoint returns season info for a specific sport. The `sportId` parameter is required.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "seasons",
+                ":seasonId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "season",
+                  "value": "<string>",
+                  "description": "Season of play"
+                },
+                {
+                  "disabled": false,
+                  "key": "sportId",
+                  "value": "<integer>",
+                  "description": "(Required) Top level organization of a sport"
+                },
+                {
+                  "disabled": false,
+                  "key": "withGameTypeDates",
+                  "value": "<boolean>",
+                  "description": "Retrieve dates for each game type"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "seasonId",
+                  "description": "(Required) Season of play"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "83a4a473-9e59-43bb-9861-ce048ae4fe80",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "seasons",
+                    ":seasonId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "season",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sportId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "withGameTypeDates",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "seasonId",
+                      "description": "(Required) Season of play"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"copyright\": \"string\",\n  \"seasons\": [\n    {\n      \"copyright\": \"string\",\n      \"seasonId\": \"string\",\n      \"hasWildcard\": false,\n      \"preSeasonStartDate\": \"1960-05-06\",\n      \"preSeasonEndDate\": \"1964-03-01\",\n      \"seasonStartDate\": \"2006-07-29\",\n      \"springStartDate\": \"2018-10-26\",\n      \"springEndDate\": \"1952-10-13\",\n      \"regularSeasonStartDate\": \"1977-09-11\",\n      \"lastDate1stHalf\": \"1995-02-10\",\n      \"allStarDate\": \"1988-04-11\",\n      \"firstDate2ndHalf\": \"1998-11-27\",\n      \"regularSeasonEndDate\": \"1985-07-01\",\n      \"postSeasonStartDate\": \"1972-04-21\",\n      \"postSeasonEndDate\": \"1999-02-13\",\n      \"seasonEndDate\": \"1957-11-06\",\n      \"offseasonStartDate\": \"1973-11-10\",\n      \"offSeasonEndDate\": \"1995-12-09\",\n      \"numberOfGames\": 8382,\n      \"tiesInUse\": false,\n      \"olympicsParticipation\": false,\n      \"conferencesInUse\": false,\n      \"divisionsInUse\": false,\n      \"gameTypeDates\": [\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1950-10-07\",\n          \"endDate\": \"1962-05-08\",\n          \"season\": \"string\",\n          \"roundRobin\": true,\n          \"playoffs\": false,\n          \"playoffRound\": 5328,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 2649,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": false,\n            \"hasSplitSeason\": false,\n            \"numGames\": 2369,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 6572,\n            \"numWildcardTeams\": 1155,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": true,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 4892,\n            \"active\": false,\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 4263,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 9959,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": false\n          },\n          \"gameType\": \"SPRING_TRAINING\"\n        },\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1970-12-21\",\n          \"endDate\": \"2004-12-27\",\n          \"season\": \"string\",\n          \"roundRobin\": true,\n          \"playoffs\": true,\n          \"playoffRound\": 9499,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 3930,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": true,\n            \"hasSplitSeason\": false,\n            \"numGames\": 4050,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 51,\n            \"numWildcardTeams\": 9498,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": true,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 7223,\n            \"active\": false,\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 582,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 6564,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": true\n          },\n          \"gameType\": \"SPRING_TRAINING\"\n        }\n      ],\n      \"seasonLevelGamedayType\": \"string\",\n      \"gameLevelGamedayType\": \"string\",\n      \"qualifierPlateAppearances\": 3082.7888438610694,\n      \"qualifierOutsPitched\": 1252.5425450085804\n    },\n    {\n      \"copyright\": \"string\",\n      \"seasonId\": \"string\",\n      \"hasWildcard\": false,\n      \"preSeasonStartDate\": \"1985-09-29\",\n      \"preSeasonEndDate\": \"2011-09-23\",\n      \"seasonStartDate\": \"1999-03-06\",\n      \"springStartDate\": \"1957-11-15\",\n      \"springEndDate\": \"2008-08-11\",\n      \"regularSeasonStartDate\": \"1960-06-29\",\n      \"lastDate1stHalf\": \"1990-10-17\",\n      \"allStarDate\": \"1979-08-13\",\n      \"firstDate2ndHalf\": \"2003-03-29\",\n      \"regularSeasonEndDate\": \"1960-08-05\",\n      \"postSeasonStartDate\": \"1965-07-10\",\n      \"postSeasonEndDate\": \"1947-05-18\",\n      \"seasonEndDate\": \"1965-09-06\",\n      \"offseasonStartDate\": \"1969-01-22\",\n      \"offSeasonEndDate\": \"2026-07-01\",\n      \"numberOfGames\": 7969,\n      \"tiesInUse\": true,\n      \"olympicsParticipation\": true,\n      \"conferencesInUse\": true,\n      \"divisionsInUse\": false,\n      \"gameTypeDates\": [\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"2018-05-12\",\n          \"endDate\": \"1976-05-07\",\n          \"season\": \"string\",\n          \"roundRobin\": false,\n          \"playoffs\": false,\n          \"playoffRound\": 5271,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 7206,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": true,\n            \"hasSplitSeason\": false,\n            \"numGames\": 6816,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 5113,\n            \"numWildcardTeams\": 4860,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": false,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 6990,\n            \"active\": false,\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 1061,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 3128,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": false,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": true\n          },\n          \"gameType\": \"PLAYOFFS\"\n        },\n        {\n          \"copyright\": \"string\",\n          \"name\": \"string\",\n          \"shortName\": \"string\",\n          \"startDate\": \"1964-06-11\",\n          \"endDate\": \"1997-04-17\",\n          \"season\": \"string\",\n          \"roundRobin\": false,\n          \"playoffs\": true,\n          \"playoffRound\": 8204,\n          \"league\": {\n            \"copyright\": \"string\",\n            \"id\": 7603,\n            \"name\": \"string\",\n            \"link\": \"string\",\n            \"abbreviation\": \"string\",\n            \"nameShort\": \"string\",\n            \"seasonState\": \"string\",\n            \"hasWildCard\": true,\n            \"hasSplitSeason\": false,\n            \"numGames\": 5822,\n            \"hasPlayoffPoints\": true,\n            \"numTeams\": 7540,\n            \"numWildcardTeams\": 8829,\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"season\": \"string\",\n            \"orgCode\": \"string\",\n            \"conferencesInUse\": false,\n            \"divisionsInUse\": false,\n            \"sport\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timeZone\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sortOrder\": 3035,\n            \"active\": false,\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          \"sport\": {\n            \"copyright\": \"string\",\n            \"hydrations\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"id\": 3032,\n            \"code\": \"string\",\n            \"link\": \"string\",\n            \"name\": \"string\",\n            \"abbreviation\": \"string\",\n            \"sortOrder\": 6735,\n            \"deviceProperties\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"isAffiliated\": true,\n            \"ruleSettings\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"seasonState\": \"string\",\n            \"seasonDateInfo\": {\n              \"value\": \"<Circular reference to #/components/schemas/SeasonRestObject detected>\"\n            },\n            \"activeStatus\": false\n          },\n          \"gameType\": \"WORLD_SERIES\"\n        }\n      ],\n      \"seasonLevelGamedayType\": \"string\",\n      \"gameLevelGamedayType\": \"string\",\n      \"qualifierPlateAppearances\": 4799.2420815307105,\n      \"qualifierOutsPitched\": 5933.5929303843095\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://statsapi.mlb.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fadfb234-9f7a-4b3f-992e-52fdd56c590d",
+    "name": "Stats API Documentation Analytics Season API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official API for Major League Baseball.",
+      "type": "text/plain"
+    }
+  }
+}

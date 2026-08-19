@@ -1,0 +1,198 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Venues API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Venues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View venue info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/venues",
+            "params": [
+              {
+                "name": "venueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique venue identifiers"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "active",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not a player is active"
+              },
+              {
+                "name": "includeEvents",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull venues"
+        },
+        {
+          "info": {
+            "name": "View venue info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/venues/:venueId",
+            "params": [
+              {
+                "name": "venueId",
+                "value": "",
+                "type": "path",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique venue identifiers"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "active",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not a player is active"
+              },
+              {
+                "name": "includeEvents",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to pull venues"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

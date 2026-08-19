@@ -1,0 +1,147 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Season API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Season",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View all seasons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/seasons/all",
+            "params": [
+              {
+                "name": "divisionId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Division Identifier"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "withGameTypeDates",
+                "value": "",
+                "type": "query",
+                "description": "Retrieve dates for each game type"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint allows you to view all seasons for a given Division, League or Sport. One of the following parameters must be present: `divisionId`, `leagueId` or `sportId`."
+        },
+        {
+          "info": {
+            "name": "View season info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/seasons",
+            "params": [
+              {
+                "name": "seasonId",
+                "value": "",
+                "type": "path",
+                "description": "Season of play"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "withGameTypeDates",
+                "value": "",
+                "type": "query",
+                "description": "Retrieve dates for each game type"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint returns season info for a specific sport. The `sportId` parameter is required."
+        },
+        {
+          "info": {
+            "name": "View season info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/seasons/:seasonId",
+            "params": [
+              {
+                "name": "seasonId",
+                "value": "",
+                "type": "path",
+                "description": "Season of play"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "withGameTypeDates",
+                "value": "",
+                "type": "query",
+                "description": "Retrieve dates for each game type"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "This endpoint returns season info for a specific sport. The `sportId` parameter is required."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

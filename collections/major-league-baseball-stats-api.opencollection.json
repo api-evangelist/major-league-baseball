@@ -1,0 +1,1522 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "API Documentation Analytics Stats API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Stats",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "View stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats",
+            "params": [
+              {
+                "name": "stats",
+                "value": "",
+                "type": "query",
+                "description": "Type of statistics. Format: Individual, Team, Career, etc. Available types in /api/v1/statTypes"
+              },
+              {
+                "name": "personId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique Team identifiers"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "leagueListId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League List Identifier"
+              },
+              {
+                "name": "metrics",
+                "value": "",
+                "type": "query",
+                "description": "Name of metric(s) for metric log stats.  Available metrics in /api/v1/metrics"
+              },
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "batterTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the batter's team"
+              },
+              {
+                "name": "pitcherTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the pitcher's team"
+              },
+              {
+                "name": "batterId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "pitcherId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "sitCodes",
+                "value": "",
+                "type": "query",
+                "description": "Situation code for a given stat split."
+              },
+              {
+                "name": "combineSits",
+                "value": "",
+                "type": "query",
+                "description": "If true, gathers stats where all of the situational criteria are met. If false, returns stats where any of the situational criteria are met. Default: false"
+              },
+              {
+                "name": "opposingTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sortStat",
+                "value": "",
+                "type": "query",
+                "description": "Baseball stat to sort splits by."
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "playerPool",
+                "value": "",
+                "type": "query",
+                "description": "Return \"ALL\" or only \"QUALIFIED\" players based on plate appearances."
+              },
+              {
+                "name": "position",
+                "value": "",
+                "type": "query",
+                "description": "Position number. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "daysBack",
+                "value": "",
+                "type": "query",
+                "description": "Returns results from the last 'X' days (Starting from yesterday)."
+              },
+              {
+                "name": "gamesBack",
+                "value": "",
+                "type": "query",
+                "description": "Returns results from the last 'X' games played."
+              },
+              {
+                "name": "excludeTradedPlayers",
+                "value": "",
+                "type": "query",
+                "description": "Excludes players who have since been traded from the input team"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              }
+            ]
+          },
+          "docs": "View stats"
+        },
+        {
+          "info": {
+            "name": "View stats from search",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/search",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "gamePks",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique primary keys"
+              },
+              {
+                "name": "playIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of unique play identifiers"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "gameTypes",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "pitcherTeamIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "batterTeamIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "pitcherSportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "batterSportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "pitcherLeagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "batterLeagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "divisionIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique League Identifiers"
+              },
+              {
+                "name": "pitcherDivisionIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique League Identifiers"
+              },
+              {
+                "name": "batterDivisionIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique League Identifiers"
+              },
+              {
+                "name": "pitchersOnTeamIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "battersOnTeamIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "playerIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "playerPool",
+                "value": "",
+                "type": "query",
+                "description": "Return \"ALL\" or only \"QUALIFIED\" players based on plate appearances."
+              },
+              {
+                "name": "pitcherIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "batterIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "catcherIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "firstBasemanIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "secondBasemanIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "thirdBasemanIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "shortstopIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "leftFielderIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "centerFielderIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "rightFielderIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "runnerFirstIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "runnerSecondIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "runnerThirdIds",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "venueIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Venue Identifier"
+              },
+              {
+                "name": "pitchHand",
+                "value": "",
+                "type": "query",
+                "description": "Handedness of pitcher"
+              },
+              {
+                "name": "batSide",
+                "value": "",
+                "type": "query",
+                "description": "Bat side of hitter"
+              },
+              {
+                "name": "pitchTypes",
+                "value": "",
+                "type": "query",
+                "description": "Classification of pitch (fastball, curveball, etc...)"
+              },
+              {
+                "name": "pitchCodes",
+                "value": "",
+                "type": "query",
+                "description": "Result of the pitch (ball, called strike, etc...)"
+              },
+              {
+                "name": "eventTypes",
+                "value": "",
+                "type": "query",
+                "description": "Type of event"
+              },
+              {
+                "name": "positions",
+                "value": "",
+                "type": "query",
+                "description": "All of the details of a player's position"
+              },
+              {
+                "name": "primaryPositions",
+                "value": "",
+                "type": "query",
+                "description": "All of the details of a player's position"
+              },
+              {
+                "name": "minPitchSpeed",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxPitchSpeed",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minSpinRate",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxSpinRate",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minExtension",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxExtension",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minExitVelocityAgainst",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxExitVelocityAgainst",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minLaunchAngleAgainst",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxLaunchAngleAgainst",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minExitVelocity",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxExitVelocity",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minLaunchAngle",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxLaunchAngle",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minHomeRunDistance",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxHomeRunDistance",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minHitDistance",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxHitDistance",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minHangTime",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxHangTime",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minHitProbability",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxHitProbability",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "minCatchProbability",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxCatchProbability",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "isBarrel",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not a play resulted in a barreled ball"
+              },
+              {
+                "name": "hitTrajectories",
+                "value": "",
+                "type": "query",
+                "description": "Trajectory of hit (line drive, fly ball, etc...)"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "groupBy",
+                "value": "",
+                "type": "query",
+                "description": "Group stats by PLAYER, TEAM, SEASON, VENUE, SPORT or STAT_GROUP"
+              },
+              {
+                "name": "compareOver",
+                "value": "",
+                "type": "query",
+                "description": "Group stats by PLAYER, TEAM, SEASON, VENUE, SPORT or STAT_GROUP"
+              },
+              {
+                "name": "sortStat",
+                "value": "",
+                "type": "query",
+                "description": "Baseball stat to sort splits by."
+              },
+              {
+                "name": "sortModifier",
+                "value": "",
+                "type": "query",
+                "description": "The prefix modifier for the sort stat.  avg, min, max. I.E minExitVelocity, maxLaunchAngle, avgHitDistance"
+              },
+              {
+                "name": "sortOrder",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "percentile",
+                "value": "",
+                "type": "query",
+                "description": "Only return averages above this percentile. used for best effort plays"
+              },
+              {
+                "name": "minOccurrences",
+                "value": "",
+                "type": "query",
+                "description": "Minimum occurrences to filter upon"
+              },
+              {
+                "name": "minPlateAppearances",
+                "value": "",
+                "type": "query",
+                "description": "Minimum occurrences to filter upon"
+              },
+              {
+                "name": "minInnings",
+                "value": "",
+                "type": "query",
+                "description": "Minimum occurrences to filter upon"
+              },
+              {
+                "name": "qualifierRate",
+                "value": "",
+                "type": "query",
+                "description": "Minimum occurrences to filter upon"
+              },
+              {
+                "name": "sitCodes",
+                "value": "",
+                "type": "query",
+                "description": "Situation code for a given stat split."
+              },
+              {
+                "name": "showTotals",
+                "value": "",
+                "type": "query",
+                "description": "Columns to return totals"
+              },
+              {
+                "name": "includeNullMetrics",
+                "value": "",
+                "type": "query",
+                "description": "Show events with null metrics"
+              },
+              {
+                "name": "statFields",
+                "value": "",
+                "type": "query",
+                "description": "Baseball stat fields to populate"
+              },
+              {
+                "name": "atBatNumbers",
+                "value": "",
+                "type": "query",
+                "description": "The at bat number of a given game. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "pitchNumbers",
+                "value": "",
+                "type": "query",
+                "description": "The pitch number of a given game. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "debug",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "activeStatus",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not a player is active"
+              }
+            ]
+          },
+          "docs": "View stats from search"
+        },
+        {
+          "info": {
+            "name": "View metric stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/metrics",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "personIds",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "batterId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "pitcherId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "stats",
+                "value": "",
+                "type": "query",
+                "description": "Type of statistics. Format: Individual, Team, Career, etc. Available types in /api/v1/statTypes"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "opposingTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "opposingPlayerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team"
+              },
+              {
+                "name": "position",
+                "value": "",
+                "type": "query",
+                "description": "All of the details of a player's position"
+              },
+              {
+                "name": "eventType",
+                "value": "",
+                "type": "query",
+                "description": "Type of event"
+              },
+              {
+                "name": "pitchType",
+                "value": "",
+                "type": "query",
+                "description": "Classification of pitch (fastball, curveball, etc...)"
+              },
+              {
+                "name": "hitTrajectory",
+                "value": "",
+                "type": "query",
+                "description": "Trajectory of hit (line drive, fly ball, etc...)"
+              },
+              {
+                "name": "batSide",
+                "value": "",
+                "type": "query",
+                "description": "Bat side of hitter"
+              },
+              {
+                "name": "pitchHand",
+                "value": "",
+                "type": "query",
+                "description": "Handedness of pitcher"
+              },
+              {
+                "name": "venueId",
+                "value": "",
+                "type": "query",
+                "description": "All of the details of a venue"
+              },
+              {
+                "name": "metrics",
+                "value": "",
+                "type": "query",
+                "description": "Name of metric(s) for metric log stats.  Available metrics in /api/v1/metrics"
+              },
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "minValue",
+                "value": "",
+                "type": "query",
+                "description": "Minimum value to filter on"
+              },
+              {
+                "name": "maxValue",
+                "value": "",
+                "type": "query",
+                "description": "Maximum value to filter on"
+              },
+              {
+                "name": "percentile",
+                "value": "",
+                "type": "query",
+                "description": "Only return averages above this percentile. used for best effort plays"
+              },
+              {
+                "name": "minOccurrences",
+                "value": "",
+                "type": "query",
+                "description": "Minimum occurrences to filter upon"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Date of Game. Format: YYYY-MM-DD"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "batterTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the batter's team"
+              },
+              {
+                "name": "pitcherTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the pitcher's team"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "debug",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "View metric stats"
+        },
+        {
+          "info": {
+            "name": "Get leaders for a statistic",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/leaders",
+            "params": [
+              {
+                "name": "leaderCategories",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "leaderGameTypes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "statGroup",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "expand",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "stats",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "leagueListId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "playerPool",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "statType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "playerActive",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "position",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sitCodes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "opposingTeamId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "daysBack",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "gamesBack",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "groupBy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get leaders for a statistic"
+        },
+        {
+          "info": {
+            "name": "View stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/grouped",
+            "params": [
+              {
+                "name": "stats",
+                "value": "",
+                "type": "query",
+                "description": "Type of statistics. Format: Individual, Team, Career, etc. Available types in /api/v1/statTypes"
+              },
+              {
+                "name": "personId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "teamIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique Team identifiers"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "Category of statistic to return. Available types in /api/v1/statGroups"
+              },
+              {
+                "name": "gameType",
+                "value": "",
+                "type": "query",
+                "description": "Type of Game. Available types in /api/v1/gameTypes"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query",
+                "description": "Season of play"
+              },
+              {
+                "name": "seasons",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Seasons of play"
+              },
+              {
+                "name": "sportId",
+                "value": "",
+                "type": "query",
+                "description": "Top level organization of a sport"
+              },
+              {
+                "name": "sportIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of top level organizations of a sport"
+              },
+              {
+                "name": "leagueId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League Identifier"
+              },
+              {
+                "name": "leagueIds",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of Unique league identifiers"
+              },
+              {
+                "name": "leagueListId",
+                "value": "",
+                "type": "query",
+                "description": "Unique League List Identifier"
+              },
+              {
+                "name": "metrics",
+                "value": "",
+                "type": "query",
+                "description": "Name of metric(s) for metric log stats.  Available metrics in /api/v1/metrics"
+              },
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query",
+                "description": "Unique Primary Key Representing a Game"
+              },
+              {
+                "name": "batterTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the batter's team"
+              },
+              {
+                "name": "pitcherTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the pitcher's team"
+              },
+              {
+                "name": "batterId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "pitcherId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Player Identifier. Format: 434538, 429665, etc"
+              },
+              {
+                "name": "sitCodes",
+                "value": "",
+                "type": "query",
+                "description": "Situation code for a given stat split."
+              },
+              {
+                "name": "combineSits",
+                "value": "",
+                "type": "query",
+                "description": "If true, gathers stats where all of the situational criteria are met. If false, returns stats where any of the situational criteria are met. Default: false"
+              },
+              {
+                "name": "opposingTeamId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for the opposing team. Must be used with Team ID"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "sortStat",
+                "value": "",
+                "type": "query",
+                "description": "Baseball stat to sort splits by."
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "playerPool",
+                "value": "",
+                "type": "query",
+                "description": "Return \"ALL\" or only \"QUALIFIED\" players based on plate appearances."
+              },
+              {
+                "name": "position",
+                "value": "",
+                "type": "query",
+                "description": "Position number. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query",
+                "description": "Start date for range of data (must be used with end date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query",
+                "description": "End date for range of data (must be used with start date). Format: MM/DD/YYYY"
+              },
+              {
+                "name": "daysBack",
+                "value": "",
+                "type": "query",
+                "description": "Returns results from the last 'X' days (Starting from yesterday)."
+              },
+              {
+                "name": "gamesBack",
+                "value": "",
+                "type": "query",
+                "description": "Returns results from the last 'X' games played."
+              },
+              {
+                "name": "excludeTradedPlayers",
+                "value": "",
+                "type": "query",
+                "description": "Excludes players who have since been traded from the input team"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "statFields",
+                "value": "",
+                "type": "query",
+                "description": "Baseball stat fields to populate"
+              },
+              {
+                "name": "sortField",
+                "value": "",
+                "type": "query",
+                "description": "Baseball statField to sort on.  If no statField is given, sortField defaults to BASIC.  If 1 statField is given, that is the default sortField."
+              }
+            ]
+          },
+          "docs": "View stats"
+        },
+        {
+          "info": {
+            "name": "Get the probability of a hit for the given hit data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/analytics/stolenBaseProbability",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the probability of a hit for the given hit data"
+        },
+        {
+          "info": {
+            "name": "Get the spray chart info for the current batter",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/analytics/sprayChart",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Get the spray chart info for the current batter"
+        },
+        {
+          "info": {
+            "name": "Get the spray chart info for the current batter",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/analytics/outsAboveAverage",
+            "params": [
+              {
+                "name": "gamePk",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timecode",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Get the spray chart info for the current batter"
+        },
+        {
+          "info": {
+            "name": "Get the probability of a hit for the given hit data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/stats/analytics/homeRunBallparkCount",
+            "params": [
+              {
+                "name": "sprayAngle",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "distance",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "isHomeRun",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "venueId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "season",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the probability of a hit for the given hit data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

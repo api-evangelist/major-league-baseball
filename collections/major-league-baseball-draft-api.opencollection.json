@@ -1,0 +1,503 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stats API Documentation Analytics Draft API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Draft",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the last drafted player and the next 5 teams up to pick",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/draft/:year/latest",
+            "params": [
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year the player was drafted. Format: 2000"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              }
+            ]
+          },
+          "docs": "Get the last drafted player and the next 5 teams up to pick"
+        },
+        {
+          "info": {
+            "name": "View MLB Draft Prospects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/draft/prospects",
+            "params": [
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year the player was drafted. Format: 2000"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "sortBy",
+                "value": "",
+                "type": "query",
+                "description": "Sort the set of data by the specified field"
+              },
+              {
+                "name": "drafted",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not the players been drafted"
+              },
+              {
+                "name": "round",
+                "value": "",
+                "type": "query",
+                "description": "Round in which a player was drafted"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by the first letter of their name using using the specific character"
+              },
+              {
+                "name": "school",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by the first letter of their school using using the specific character"
+              },
+              {
+                "name": "position",
+                "value": "",
+                "type": "query",
+                "description": "Position number. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "team",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Code. Format: tor, nya, etc"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query",
+                "description": "State where the venue is located. Format: Ohio"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by their home country"
+              },
+              {
+                "name": "playerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "bisPlayerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player in the EBIS system"
+              }
+            ]
+          },
+          "docs": "View MLB Draft Prospects"
+        },
+        {
+          "info": {
+            "name": "View MLB Draft Prospects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/draft/prospects/:year",
+            "params": [
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year the player was drafted. Format: 2000"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "sortBy",
+                "value": "",
+                "type": "query",
+                "description": "Sort the set of data by the specified field"
+              },
+              {
+                "name": "drafted",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not the players been drafted"
+              },
+              {
+                "name": "round",
+                "value": "",
+                "type": "query",
+                "description": "Round in which a player was drafted"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by the first letter of their name using using the specific character"
+              },
+              {
+                "name": "school",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by the first letter of their school using using the specific character"
+              },
+              {
+                "name": "position",
+                "value": "",
+                "type": "query",
+                "description": "Position number. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "team",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Code. Format: tor, nya, etc"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query",
+                "description": "State where the venue is located. Format: Ohio"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by their home country"
+              },
+              {
+                "name": "playerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "bisPlayerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player in the EBIS system"
+              }
+            ]
+          },
+          "docs": "View MLB Draft Prospects"
+        },
+        {
+          "info": {
+            "name": "View MLB Drafted Players",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/draft",
+            "params": [
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year the player was drafted. Format: 2000"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "sortBy",
+                "value": "",
+                "type": "query",
+                "description": "Sort the set of data by the specified field"
+              },
+              {
+                "name": "drafted",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not the players been drafted"
+              },
+              {
+                "name": "round",
+                "value": "",
+                "type": "query",
+                "description": "Round in which a player was drafted"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by the first letter of their name using using the specific character"
+              },
+              {
+                "name": "school",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by the first letter of their school using using the specific character"
+              },
+              {
+                "name": "position",
+                "value": "",
+                "type": "query",
+                "description": "Position number. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "team",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Code. Format: tor, nya, etc"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query",
+                "description": "State where the venue is located. Format: Ohio"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by their home country"
+              },
+              {
+                "name": "playerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "bisPlayerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player in the EBIS system"
+              }
+            ]
+          },
+          "docs": "View MLB Drafted Players"
+        },
+        {
+          "info": {
+            "name": "View MLB Drafted Players",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://statsapi.mlb.com/api/v1/draft/:year",
+            "params": [
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year the player was drafted. Format: 2000"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The pointer to start for a return set; used for pagination"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma delimited list of specific fields to be returned. Format: topLevelNode, childNode, attribute"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "The order of sorting, ascending or descending"
+              },
+              {
+                "name": "sortBy",
+                "value": "",
+                "type": "query",
+                "description": "Sort the set of data by the specified field"
+              },
+              {
+                "name": "drafted",
+                "value": "",
+                "type": "query",
+                "description": "Whether or not the players been drafted"
+              },
+              {
+                "name": "round",
+                "value": "",
+                "type": "query",
+                "description": "Round in which a player was drafted"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by the first letter of their name using using the specific character"
+              },
+              {
+                "name": "school",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by the first letter of their school using using the specific character"
+              },
+              {
+                "name": "position",
+                "value": "",
+                "type": "query",
+                "description": "Position number. Format: 1, 2, 3, etc"
+              },
+              {
+                "name": "team",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Code. Format: tor, nya, etc"
+              },
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query",
+                "description": "Unique Team Identifier. Format: 141, 147, etc"
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query",
+                "description": "State where the venue is located. Format: Ohio"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "Filter players by their home country"
+              },
+              {
+                "name": "playerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player"
+              },
+              {
+                "name": "bisPlayerId",
+                "value": "",
+                "type": "query",
+                "description": "A unique identifier for a player in the EBIS system"
+              }
+            ]
+          },
+          "docs": "View MLB Drafted Players"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
