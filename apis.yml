@@ -35,7 +35,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/major-league-baseball/refs/heads/main/apis.yml
 created: '2026-05-05'
 modified: '2026-05-16'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: major-league-baseball:mlb-stats-api
   name: MLB Stats API
