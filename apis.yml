@@ -251,6 +251,8 @@ apis:
   description: Operations pertaining to players
   humanURL: https://statsapi.mlb.com/
   tags:
+  - Persons
+  tags_raw:
   - Person
   properties:
   - type: OpenAPI
@@ -341,6 +343,8 @@ apis:
   description: Operations pertaining to teams
   humanURL: https://statsapi.mlb.com/
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
@@ -350,6 +354,8 @@ apis:
   description: Operations pertaining to transactions
   humanURL: https://statsapi.mlb.com/
   tags:
+  - Transaction
+  tags_raw:
   - Transactions
   properties:
   - type: OpenAPI
