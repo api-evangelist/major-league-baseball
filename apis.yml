@@ -163,6 +163,8 @@ apis:
     divided into separate conferences.
   humanURL: https://statsapi.mlb.com/
   tags:
+  - Conferences
+  tags_raw:
   - Conference
   properties:
   - type: OpenAPI
