@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Stats API Documentation Analytics Bat Tracking API
+  title: Stats API Documentation Bat Tracking API
   description: Official API for Major League Baseball.
   version: 2.0.0
 servers:
@@ -14,7 +14,7 @@ servers:
   description: Local
 tags:
 - name: Bat Tracking
-  description: 'Operations pertaining to bat tracking data '
+  description: Operations pertaining to bat tracking data
 paths:
   /api/v1/batTracking/game/{gamePk}/{playId}:
     get:
@@ -55,6 +55,59 @@ paths:
                 $ref: '#/components/schemas/BatTrackingRestObject'
 components:
   schemas:
+    BatImpactRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        attackAngle:
+          type: number
+          description: The angle of the bat's path, at impact, relative to horizontal. A negative value represents swinging downward, a positive value upward.
+          format: double
+        speed:
+          $ref: '#/components/schemas/BatImpactSpeedRestObject'
+        contactPoint:
+          $ref: '#/components/schemas/ContactPointPositionRestObject'
+        headPosition:
+          $ref: '#/components/schemas/HeadPositionRestObject'
+        handlePosition:
+          $ref: '#/components/schemas/HandlePositionRestObject'
+        timeStamp:
+          type: string
+          description: TimeStamp when bat and ball either intersect in case of contact, or in cases where they don’t collide, timeStamp where ball is closest to any point along the bat.
+    BatPositionRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        positionId:
+          type: string
+          description: Identifier for which part of the bat the positions/timeStamp represent. For now this will only be the “head” and the “handle”, but is subject to change in the future.
+        positions:
+          type: array
+          description: Locations of the head of the bat at the given timeStamps.
+          items:
+            $ref: '#/components/schemas/PositionRestObject'
+    HeadPositionRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        x:
+          type: number
+          description: Location in the horizontal dimension, negative toward third base, positive toward first base.
+          format: double
+        y:
+          type: number
+          description: Location in the depth dimension, negative toward the backstop, positive toward pitcher’s mound.
+          format: double
+        z:
+          type: number
+          description: Location in the vertical dimension, from the ground upward.
+          format: double
+        timeStamp:
+          type: string
+      description: Location of the head of the bat during impact.
     BatSweetSpotRestObject:
       type: object
       properties:
@@ -76,39 +129,8 @@ components:
           type: number
           description: Distance from the sweetSpot to the impact point perpendicular to the bat. Negative is below the center of the bat, positive is above.
           format: double
-    BatImpactRestObject:
+    JsonNode:
       type: object
-      properties:
-        copyright:
-          type: string
-        attackAngle:
-          type: number
-          description: The angle of the bat's path, at impact, relative to horizontal. A negative value represents swinging downward, a positive value upward.
-          format: double
-        speed:
-          $ref: '#/components/schemas/BatImpactSpeedRestObject'
-        contactPoint:
-          $ref: '#/components/schemas/ContactPointPositionRestObject'
-        headPosition:
-          $ref: '#/components/schemas/HeadPositionRestObject'
-        handlePosition:
-          $ref: '#/components/schemas/HandlePositionRestObject'
-        timeStamp:
-          type: string
-          description: TimeStamp when bat and ball either intersect in case of contact, or in cases where they don’t collide, timeStamp where ball is closest to any point along the bat.
-    BatImpactSpeedRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        before:
-          type: number
-          description: Speed of impact point right before contact.
-          format: double
-        after:
-          type: number
-          description: Speed of impact point right after contact.
-          format: double
     PositionRestObject:
       type: object
       properties:
@@ -122,26 +144,6 @@ components:
           type: string
         abbreviation:
           type: string
-    HandlePositionRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        x:
-          type: number
-          description: Location in the horizontal dimension, negative toward third base, positive toward first base.
-          format: double
-        y:
-          type: number
-          description: Location in the depth dimension, negative toward the backstop, positive toward pitcher’s mound.
-          format: double
-        z:
-          type: number
-          description: Location in the vertical dimension, from the ground upward.
-          format: double
-        timeStamp:
-          type: string
-      description: Location of the handle of the bat during impact. The distance from head to handle is currently fixed at 32.677 inches.
     BatTrackingRestObject:
       type: object
       properties:
@@ -164,22 +166,20 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/BatPositionRestObject'
-    BatPositionRestObject:
+    BatImpactSpeedRestObject:
       type: object
       properties:
         copyright:
           type: string
-        positionId:
-          type: string
-          description: Identifier for which part of the bat the positions/timeStamp represent. For now this will only be the “head” and the “handle”, but is subject to change in the future.
-        positions:
-          type: array
-          description: Locations of the head of the bat at the given timeStamps.
-          items:
-            $ref: '#/components/schemas/PositionRestObject'
-    JsonNode:
-      type: object
-    HeadPositionRestObject:
+        before:
+          type: number
+          description: Speed of impact point right before contact.
+          format: double
+        after:
+          type: number
+          description: Speed of impact point right after contact.
+          format: double
+    HandlePositionRestObject:
       type: object
       properties:
         copyright:
@@ -198,7 +198,7 @@ components:
           format: double
         timeStamp:
           type: string
-      description: Location of the head of the bat during impact.
+      description: Location of the handle of the bat during impact. The distance from head to handle is currently fixed at 32.677 inches.
     ContactPointPositionRestObject:
       type: object
       properties:

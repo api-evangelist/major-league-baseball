@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Stats API Documentation Analytics Biomechanics API
+  title: Stats API Documentation Biomechanics API
   description: Official API for Major League Baseball.
   version: 2.0.0
 servers:
@@ -14,7 +14,7 @@ servers:
   description: Local
 tags:
 - name: Biomechanics
-  description: 'Operations pertaining to biomechanical data '
+  description: Operations pertaining to biomechanical data
 paths:
   /api/v1/game/{gamePk}/{playId}/analytics/biomechanics/{positionId}:
     get:
@@ -62,26 +62,6 @@ paths:
                 $ref: '#/components/schemas/SkeletalDataWrapperRestObject'
 components:
   schemas:
-    PositionRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        code:
-          type: string
-        name:
-          type: string
-        type:
-          type: string
-        abbreviation:
-          type: string
-    SkeletalDataWrapperRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        skeletalData:
-          $ref: '#/components/schemas/SkeletalDataRestObject'
     FrameRestObject:
       type: object
       properties:
@@ -93,6 +73,13 @@ components:
             $ref: '#/components/schemas/PositionRestObject'
         timeStamp:
           type: string
+    SkeletalDataWrapperRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        skeletalData:
+          $ref: '#/components/schemas/SkeletalDataRestObject'
     SkeletalDataRestObject:
       type: object
       properties:
@@ -106,3 +93,16 @@ components:
           type: object
           additionalProperties:
             type: string
+    PositionRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        abbreviation:
+          type: string

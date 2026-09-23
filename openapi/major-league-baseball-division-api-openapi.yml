@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Stats API Documentation Analytics Division API
+  title: Stats API Documentation Division API
   description: Official API for Major League Baseball.
   version: 2.0.0
 servers:
@@ -134,15 +134,6 @@ paths:
                 $ref: '#/components/schemas/DivisionsRestObject'
 components:
   schemas:
-    DivisionsRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        divisions:
-          type: array
-          items:
-            $ref: '#/components/schemas/DivisionRestObject'
     SportRestObject:
       type: object
       properties:
@@ -214,21 +205,6 @@ components:
           format: int32
         active:
           type: boolean
-    GameTypeEnum:
-      type: string
-      enum:
-      - SPRING_TRAINING
-      - REGULAR_SEASON
-      - FIRST_ROUND
-      - DIVISION_SERIES
-      - LEAGUE_CHAMPIONSHIP_SERIES
-      - WORLD_SERIES
-      - CHAMPIONSHIP
-      - NINETEENTH_CENTURY_SERIES
-      - PLAYOFFS
-      - ALL_STAR
-      - INTRASQUAD
-      - EXHIBITION
     GameTypeDatesRestObject:
       type: object
       properties:
@@ -259,6 +235,21 @@ components:
           $ref: '#/components/schemas/SportRestObject'
         gameType:
           $ref: '#/components/schemas/GameTypeEnum'
+    GameTypeEnum:
+      type: string
+      enum:
+      - SPRING_TRAINING
+      - REGULAR_SEASON
+      - FIRST_ROUND
+      - DIVISION_SERIES
+      - LEAGUE_CHAMPIONSHIP_SERIES
+      - WORLD_SERIES
+      - CHAMPIONSHIP
+      - NINETEENTH_CENTURY_SERIES
+      - PLAYOFFS
+      - ALL_STAR
+      - INTRASQUAD
+      - EXHIBITION
     LeagueRestObject:
       type: object
       properties:
@@ -317,6 +308,109 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/RuleSettingsRestObject'
+    RuleSettingsRestObject:
+      type: object
+      properties:
+        playSettingId:
+          type: integer
+          format: int32
+        settingId:
+          type: integer
+          format: int32
+        settingName:
+          type: string
+        settingDisplayName:
+          type: string
+        settingCategory:
+          type: string
+        settingCategoryCode:
+          type: string
+        settingDescription:
+          type: string
+        settingOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsOptionRestObject'
+        valueType:
+          type: string
+        settingValue:
+          type: object
+        settingScope:
+          type: string
+        priorityOverride:
+          type: integer
+          format: int32
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        inherited:
+          type: boolean
+        gameType:
+          type: string
+        allGameTypeStatus:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+    DivisionsRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        divisions:
+          type: array
+          items:
+            $ref: '#/components/schemas/DivisionRestObject'
+    ConferenceRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        link:
+          type: string
+    RuleSettingsOptionRestObject:
+      type: object
+      properties:
+        settingValueId:
+          type: integer
+          format: int32
+        displayName:
+          type: string
+        description:
+          type: string
+        activeBeginDate:
+          type: string
+          format: date
+        activeEndDate:
+          type: string
+          format: date
+        value:
+          type: object
+        sortOrder:
+          type: integer
+          format: int32
+    TimeZoneRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: string
+        offset:
+          type: integer
+          format: int32
+        tz:
+          type: string
+    JsonNode:
+      type: object
     SeasonRestObject:
       type: object
       properties:
@@ -396,97 +490,3 @@ components:
         qualifierOutsPitched:
           type: number
           format: double
-    ConferenceRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        id:
-          type: integer
-          format: int32
-        name:
-          type: string
-        link:
-          type: string
-    JsonNode:
-      type: object
-    TimeZoneRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        id:
-          type: string
-        offset:
-          type: integer
-          format: int32
-        tz:
-          type: string
-    RuleSettingsRestObject:
-      type: object
-      properties:
-        playSettingId:
-          type: integer
-          format: int32
-        settingId:
-          type: integer
-          format: int32
-        settingName:
-          type: string
-        settingDisplayName:
-          type: string
-        settingCategory:
-          type: string
-        settingCategoryCode:
-          type: string
-        settingDescription:
-          type: string
-        settingOptions:
-          type: array
-          items:
-            $ref: '#/components/schemas/RuleSettingsOptionRestObject'
-        valueType:
-          type: string
-        settingValue:
-          type: object
-        settingScope:
-          type: string
-        priorityOverride:
-          type: integer
-          format: int32
-        startDate:
-          type: string
-          format: date
-        endDate:
-          type: string
-          format: date
-        inherited:
-          type: boolean
-        gameType:
-          type: string
-        allGameTypeStatus:
-          type: boolean
-        sortOrder:
-          type: integer
-          format: int32
-    RuleSettingsOptionRestObject:
-      type: object
-      properties:
-        settingValueId:
-          type: integer
-          format: int32
-        displayName:
-          type: string
-        description:
-          type: string
-        activeBeginDate:
-          type: string
-          format: date
-        activeEndDate:
-          type: string
-          format: date
-        value:
-          type: object
-        sortOrder:
-          type: integer
-          format: int32

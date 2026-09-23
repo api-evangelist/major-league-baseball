@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Stats API Documentation Analytics Skeletal API
+  title: Stats API Documentation Skeletal API
   description: Official API for Major League Baseball.
   version: 2.0.0
 servers:
@@ -14,7 +14,7 @@ servers:
   description: Local
 tags:
 - name: Skeletal
-  description: 'Operations pertaining to skeletal data '
+  description: Operations pertaining to skeletal data
 paths:
   /api/v1/game/{gamePk}/{playId}/analytics/skeletalData/files:
     get:

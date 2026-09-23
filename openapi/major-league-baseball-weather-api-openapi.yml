@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Stats API Documentation Analytics Weather API
+  title: Stats API Documentation Weather API
   description: Official API for Major League Baseball.
   version: 2.0.0
 servers:
@@ -19,7 +19,7 @@ paths:
     get:
       tags:
       - Weather
-      summary: Get full weather for a venue.
+      summary: Get full weather for a venue
       description: Returns a json file containing full weather for a specific venue.
       operationId: weatherFull
       parameters:
@@ -50,7 +50,7 @@ paths:
     get:
       tags:
       - Weather
-      summary: Get basic weather for a venue.
+      summary: Get basic weather for a venue
       description: Returns a json file containing basic weather for a specific venue.
       operationId: weatherBasic
       parameters:
@@ -81,7 +81,7 @@ paths:
     get:
       tags:
       - Weather
-      summary: Get the raw field weather data.
+      summary: Get the raw field weather data
       description: Returns a json file containing weather for the current play.
       operationId: weatherDataBasedOnPlay
       parameters:
@@ -118,7 +118,7 @@ paths:
     get:
       tags:
       - Weather
-      summary: Get the weather forecast for a game.
+      summary: Get the weather forecast for a game
       description: Returns a json file containing the weather forecast for a specific game.
       operationId: weatherForecast
       parameters:
@@ -153,6 +153,13 @@ paths:
                 $ref: '#/components/schemas/WeatherWrapperRestObject'
 components:
   schemas:
+    JsonNode:
+      type: object
+    RestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
     WeatherWrapperRestObject:
       type: object
       properties:
@@ -171,10 +178,3 @@ components:
       - roofClosedPanelClosed
       - noRoof
       - unknown
-    RestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-    JsonNode:
-      type: object
