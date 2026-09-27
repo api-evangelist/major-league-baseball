@@ -100,15 +100,6 @@ paths:
                 $ref: '#/components/schemas/ConferencesRestObject'
 components:
   schemas:
-    ConferencesRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        conferences:
-          type: array
-          items:
-            $ref: '#/components/schemas/ConferenceRestObject'
     ConferenceRestObject:
       type: object
       properties:
@@ -121,3 +112,12 @@ components:
           type: string
         link:
           type: string
+    ConferencesRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        conferences:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConferenceRestObject'

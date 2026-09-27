@@ -50,15 +50,6 @@ paths:
                   $ref: '#/components/schemas/BroadcastRestObject'
 components:
   schemas:
-    VideoResolutionEnumRestObject:
-      type: object
-      properties:
-        code:
-          type: string
-        resolutionShort:
-          type: string
-        resolutionFull:
-          type: string
     BroadcastRestObject:
       type: object
       properties:
@@ -85,3 +76,12 @@ components:
           type: string
         videoResolution:
           $ref: '#/components/schemas/VideoResolutionEnumRestObject'
+    VideoResolutionEnumRestObject:
+      type: object
+      properties:
+        code:
+          type: string
+        resolutionShort:
+          type: string
+        resolutionFull:
+          type: string

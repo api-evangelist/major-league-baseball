@@ -62,24 +62,19 @@ paths:
                 $ref: '#/components/schemas/SkeletalDataWrapperRestObject'
 components:
   schemas:
-    FrameRestObject:
+    PositionRestObject:
       type: object
       properties:
         copyright:
           type: string
-        positions:
-          type: array
-          items:
-            $ref: '#/components/schemas/PositionRestObject'
-        timeStamp:
+        code:
           type: string
-    SkeletalDataWrapperRestObject:
-      type: object
-      properties:
-        copyright:
+        name:
           type: string
-        skeletalData:
-          $ref: '#/components/schemas/SkeletalDataRestObject'
+        type:
+          type: string
+        abbreviation:
+          type: string
     SkeletalDataRestObject:
       type: object
       properties:
@@ -93,16 +88,21 @@ components:
           type: object
           additionalProperties:
             type: string
-    PositionRestObject:
+    SkeletalDataWrapperRestObject:
       type: object
       properties:
         copyright:
           type: string
-        code:
+        skeletalData:
+          $ref: '#/components/schemas/SkeletalDataRestObject'
+    FrameRestObject:
+      type: object
+      properties:
+        copyright:
           type: string
-        name:
-          type: string
-        type:
-          type: string
-        abbreviation:
+        positions:
+          type: array
+          items:
+            $ref: '#/components/schemas/PositionRestObject'
+        timeStamp:
           type: string
