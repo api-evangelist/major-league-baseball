@@ -204,48 +204,6 @@ components:
           $ref: '#/components/schemas/SportRestObject'
         gameType:
           $ref: '#/components/schemas/GameTypeEnum'
-    TimeZoneRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        id:
-          type: string
-        offset:
-          type: integer
-          format: int32
-        tz:
-          type: string
-    SeasonsRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        seasons:
-          type: array
-          items:
-            $ref: '#/components/schemas/SeasonRestObject'
-    RuleSettingsOptionRestObject:
-      type: object
-      properties:
-        settingValueId:
-          type: integer
-          format: int32
-        displayName:
-          type: string
-        description:
-          type: string
-        activeBeginDate:
-          type: string
-          format: date
-        activeEndDate:
-          type: string
-          format: date
-        value:
-          type: object
-        sortOrder:
-          type: integer
-          format: int32
     SeasonRestObject:
       type: object
       properties:
@@ -325,45 +283,6 @@ components:
         qualifierOutsPitched:
           type: number
           format: double
-    SportRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        hydrations:
-          type: array
-          items:
-            type: string
-        id:
-          type: integer
-          format: int32
-        code:
-          type: string
-        link:
-          type: string
-        name:
-          type: string
-        abbreviation:
-          type: string
-        sortOrder:
-          type: integer
-          format: int32
-        deviceProperties:
-          $ref: '#/components/schemas/JsonNode'
-        isAffiliated:
-          type: boolean
-        ruleSettings:
-          type: array
-          items:
-            $ref: '#/components/schemas/RuleSettingsRestObject'
-        seasonState:
-          type: string
-        seasonDateInfo:
-          $ref: '#/components/schemas/SeasonRestObject'
-        activeStatus:
-          type: boolean
-    JsonNode:
-      type: object
     RuleSettingsRestObject:
       type: object
       properties:
@@ -469,6 +388,66 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/RuleSettingsRestObject'
+    SeasonsRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        seasons:
+          type: array
+          items:
+            $ref: '#/components/schemas/SeasonRestObject'
+    SportRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        hydrations:
+          type: array
+          items:
+            type: string
+        id:
+          type: integer
+          format: int32
+        code:
+          type: string
+        link:
+          type: string
+        name:
+          type: string
+        abbreviation:
+          type: string
+        sortOrder:
+          type: integer
+          format: int32
+        deviceProperties:
+          $ref: '#/components/schemas/JsonNode'
+        isAffiliated:
+          type: boolean
+        ruleSettings:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsRestObject'
+        seasonState:
+          type: string
+        seasonDateInfo:
+          $ref: '#/components/schemas/SeasonRestObject'
+        activeStatus:
+          type: boolean
+    JsonNode:
+      type: object
+    TimeZoneRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: string
+        offset:
+          type: integer
+          format: int32
+        tz:
+          type: string
     GameTypeEnum:
       type: string
       enum:
@@ -484,3 +463,24 @@ components:
       - ALL_STAR
       - INTRASQUAD
       - EXHIBITION
+    RuleSettingsOptionRestObject:
+      type: object
+      properties:
+        settingValueId:
+          type: integer
+          format: int32
+        displayName:
+          type: string
+        description:
+          type: string
+        activeBeginDate:
+          type: string
+          format: date
+        activeEndDate:
+          type: string
+          format: date
+        value:
+          type: object
+        sortOrder:
+          type: integer
+          format: int32

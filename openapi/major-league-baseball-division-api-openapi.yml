@@ -164,48 +164,6 @@ components:
           $ref: '#/components/schemas/SportRestObject'
         gameType:
           $ref: '#/components/schemas/GameTypeEnum'
-    DivisionsRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        divisions:
-          type: array
-          items:
-            $ref: '#/components/schemas/DivisionRestObject'
-    TimeZoneRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        id:
-          type: string
-        offset:
-          type: integer
-          format: int32
-        tz:
-          type: string
-    RuleSettingsOptionRestObject:
-      type: object
-      properties:
-        settingValueId:
-          type: integer
-          format: int32
-        displayName:
-          type: string
-        description:
-          type: string
-        activeBeginDate:
-          type: string
-          format: date
-        activeEndDate:
-          type: string
-          format: date
-        value:
-          type: object
-        sortOrder:
-          type: integer
-          format: int32
     SeasonRestObject:
       type: object
       properties:
@@ -297,104 +255,6 @@ components:
           type: string
         link:
           type: string
-    DivisionRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        id:
-          type: integer
-          format: int32
-        name:
-          type: string
-        season:
-          type: string
-        nameShort:
-          type: string
-        link:
-          type: string
-        abbreviation:
-          type: string
-        conference:
-          $ref: '#/components/schemas/ConferenceRestObject'
-        league:
-          $ref: '#/components/schemas/LeagueRestObject'
-        sport:
-          $ref: '#/components/schemas/SportRestObject'
-        hasWildcard:
-          type: boolean
-        sortOrder:
-          type: integer
-          format: int32
-        numPlayoffTeams:
-          type: integer
-          format: int32
-        active:
-          type: boolean
-    RuleSettingsRestObject:
-      type: object
-      properties:
-        playSettingId:
-          type: integer
-          format: int32
-        settingId:
-          type: integer
-          format: int32
-        settingName:
-          type: string
-        settingDisplayName:
-          type: string
-        settingCategory:
-          type: string
-        settingCategoryCode:
-          type: string
-        settingDescription:
-          type: string
-        settingOptions:
-          type: array
-          items:
-            $ref: '#/components/schemas/RuleSettingsOptionRestObject'
-        valueType:
-          type: string
-        settingValue:
-          type: object
-        settingScope:
-          type: string
-        priorityOverride:
-          type: integer
-          format: int32
-        startDate:
-          type: string
-          format: date
-        endDate:
-          type: string
-          format: date
-        inherited:
-          type: boolean
-        gameType:
-          type: string
-        allGameTypeStatus:
-          type: boolean
-        sortOrder:
-          type: integer
-          format: int32
-    JsonNode:
-      type: object
-    GameTypeEnum:
-      type: string
-      enum:
-      - SPRING_TRAINING
-      - REGULAR_SEASON
-      - FIRST_ROUND
-      - DIVISION_SERIES
-      - LEAGUE_CHAMPIONSHIP_SERIES
-      - WORLD_SERIES
-      - CHAMPIONSHIP
-      - NINETEENTH_CENTURY_SERIES
-      - PLAYOFFS
-      - ALL_STAR
-      - INTRASQUAD
-      - EXHIBITION
     LeagueRestObject:
       type: object
       properties:
@@ -453,6 +313,53 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/RuleSettingsRestObject'
+    RuleSettingsRestObject:
+      type: object
+      properties:
+        playSettingId:
+          type: integer
+          format: int32
+        settingId:
+          type: integer
+          format: int32
+        settingName:
+          type: string
+        settingDisplayName:
+          type: string
+        settingCategory:
+          type: string
+        settingCategoryCode:
+          type: string
+        settingDescription:
+          type: string
+        settingOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsOptionRestObject'
+        valueType:
+          type: string
+        settingValue:
+          type: object
+        settingScope:
+          type: string
+        priorityOverride:
+          type: integer
+          format: int32
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        inherited:
+          type: boolean
+        gameType:
+          type: string
+        allGameTypeStatus:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
     SportRestObject:
       type: object
       properties:
@@ -490,3 +397,96 @@ components:
           $ref: '#/components/schemas/SeasonRestObject'
         activeStatus:
           type: boolean
+    TimeZoneRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: string
+        offset:
+          type: integer
+          format: int32
+        tz:
+          type: string
+    JsonNode:
+      type: object
+    DivisionRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        season:
+          type: string
+        nameShort:
+          type: string
+        link:
+          type: string
+        abbreviation:
+          type: string
+        conference:
+          $ref: '#/components/schemas/ConferenceRestObject'
+        league:
+          $ref: '#/components/schemas/LeagueRestObject'
+        sport:
+          $ref: '#/components/schemas/SportRestObject'
+        hasWildcard:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+        numPlayoffTeams:
+          type: integer
+          format: int32
+        active:
+          type: boolean
+    GameTypeEnum:
+      type: string
+      enum:
+      - SPRING_TRAINING
+      - REGULAR_SEASON
+      - FIRST_ROUND
+      - DIVISION_SERIES
+      - LEAGUE_CHAMPIONSHIP_SERIES
+      - WORLD_SERIES
+      - CHAMPIONSHIP
+      - NINETEENTH_CENTURY_SERIES
+      - PLAYOFFS
+      - ALL_STAR
+      - INTRASQUAD
+      - EXHIBITION
+    DivisionsRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        divisions:
+          type: array
+          items:
+            $ref: '#/components/schemas/DivisionRestObject'
+    RuleSettingsOptionRestObject:
+      type: object
+      properties:
+        settingValueId:
+          type: integer
+          format: int32
+        displayName:
+          type: string
+        description:
+          type: string
+        activeBeginDate:
+          type: string
+          format: date
+        activeEndDate:
+          type: string
+          format: date
+        value:
+          type: object
+        sortOrder:
+          type: integer
+          format: int32
