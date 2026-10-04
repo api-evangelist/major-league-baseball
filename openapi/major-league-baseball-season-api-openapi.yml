@@ -174,36 +174,15 @@ paths:
                 $ref: '#/components/schemas/SeasonsRestObject'
 components:
   schemas:
-    GameTypeDatesRestObject:
+    SeasonsRestObject:
       type: object
       properties:
         copyright:
           type: string
-        name:
-          type: string
-        shortName:
-          type: string
-        startDate:
-          type: string
-          format: date
-        endDate:
-          type: string
-          format: date
-        season:
-          type: string
-        roundRobin:
-          type: boolean
-        playoffs:
-          type: boolean
-        playoffRound:
-          type: integer
-          format: int32
-        league:
-          $ref: '#/components/schemas/LeagueRestObject'
-        sport:
-          $ref: '#/components/schemas/SportRestObject'
-        gameType:
-          $ref: '#/components/schemas/GameTypeEnum'
+        seasons:
+          type: array
+          items:
+            $ref: '#/components/schemas/SeasonRestObject'
     SeasonRestObject:
       type: object
       properties:
@@ -283,53 +262,43 @@ components:
         qualifierOutsPitched:
           type: number
           format: double
-    RuleSettingsRestObject:
+    SportRestObject:
       type: object
       properties:
-        playSettingId:
-          type: integer
-          format: int32
-        settingId:
-          type: integer
-          format: int32
-        settingName:
+        copyright:
           type: string
-        settingDisplayName:
-          type: string
-        settingCategory:
-          type: string
-        settingCategoryCode:
-          type: string
-        settingDescription:
-          type: string
-        settingOptions:
+        hydrations:
           type: array
           items:
-            $ref: '#/components/schemas/RuleSettingsOptionRestObject'
-        valueType:
-          type: string
-        settingValue:
-          type: object
-        settingScope:
-          type: string
-        priorityOverride:
+            type: string
+        id:
           type: integer
           format: int32
-        startDate:
+        code:
           type: string
-          format: date
-        endDate:
+        link:
           type: string
-          format: date
-        inherited:
-          type: boolean
-        gameType:
+        name:
           type: string
-        allGameTypeStatus:
-          type: boolean
+        abbreviation:
+          type: string
         sortOrder:
           type: integer
           format: int32
+        deviceProperties:
+          $ref: '#/components/schemas/JsonNode'
+        isAffiliated:
+          type: boolean
+        ruleSettings:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsRestObject'
+        seasonState:
+          type: string
+        seasonDateInfo:
+          $ref: '#/components/schemas/SeasonRestObject'
+        activeStatus:
+          type: boolean
     LeagueRestObject:
       type: object
       properties:
@@ -388,54 +357,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/RuleSettingsRestObject'
-    SeasonsRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        seasons:
-          type: array
-          items:
-            $ref: '#/components/schemas/SeasonRestObject'
-    SportRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        hydrations:
-          type: array
-          items:
-            type: string
-        id:
-          type: integer
-          format: int32
-        code:
-          type: string
-        link:
-          type: string
-        name:
-          type: string
-        abbreviation:
-          type: string
-        sortOrder:
-          type: integer
-          format: int32
-        deviceProperties:
-          $ref: '#/components/schemas/JsonNode'
-        isAffiliated:
-          type: boolean
-        ruleSettings:
-          type: array
-          items:
-            $ref: '#/components/schemas/RuleSettingsRestObject'
-        seasonState:
-          type: string
-        seasonDateInfo:
-          $ref: '#/components/schemas/SeasonRestObject'
-        activeStatus:
-          type: boolean
-    JsonNode:
-      type: object
     TimeZoneRestObject:
       type: object
       properties:
@@ -448,6 +369,38 @@ components:
           format: int32
         tz:
           type: string
+    GameTypeDatesRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        name:
+          type: string
+        shortName:
+          type: string
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        season:
+          type: string
+        roundRobin:
+          type: boolean
+        playoffs:
+          type: boolean
+        playoffRound:
+          type: integer
+          format: int32
+        league:
+          $ref: '#/components/schemas/LeagueRestObject'
+        sport:
+          $ref: '#/components/schemas/SportRestObject'
+        gameType:
+          $ref: '#/components/schemas/GameTypeEnum'
+    JsonNode:
+      type: object
     GameTypeEnum:
       type: string
       enum:
@@ -463,6 +416,53 @@ components:
       - ALL_STAR
       - INTRASQUAD
       - EXHIBITION
+    RuleSettingsRestObject:
+      type: object
+      properties:
+        playSettingId:
+          type: integer
+          format: int32
+        settingId:
+          type: integer
+          format: int32
+        settingName:
+          type: string
+        settingDisplayName:
+          type: string
+        settingCategory:
+          type: string
+        settingCategoryCode:
+          type: string
+        settingDescription:
+          type: string
+        settingOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/RuleSettingsOptionRestObject'
+        valueType:
+          type: string
+        settingValue:
+          type: object
+        settingScope:
+          type: string
+        priorityOverride:
+          type: integer
+          format: int32
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        inherited:
+          type: boolean
+        gameType:
+          type: string
+        allGameTypeStatus:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
     RuleSettingsOptionRestObject:
       type: object
       properties:
