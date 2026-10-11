@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "major-league-baseball",
+    "captured_at": "2026-10-11T190820",
+    "source_url": "https://mlb.com",
+    "source_type": "root-domain",
+    "file": "major-league-baseball-2026-10-11T190820.png",
+    "bytes": 711755,
+    "capture": "playwright-local"
+  }
+]
