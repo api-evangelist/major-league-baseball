@@ -932,11 +932,247 @@ paths:
                   $ref: '#/components/schemas/BaseballStatsTypeRestObject'
 components:
   schemas:
-    LeagueLeaderTypeRestObject:
+    StatSearchParamRestObject:
       type: object
       properties:
-        displayName:
+        copyright:
           type: string
+        code:
+          type: string
+        filterLevel:
+          type: string
+        hitting:
+          type: boolean
+        pitching:
+          type: boolean
+        fielding:
+          type: boolean
+        catching:
+          type: boolean
+        running:
+          type: boolean
+    StatSearchSitCodeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        sitCode:
+          type: string
+        description:
+          type: string
+        navigationMenu:
+          type: string
+        category:
+          type: string
+        hitting:
+          type: boolean
+        pitching:
+          type: boolean
+        fielding:
+          type: boolean
+        catching:
+          type: boolean
+        running:
+          type: boolean
+    StatcastPositionRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        positionId:
+          type: integer
+          format: int32
+        description:
+          type: string
+    GameTypeEnum:
+      type: string
+      enum:
+      - SPRING_TRAINING
+      - REGULAR_SEASON
+      - FIRST_ROUND
+      - DIVISION_SERIES
+      - LEAGUE_CHAMPIONSHIP_SERIES
+      - WORLD_SERIES
+      - CHAMPIONSHIP
+      - NINETEENTH_CENTURY_SERIES
+      - PLAYOFFS
+      - ALL_STAR
+      - INTRASQUAD
+      - EXHIBITION
+    FilterLevels:
+      type: object
+      properties:
+        copyright:
+          type: string
+        pitch:
+          type: boolean
+        atBat:
+          type: boolean
+        inning:
+          type: boolean
+        game:
+          type: boolean
+        season:
+          type: boolean
+        career:
+          type: boolean
+    FilterLevelEnum:
+      type: string
+      enum:
+      - PITCH
+      - AT_BAT
+      - INNING
+      - PITCH_TYPE
+      - GAME
+      - SEASON
+      - CAREER
+      - NONE
+    JobTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        job:
+          type: string
+        sortOrder:
+          type: integer
+          format: int32
+    FilterLevelEnumRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        name:
+          type: string
+        scope:
+          type: integer
+          format: int32
+    StatSearchGroupByRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        description:
+          type: string
+        filterLevel:
+          type: string
+        hitting:
+          type: boolean
+        pitching:
+          type: boolean
+        fielding:
+          type: boolean
+        catching:
+          type: boolean
+        running:
+          type: boolean
+    Platform:
+      type: string
+      enum:
+      - WEB
+      - ANDROID_PHONE
+      - ANDROID_TABLET
+      - IOS_PHONE
+      - IOS_TABLET
+      - XBOX_ONE
+      - XBOX_360
+      - ROKU
+      - PLAYSTATION
+      - CHROMECAST
+      - APPLETV
+      - TV_OS
+    AggregateSortTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        description:
+          type: string
+    WeatherTrajectoryConfidenceTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        value:
+          type: string
+        description:
+          type: string
+    GeneralLookupRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        base:
+          $ref: '#/components/schemas/GenericLookup'
+        code:
+          type: string
+        description:
+          type: string
+    ScheduleEventTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        name:
+          type: string
+    SituationCodeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        code:
+          type: string
+        sortOrder:
+          type: integer
+          format: int32
+        navigationMenu:
+          type: string
+        description:
+          type: string
+        team:
+          type: boolean
+        batting:
+          type: boolean
+        fielding:
+          type: boolean
+        pitching:
+          type: boolean
+    StatFields:
+      type: object
+      properties:
+        copyright:
+          type: string
+        standard:
+          type: boolean
+        advanced:
+          type: boolean
+        tracking:
+          type: boolean
+        expected:
+          type: boolean
+    PerformerType:
+      type: object
+      properties:
+        name:
+          type: string
+    StatField:
+      type: string
+      enum:
+      - STANDARD
+      - ADVANCED
+      - TRACKING
+      - EXPECTED
+      - SABERMETRICS
+      - RANKING
+      - PERCENTILE
     StatSearchStatRestObject:
       type: object
       properties:
@@ -967,6 +1203,159 @@ components:
         decimals:
           type: integer
           format: int32
+    StatSearchPersonFilterRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        name:
+          type: string
+        personStatGroup:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonStatGroupRestObject'
+        primaryFilterLevel:
+          type: string
+        secondaryFilterLevel:
+          type: string
+    TrackingVersion:
+      type: string
+      enum:
+      - PITCH_FX
+      - STATCAST_2015_COMBINED
+      - STATCAST_2015_RADAR_ONLY_20
+      - STATCAST_2017_RADAR_ONLY_20
+      - STATCAST_2017_COMBINED_RADAR_20
+      - STATCAST_2018_COMBINED_RADAR_25
+      - STATCAST_2018_RADAR_ONLY_25
+      - STATCAST_2020_12_CAM
+      - STATCAST_2020_8_CAM
+      - TRACKMAN_V3
+      - STATCAST_2023_12_CAM
+    StatType:
+      type: string
+      enum:
+      - PROJECTED
+      - PROJECTED_ROS
+      - YEAR_BY_YEAR
+      - YEAR_BY_YEAR_ADVANCED
+      - YEAR_BY_YEAR_PLAYOFFS
+      - SEASON
+      - STANDARD
+      - ADVANCED
+      - CAREER
+      - CAREER_REGULAR_SEASON
+      - CAREER_ADVANCED
+      - SEASON_ADVANCED
+      - CAREER_STAT_SPLITS
+      - CAREER_PLAYOFFS
+      - GAME_LOG
+      - PLAY_LOG
+      - PITCH_LOG
+      - METRIC_LOG
+      - METRIC_AVERAGES
+      - PITCH_ARSENAL
+      - OUTS_ABOVE_AVERAGE
+      - EXPECTED_STATISTICS
+      - SABERMETRICS
+      - SPRAY_CHART
+      - TRACKING_STATISTICS
+      - VS_PLAYER
+      - VS_PLAYER_TOTAL
+      - VS_PLAYER_5Y
+      - VS_TEAM
+      - VS_TEAM_5Y
+      - VS_TEAM_TOTAL
+      - LAST_X_GAMES
+      - BY_DATE_RANGE
+      - BY_DATE_RANGE_ADVANCED
+      - BY_MONTH
+      - BY_MONTH_PLAYOFFS
+      - BY_DAY_OF_WEEK
+      - BY_DAY_OF_WEEK_PLAYOFFS
+      - HOME_AND_AWAY
+      - HOME_AND_AWAY_PLAYOFFS
+      - WIN_LOSS
+      - WIN_LOSS_PLAYOFFS
+      - RANKINGS
+      - RANKINGS_BY_YEAR
+      - STATS_SINGLE_SEASON
+      - STATS_SINGLE_SEASON_ADVANCED
+      - HOT_COLD_ZONES
+      - AVAILABLE_STATS
+      - OPPONENTS_FACED
+      - GAME_TYPE_STATS
+      - FIRST_YEAR_STATS
+      - LAST_YEAR_STATS
+      - STAT_SPLITS
+      - STAT_SPLITS_ADVANCED
+      - AT_GAME_START
+      - VS_OPPONENTS
+    BaseballStatsTypeRestObject:
+      type: object
+      properties:
+        name:
+          type: string
+        lookupParam:
+          type: string
+        isCounting:
+          type: boolean
+        label:
+          type: string
+        statGroups:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatGroup'
+        orgTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationType'
+        highLowTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/HighLowTypeEnum'
+        streakLevels:
+          type: array
+          items:
+            $ref: '#/components/schemas/StreakLevelEnum'
+    StreakLevelEnum:
+      type: string
+      enum:
+      - SEASON
+      - GAME
+      - AT_BAT
+      - PITCH
+    HighLowTypeEnum:
+      type: string
+      enum:
+      - PLAYER
+      - TEAM
+      - GAME
+    ViolationType:
+      type: object
+      properties:
+        violation_type_desc:
+          type: string
+        violationTypeCode:
+          type: string
+        eventType:
+          type: string
+        eventTypeCode:
+          type: string
+        parentId:
+          type: integer
+          format: int32
+        violatorCode:
+          type: string
+    OrganizationType:
+      type: string
+      enum:
+      - PLAYER
+      - TEAM
+      - DIVISION
+      - LEAGUE
+      - SPORT
+      - LEAGUE_LIST
     RosterType:
       type: string
       enum:
@@ -979,26 +1368,28 @@ components:
       - DEPTH_CHART
       - GAMEDAY
       - COACH
-    StatcastPositionRestObject:
+    TrackingVendor:
+      type: string
+      enum:
+      - SPORTVISION
+      - TRACKMAN
+      - CHYRONHEGO
+      - HAWKEYE
+    StatSearchStatGroupRestObject:
       type: object
       properties:
         copyright:
           type: string
-        positionId:
-          type: integer
-          format: int32
-        description:
-          type: string
-    StatField:
-      type: string
-      enum:
-      - STANDARD
-      - ADVANCED
-      - TRACKING
-      - EXPECTED
-      - SABERMETRICS
-      - RANKING
-      - PERCENTILE
+        hitting:
+          type: boolean
+        pitching:
+          type: boolean
+        fielding:
+          type: boolean
+        catching:
+          type: boolean
+        running:
+          type: boolean
     StandingsType:
       type: string
       enum:
@@ -1014,95 +1405,68 @@ components:
       - BY_CONFERENCE
       - BY_LEAGUE
       - BY_ORGANIZATION
-    StatFields:
-      type: object
-      properties:
-        copyright:
-          type: string
-        standard:
-          type: boolean
-        advanced:
-          type: boolean
-        tracking:
-          type: boolean
-        expected:
-          type: boolean
-    GameTypeEnum:
-      type: string
-      enum:
-      - SPRING_TRAINING
-      - REGULAR_SEASON
-      - FIRST_ROUND
-      - DIVISION_SERIES
-      - LEAGUE_CHAMPIONSHIP_SERIES
-      - WORLD_SERIES
-      - CHAMPIONSHIP
-      - NINETEENTH_CENTURY_SERIES
-      - PLAYOFFS
-      - ALL_STAR
-      - INTRASQUAD
-      - EXHIBITION
-    TrackingVersion:
-      type: string
-      enum:
-      - PITCH_FX
-      - STATCAST_2015_COMBINED
-      - STATCAST_2015_RADAR_ONLY_20
-      - STATCAST_2017_RADAR_ONLY_20
-      - STATCAST_2017_COMBINED_RADAR_20
-      - STATCAST_2018_COMBINED_RADAR_25
-      - STATCAST_2018_RADAR_ONLY_25
-      - STATCAST_2020_12_CAM
-      - STATCAST_2020_8_CAM
-      - TRACKMAN_V3
-      - STATCAST_2023_12_CAM
-    RunnerDetailType:
-      type: string
-      enum:
-      - START_BASE
-      - SEQUENCE
-      - RUNNER_GOING
-      - END_BASE
-      - RUNNER_OUT
-      - FORCED_OUT
-      - ADVANCED_ON_FORCE
-      - ADVANCED_ON_THROW
-      - ADVANCED_ON_PLAY
-      - DOUBLED_OFF
-      - THROWN_OUT
-      - TAGGED_OUT
-      - OUT_STRETCHING
-      - LEFT_EARLY
-      - FIELDERS_CHOICE
-      - OUT_ON_APPEAL
-      - OUT_ADVANCING
-      - DEFENSIVE_INDIFFERENCE
-      - INTERFERENCE
-      - HIT_BY_BATTED_BALL
-      - OUT_OVER_RUNNING
-      - OUT_RETURNING
-      - RUNDOWN
-      - CAUGHT_STEALING_2B
-      - CAUGHT_STEALING_3B
-      - CAUGHT_STEALING_HOME
-      - PICKOFF_CAUGHT_STEALING_2B
-      - PICKOFF_CAUGHT_STEALING_3B
-      - PICKOFF_CAUGHT_STEALING_HOME
-      - STOLEN_BASE_2B
-      - STOLEN_BASE_3B
-      - STOLEN_BASE_HOME
-      - PICKOFF_1B
-      - PICKOFF_2B
-      - PICKOFF_3B
-      - PICKOFF_ERROR_1B
-      - PICKOFF_ERROR_2B
-      - PICKOFF_ERROR_3B
-      - UNKNOWN
     RestObject:
       type: object
       properties:
         copyright:
           type: string
+    GenericLookup:
+      type: string
+      enum:
+      - BAT_SIDE
+      - BATS
+      - DOUBLE_HEADER_SW
+      - DRAFT_TYPE
+      - GAMEDAY_SW
+      - HIT_HARDNESS
+      - HIT_TRAJECTORY
+      - IF_NECESSARY
+      - PITCH_CODE
+      - PITCH_HAND
+      - PITCH_TYPE
+      - PLAYER_STATUS
+      - REVIEW_REASON
+      - SIT_CODE
+      - SKY
+      - TIEBREAKER_SW
+      - TRANS_TYPE
+      - THROWS
+      - WIND_DIRECTION
+    LeagueLeaderTypeRestObject:
+      type: object
+      properties:
+        displayName:
+          type: string
+    IGameStatus:
+      type: object
+      properties:
+        code:
+          type: string
+        startTimeTBD:
+          type: boolean
+        abstractGameState:
+          type: string
+        detailedState:
+          type: string
+    Language:
+      type: string
+      enum:
+      - ENGLISH
+      - ELIAS
+      - SPANISH
+      - BIS
+      - JAPANESE
+      - KOREAN
+      - CHINESE
+      - FRENCH
+      - GERMAN
+      - ITALIAN
+      - DUTCH
+      - PORTUGUESE
+      - GREEK
+      - TAGALOG
+      - JAPANESE_2
+      - UNACCENT_OVERRIDE
     RuleSettingsOptionRestObject:
       type: object
       properties:
@@ -1124,67 +1488,6 @@ components:
         sortOrder:
           type: integer
           format: int32
-    FilterLevels:
-      type: object
-      properties:
-        copyright:
-          type: string
-        pitch:
-          type: boolean
-        atBat:
-          type: boolean
-        inning:
-          type: boolean
-        game:
-          type: boolean
-        season:
-          type: boolean
-        career:
-          type: boolean
-    OrganizationType:
-      type: string
-      enum:
-      - PLAYER
-      - TEAM
-      - DIVISION
-      - LEAGUE
-      - SPORT
-      - LEAGUE_LIST
-    ScheduleEventTypeRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        code:
-          type: string
-        name:
-          type: string
-    StatSearchPersonFilterRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        name:
-          type: string
-        personStatGroup:
-          type: array
-          items:
-            $ref: '#/components/schemas/PersonStatGroupRestObject'
-        primaryFilterLevel:
-          type: string
-        secondaryFilterLevel:
-          type: string
-    FilterLevelEnum:
-      type: string
-      enum:
-      - PITCH
-      - AT_BAT
-      - INNING
-      - PITCH_TYPE
-      - GAME
-      - SEASON
-      - CAREER
-      - NONE
     BaseballPosition:
       type: string
       enum:
@@ -1225,12 +1528,50 @@ components:
       - RUNNER_ON_FIRST
       - RUNNER_ON_SECOND
       - RUNNER_ON_THIRD
-    ScheduleTypeEnum:
-      type: string
-      enum:
-      - GAMESCHEDULE
-      - XREF
-      - EVENTSCHEDULE
+    RoofTypeRestObject:
+      type: object
+      properties:
+        copyright:
+          type: string
+        value:
+          type: string
+        description:
+          type: string
+    StatSearchConfigRestObject:
+      type: object
+      properties:
+        parameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchParamRestObject'
+        groupByTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchGroupByRestObject'
+        compareOverTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchGroupByRestObject'
+        situationCodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchSitCodeRestObject'
+        stats:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchStatRestObject'
+        aggregations:
+          type: array
+          items:
+            $ref: '#/components/schemas/AggregateSortTypeRestObject'
+        filterLevels:
+          type: array
+          items:
+            $ref: '#/components/schemas/FilterLevelEnumRestObject'
+        personFilters:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatSearchPersonFilterRestObject'
     GroupByEnum:
       type: string
       enum:
@@ -1292,57 +1633,107 @@ components:
       - HIT_DIRECTION
       - PITCH_ZONE
       - DATE
-    BaseballStatsTypeRestObject:
-      type: object
-      properties:
-        name:
-          type: string
-        lookupParam:
-          type: string
-        isCounting:
-          type: boolean
-        label:
-          type: string
-        statGroups:
-          type: array
-          items:
-            $ref: '#/components/schemas/StatGroup'
-        orgTypes:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrganizationType'
-        highLowTypes:
-          type: array
-          items:
-            $ref: '#/components/schemas/HighLowTypeEnum'
-        streakLevels:
-          type: array
-          items:
-            $ref: '#/components/schemas/StreakLevelEnum'
-    PerformerType:
-      type: object
-      properties:
-        name:
-          type: string
-    FilterLevelEnumRestObject:
+    ScheduleTypeEnum:
+      type: string
+      enum:
+      - GAMESCHEDULE
+      - XREF
+      - EVENTSCHEDULE
+    FielderDetailType:
+      type: string
+      enum:
+      - ASSIST
+      - OUTFIELD_ASSIST
+      - PASSED_BALL
+      - FIELDED_BALL
+      - DEFLECTION
+      - OUT_NUMBER
+      - PUTOUT
+      - TOUCH
+      - ERROR
+      - FIELDING_ERROR
+      - FOUL_ERROR
+      - DROPPED_BALL_ERROR
+      - INTERFERENCE
+      - THROWING_ERROR
+      - CATCHER_INTERFERENCE
+      - STOLEN_BASE_2B
+      - STOLEN_BASE_3B
+      - STOLEN_BASE_HP
+      - CAUGHT_STEALING_2B
+      - CAUGHT_STEALING_3B
+      - CAUGHT_STEALING_HP
+      - PICKOFF_1B
+      - PICKOFF_2B
+      - PICKOFF_3B
+      - TEAM_ERROR
+      - TEAM_DOUBLE_PLAY
+      - TEAM_TRIPLE_PLAY
+      - UNKNOWN
+    StatGroup:
+      type: string
+      enum:
+      - HITTING
+      - PITCHING
+      - FIELDING
+      - CATCHING
+      - RUNNING
+      - GAME
+      - TEAM
+      - STREAK
+    RunnerDetailType:
+      type: string
+      enum:
+      - START_BASE
+      - SEQUENCE
+      - RUNNER_GOING
+      - END_BASE
+      - RUNNER_OUT
+      - FORCED_OUT
+      - ADVANCED_ON_FORCE
+      - ADVANCED_ON_THROW
+      - ADVANCED_ON_PLAY
+      - DOUBLED_OFF
+      - THROWN_OUT
+      - TAGGED_OUT
+      - OUT_STRETCHING
+      - LEFT_EARLY
+      - FIELDERS_CHOICE
+      - OUT_ON_APPEAL
+      - OUT_ADVANCING
+      - DEFENSIVE_INDIFFERENCE
+      - INTERFERENCE
+      - HIT_BY_BATTED_BALL
+      - OUT_OVER_RUNNING
+      - OUT_RETURNING
+      - RUNDOWN
+      - CAUGHT_STEALING_2B
+      - CAUGHT_STEALING_3B
+      - CAUGHT_STEALING_HOME
+      - PICKOFF_CAUGHT_STEALING_2B
+      - PICKOFF_CAUGHT_STEALING_3B
+      - PICKOFF_CAUGHT_STEALING_HOME
+      - STOLEN_BASE_2B
+      - STOLEN_BASE_3B
+      - STOLEN_BASE_HOME
+      - PICKOFF_1B
+      - PICKOFF_2B
+      - PICKOFF_3B
+      - PICKOFF_ERROR_1B
+      - PICKOFF_ERROR_2B
+      - PICKOFF_ERROR_3B
+      - UNKNOWN
+    PersonStatGroupRestObject:
       type: object
       properties:
         copyright:
           type: string
-        name:
+        person:
           type: string
-        scope:
-          type: integer
-          format: int32
-    RoofTypeRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        value:
-          type: string
-        description:
-          type: string
+        primaryStatGroups:
+          $ref: '#/components/schemas/StatSearchStatGroupRestObject'
+        supportedStatGroups:
+          $ref: '#/components/schemas/StatSearchStatGroupRestObject'
     RuleSettingsRestObject:
       type: object
       properties:
@@ -1390,394 +1781,3 @@ components:
         sortOrder:
           type: integer
           format: int32
-    AggregateSortTypeRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        code:
-          type: string
-        description:
-          type: string
-    StatSearchStatGroupRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        hitting:
-          type: boolean
-        pitching:
-          type: boolean
-        fielding:
-          type: boolean
-        catching:
-          type: boolean
-        running:
-          type: boolean
-    StatSearchConfigRestObject:
-      type: object
-      properties:
-        parameters:
-          type: array
-          items:
-            $ref: '#/components/schemas/StatSearchParamRestObject'
-        groupByTypes:
-          type: array
-          items:
-            $ref: '#/components/schemas/StatSearchGroupByRestObject'
-        compareOverTypes:
-          type: array
-          items:
-            $ref: '#/components/schemas/StatSearchGroupByRestObject'
-        situationCodes:
-          type: array
-          items:
-            $ref: '#/components/schemas/StatSearchSitCodeRestObject'
-        stats:
-          type: array
-          items:
-            $ref: '#/components/schemas/StatSearchStatRestObject'
-        aggregations:
-          type: array
-          items:
-            $ref: '#/components/schemas/AggregateSortTypeRestObject'
-        filterLevels:
-          type: array
-          items:
-            $ref: '#/components/schemas/FilterLevelEnumRestObject'
-        personFilters:
-          type: array
-          items:
-            $ref: '#/components/schemas/StatSearchPersonFilterRestObject'
-    StatGroup:
-      type: string
-      enum:
-      - HITTING
-      - PITCHING
-      - FIELDING
-      - CATCHING
-      - RUNNING
-      - GAME
-      - TEAM
-      - STREAK
-    HighLowTypeEnum:
-      type: string
-      enum:
-      - PLAYER
-      - TEAM
-      - GAME
-    GeneralLookupRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        base:
-          $ref: '#/components/schemas/GenericLookup'
-        code:
-          type: string
-        description:
-          type: string
-    TrackingVendor:
-      type: string
-      enum:
-      - SPORTVISION
-      - TRACKMAN
-      - CHYRONHEGO
-      - HAWKEYE
-    StatSearchGroupByRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        code:
-          type: string
-        description:
-          type: string
-        filterLevel:
-          type: string
-        hitting:
-          type: boolean
-        pitching:
-          type: boolean
-        fielding:
-          type: boolean
-        catching:
-          type: boolean
-        running:
-          type: boolean
-    Language:
-      type: string
-      enum:
-      - ENGLISH
-      - ELIAS
-      - SPANISH
-      - BIS
-      - JAPANESE
-      - KOREAN
-      - CHINESE
-      - FRENCH
-      - GERMAN
-      - ITALIAN
-      - DUTCH
-      - PORTUGUESE
-      - GREEK
-      - TAGALOG
-      - JAPANESE_2
-      - UNACCENT_OVERRIDE
-    ViolationType:
-      type: object
-      properties:
-        violation_type_desc:
-          type: string
-        violationTypeCode:
-          type: string
-        eventType:
-          type: string
-        eventTypeCode:
-          type: string
-        parentId:
-          type: integer
-          format: int32
-        violatorCode:
-          type: string
-    GenericLookup:
-      type: string
-      enum:
-      - BAT_SIDE
-      - BATS
-      - DOUBLE_HEADER_SW
-      - DRAFT_TYPE
-      - GAMEDAY_SW
-      - HIT_HARDNESS
-      - HIT_TRAJECTORY
-      - IF_NECESSARY
-      - PITCH_CODE
-      - PITCH_HAND
-      - PITCH_TYPE
-      - PLAYER_STATUS
-      - REVIEW_REASON
-      - SIT_CODE
-      - SKY
-      - TIEBREAKER_SW
-      - TRANS_TYPE
-      - THROWS
-      - WIND_DIRECTION
-    SituationCodeRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        code:
-          type: string
-        sortOrder:
-          type: integer
-          format: int32
-        navigationMenu:
-          type: string
-        description:
-          type: string
-        team:
-          type: boolean
-        batting:
-          type: boolean
-        fielding:
-          type: boolean
-        pitching:
-          type: boolean
-    StatSearchParamRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        code:
-          type: string
-        filterLevel:
-          type: string
-        hitting:
-          type: boolean
-        pitching:
-          type: boolean
-        fielding:
-          type: boolean
-        catching:
-          type: boolean
-        running:
-          type: boolean
-    FielderDetailType:
-      type: string
-      enum:
-      - ASSIST
-      - OUTFIELD_ASSIST
-      - PASSED_BALL
-      - FIELDED_BALL
-      - DEFLECTION
-      - OUT_NUMBER
-      - PUTOUT
-      - TOUCH
-      - ERROR
-      - FIELDING_ERROR
-      - FOUL_ERROR
-      - DROPPED_BALL_ERROR
-      - INTERFERENCE
-      - THROWING_ERROR
-      - CATCHER_INTERFERENCE
-      - STOLEN_BASE_2B
-      - STOLEN_BASE_3B
-      - STOLEN_BASE_HP
-      - CAUGHT_STEALING_2B
-      - CAUGHT_STEALING_3B
-      - CAUGHT_STEALING_HP
-      - PICKOFF_1B
-      - PICKOFF_2B
-      - PICKOFF_3B
-      - TEAM_ERROR
-      - TEAM_DOUBLE_PLAY
-      - TEAM_TRIPLE_PLAY
-      - UNKNOWN
-    StreakLevelEnum:
-      type: string
-      enum:
-      - SEASON
-      - GAME
-      - AT_BAT
-      - PITCH
-    StatSearchSitCodeRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        sitCode:
-          type: string
-        description:
-          type: string
-        navigationMenu:
-          type: string
-        category:
-          type: string
-        hitting:
-          type: boolean
-        pitching:
-          type: boolean
-        fielding:
-          type: boolean
-        catching:
-          type: boolean
-        running:
-          type: boolean
-    StatType:
-      type: string
-      enum:
-      - PROJECTED
-      - PROJECTED_ROS
-      - YEAR_BY_YEAR
-      - YEAR_BY_YEAR_ADVANCED
-      - YEAR_BY_YEAR_PLAYOFFS
-      - SEASON
-      - STANDARD
-      - ADVANCED
-      - CAREER
-      - CAREER_REGULAR_SEASON
-      - CAREER_ADVANCED
-      - SEASON_ADVANCED
-      - CAREER_STAT_SPLITS
-      - CAREER_PLAYOFFS
-      - GAME_LOG
-      - PLAY_LOG
-      - PITCH_LOG
-      - METRIC_LOG
-      - METRIC_AVERAGES
-      - PITCH_ARSENAL
-      - OUTS_ABOVE_AVERAGE
-      - EXPECTED_STATISTICS
-      - SABERMETRICS
-      - SPRAY_CHART
-      - TRACKING_STATISTICS
-      - VS_PLAYER
-      - VS_PLAYER_TOTAL
-      - VS_PLAYER_5Y
-      - VS_TEAM
-      - VS_TEAM_5Y
-      - VS_TEAM_TOTAL
-      - LAST_X_GAMES
-      - BY_DATE_RANGE
-      - BY_DATE_RANGE_ADVANCED
-      - BY_MONTH
-      - BY_MONTH_PLAYOFFS
-      - BY_DAY_OF_WEEK
-      - BY_DAY_OF_WEEK_PLAYOFFS
-      - HOME_AND_AWAY
-      - HOME_AND_AWAY_PLAYOFFS
-      - WIN_LOSS
-      - WIN_LOSS_PLAYOFFS
-      - RANKINGS
-      - RANKINGS_BY_YEAR
-      - STATS_SINGLE_SEASON
-      - STATS_SINGLE_SEASON_ADVANCED
-      - HOT_COLD_ZONES
-      - AVAILABLE_STATS
-      - OPPONENTS_FACED
-      - GAME_TYPE_STATS
-      - FIRST_YEAR_STATS
-      - LAST_YEAR_STATS
-      - STAT_SPLITS
-      - STAT_SPLITS_ADVANCED
-      - AT_GAME_START
-      - VS_OPPONENTS
-    Platform:
-      type: string
-      enum:
-      - WEB
-      - ANDROID_PHONE
-      - ANDROID_TABLET
-      - IOS_PHONE
-      - IOS_TABLET
-      - XBOX_ONE
-      - XBOX_360
-      - ROKU
-      - PLAYSTATION
-      - CHROMECAST
-      - APPLETV
-      - TV_OS
-    IGameStatus:
-      type: object
-      properties:
-        code:
-          type: string
-        startTimeTBD:
-          type: boolean
-        abstractGameState:
-          type: string
-        detailedState:
-          type: string
-    JobTypeRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        code:
-          type: string
-        job:
-          type: string
-        sortOrder:
-          type: integer
-          format: int32
-    PersonStatGroupRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        person:
-          type: string
-        primaryStatGroups:
-          $ref: '#/components/schemas/StatSearchStatGroupRestObject'
-        supportedStatGroups:
-          $ref: '#/components/schemas/StatSearchStatGroupRestObject'
-    WeatherTrajectoryConfidenceTypeRestObject:
-      type: object
-      properties:
-        copyright:
-          type: string
-        value:
-          type: string
-        description:
-          type: string
