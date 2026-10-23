@@ -1781,3 +1781,9 @@ components:
         sortOrder:
           type: integer
           format: int32
+x-provenance:
+  method: harvested
+  publisher: Major League Baseball
+  source: https://docs.statsapi.mlb.com/openapi.json
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
