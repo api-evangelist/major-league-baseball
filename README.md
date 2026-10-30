@@ -1,4 +1,4 @@
-# Major League Baseball (major-league-baseball)
+# Major League Baseball
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,98 +66,153 @@
 
 Major League Baseball (MLB) is the professional baseball organization of the United States and Canada, operating the National League and American League with 30 teams. MLB Advanced Media (now part of MLB) provides public stats and game data through the MLB Stats API and the legacy MLB Data (lookup service) API, used by teams, broadcasters, analysts, and a wide community of developers building stats sites, fantasy applications, and analytical tools. MLB also exposes Statcast data through Baseball Savant. There is no general-purpose self-service developer portal with terms or signup; the APIs are widely consumed but are formally intended for partner use.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/major-league-baseball/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/major-league-baseball/refs/heads/main/apis.yml)
+**Areas:** Analytics · Baseball · Entertainment · Media · Sports · Sports Data · Statistics
 
-## Tags
+## Major League Baseball on APIs.io
 
-- Analytics
-- Baseball
-- Entertainment
-- Media
-- Sports
-- Sports Data
-- Statistics
+Everything profiled for Major League Baseball is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/major-league-baseball/](https://apis.io/providers/major-league-baseball/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (34)
 
-- **Created:** 2026-05-05
-- **Modified:** 2026-05-16
+- [MLB Stats API](https://apis.io/apis/major-league-baseball/mlb-stats-api/) — The MLB Stats API is the modern statistics and game-data service operated by Major League Baseball. It powers official scoreboards, gameday feeds, and…
+- [MLB Data Lookup Service API](https://apis.io/apis/major-league-baseball/mlb-data-lookup-service/) — The MLB Data Lookup Service is the legacy public data service exposing player search and details, hitting and pitching statistics, projections, team lists…
+- [MLB Statcast (Baseball Savant)](https://apis.io/apis/major-league-baseball/mlb-statcast-baseball-savant/) — Baseball Savant is MLB's public Statcast platform, surfacing pitch- and tracking-level data captured by Statcast cameras and radar in every MLB ballpark. It…
+- [Major League Baseball Analytics API](https://apis.io/apis/major-league-baseball/major-league-baseball-analytics-api/) — Operations pertaining to field tracking and analytics.
+- [Major League Baseball Attendance API](https://apis.io/apis/major-league-baseball/major-league-baseball-attendance-api/) — The attendance endpoints handle game and season attendance and openings numbers by team.
+- [Major League Baseball Awards API](https://apis.io/apis/major-league-baseball/major-league-baseball-awards-api/) — The awards endpoints allow users to lookup award information and recipients.
+- [Major League Baseball Bat Tracking API](https://apis.io/apis/major-league-baseball/major-league-baseball-bat-tracking-api/) — Operations pertaining to bat tracking data
+- [Major League Baseball Biomechanics API](https://apis.io/apis/major-league-baseball/major-league-baseball-biomechanics-api/) — Operations pertaining to biomechanical data
+- [Major League Baseball Broadcast API](https://apis.io/apis/major-league-baseball/major-league-baseball-broadcast-api/) — The broadcast endpoints return information pertaining to broadcasters.
+- [Major League Baseball Conference API](https://apis.io/apis/major-league-baseball/major-league-baseball-conference-api/) — The conference endpoint returns data specific to the PCL (Pacific Coast League) which was historically divided into separate conferences.
+- [Major League Baseball Config API](https://apis.io/apis/major-league-baseball/major-league-baseball-config-api/) — Config elements
+- [Major League Baseball Division API](https://apis.io/apis/major-league-baseball/major-league-baseball-division-api/) — Operations pertaining to divisions
+- [Major League Baseball Draft API](https://apis.io/apis/major-league-baseball/major-league-baseball-draft-api/) — Operations pertaining to MLB BaseballDraft
+- [Major League Baseball Game API](https://apis.io/apis/major-league-baseball/major-league-baseball-game-api/) — Operations pertaining to games
+- [Major League Baseball Game Pace API](https://apis.io/apis/major-league-baseball/major-league-baseball-game-pace-api/) — The Game Pace API from Major League Baseball — 1 operation(s) for game pace.
+- [Major League Baseball High/Low API](https://apis.io/apis/major-league-baseball/major-league-baseball-high-low-api/) — Operations pertaining to high/low stats
+- [Major League Baseball Homerun Derby API](https://apis.io/apis/major-league-baseball/major-league-baseball-homerun-derby-api/) — Operations pertaining to home run derby
+- [Major League Baseball Job API](https://apis.io/apis/major-league-baseball/major-league-baseball-job-api/) — Operations pertaining to jobs
+- [Major League Baseball League API](https://apis.io/apis/major-league-baseball/major-league-baseball-league-api/) — Operations pertaining to leagues
+- [Major League Baseball Milestones API](https://apis.io/apis/major-league-baseball/major-league-baseball-milestones-api/) — Operations pertaining to milestones
+- [Major League Baseball Person API](https://apis.io/apis/major-league-baseball/major-league-baseball-person-api/) — Operations pertaining to players
+- [Major League Baseball Predictions API](https://apis.io/apis/major-league-baseball/major-league-baseball-predictions-api/) — The Predictions API from Major League Baseball — 2 operation(s) for predictions.
+- [Major League Baseball Reviews API](https://apis.io/apis/major-league-baseball/major-league-baseball-reviews-api/) — The Reviews API from Major League Baseball — 1 operation(s) for reviews.
+- [Major League Baseball Schedule API](https://apis.io/apis/major-league-baseball/major-league-baseball-schedule-api/) — Operations pertaining to schedules
+- [Major League Baseball Season API](https://apis.io/apis/major-league-baseball/major-league-baseball-season-api/) — Operations pertaining to seasons
+- [Major League Baseball Skeletal API](https://apis.io/apis/major-league-baseball/major-league-baseball-skeletal-api/) — Operations pertaining to skeletal data
+- [Major League Baseball Sports API](https://apis.io/apis/major-league-baseball/major-league-baseball-sports-api/) — Operations pertaining to sports
+- [Major League Baseball Standings API](https://apis.io/apis/major-league-baseball/major-league-baseball-standings-api/) — Operations pertaining to teams
+- [Major League Baseball Stats API](https://apis.io/apis/major-league-baseball/major-league-baseball-stats-api/) — Operations pertaining to stats
+- [Major League Baseball Streaks API](https://apis.io/apis/major-league-baseball/major-league-baseball-streaks-api/) — Endpoints for stats streaks
+- [Major League Baseball Teams API](https://apis.io/apis/major-league-baseball/major-league-baseball-teams-api/) — Operations pertaining to teams
+- [Major League Baseball Transactions API](https://apis.io/apis/major-league-baseball/major-league-baseball-transactions-api/) — Operations pertaining to transactions
+- [Major League Baseball Venues API](https://apis.io/apis/major-league-baseball/major-league-baseball-venues-api/) — Operations pertaining to venues
+- [Major League Baseball Weather API](https://apis.io/apis/major-league-baseball/major-league-baseball-weather-api/) — The Weather API from Major League Baseball — 4 operation(s) for weather.
 
-## APIs
+### Published properties
 
-### MLB Stats API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-The MLB Stats API is the modern statistics and game-data service operated by Major League Baseball. It powers official scoreboards, gameday feeds, and downstream applications with endpoints for schedule, live game state, box scores, play-by-play, players, teams, standings, venues, divisions, and statistical splits. Documentation is hosted at docs.statsapi.mlb.com and access is gated through MLB's identity provider for partners.
+#### Agentic access (1)
 
-- **Human URL:** [https://statsapi.mlb.com/](https://statsapi.mlb.com/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Major League Baseball Agentic Access](https://apis.io/agentic-access/major-league-baseball/major-league-baseball-agentic-access/)
 
-- Game Data
-- Live Scores
-- REST API
-- Sports Statistics
+#### Collections (31)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://docs.statsapi.mlb.com/)
-- [API Reference](https://statsapi.mlb.com/)
-- [Postman Collection](collections/major-league-baseball.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/major-league-baseball.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Stats API Documentation](https://apis.io/collections/major-league-baseball/open-major-league-baseball/)
+- [Stats API Documentation Analytics API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-analytics-api/)
+- [Stats API Documentation Analytics Attendance API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-attendance-api/)
+- [Stats API Documentation Analytics Awards API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-awards-api/)
+- [Stats API Documentation Analytics Bat Tracking API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-bat-tracking-api/)
+- [Stats API Documentation Analytics Biomechanics API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-biomechanics-api/)
+- [Stats API Documentation Analytics Broadcast API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-broadcast-api/)
+- [Stats API Documentation Analytics Conference API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-conference-api/)
+- [Stats API Documentation Analytics Config API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-config-api/)
+- [Stats API Documentation Analytics Division API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-division-api/)
+- [Stats API Documentation Analytics Draft API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-draft-api/)
+- [Stats API Documentation Analytics Game API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-game-api/)
+- [Stats API Documentation Analytics Game Pace API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-game-pace-api/)
+- [Stats API Documentation Analytics High/Low API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-high-low-api/)
+- [Stats API Documentation Analytics Homerun Derby API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-homerun-derby-api/)
+- [Stats API Documentation Analytics Job API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-job-api/)
+- [Stats API Documentation Analytics League API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-league-api/)
+- [Stats API Documentation Analytics Milestones API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-milestones-api/)
+- [Stats API Documentation Analytics Person API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-person-api/)
+- [Stats API Documentation Analytics Predictions API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-predictions-api/)
+- [Stats API Documentation Analytics Schedule API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-schedule-api/)
+- [Stats API Documentation Analytics Season API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-season-api/)
+- [Stats API Documentation Analytics Skeletal API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-skeletal-api/)
+- [Stats API Documentation Analytics Sports API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-sports-api/)
+- [Stats API Documentation Analytics Standings API](https://apis.io/collections/major-league-baseball/open-major-league-baseball-standings-api/)
+- …and 6 more published on APIs.io
 
-### MLB Data Lookup Service API
+#### Security (2)
 
-The MLB Data Lookup Service is the legacy public data service exposing player search and details, hitting and pitching statistics, projections, team lists and rosters, game type information, date ranges, transactions, broadcast schedules, injury reports, and statistical leaderboards. The base endpoint is lookup-service-prod.mlb.com, with requests formatted as `/json/named.[endpoint].bam`.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://appac.github.io/mlb-data-api-docs/](https://appac.github.io/mlb-data-api-docs/)
+- [Major League Baseball Domain Security](https://apis.io/security/major-league-baseball/major-league-baseball-domain-security/)
+- [Major League Baseball Vulnerability Disclosure](https://apis.io/security/major-league-baseball/major-league-baseball-vulnerability-disclosure/)
 
-#### Tags
+## Where to find this API
 
-- Legacy API
-- Player Data
-- Sports Statistics
-- Team Data
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://appac.github.io/mlb-data-api-docs/)
-- [API Reference](http://lookup-service-prod.mlb.com/)
-- [Postman Collection](collections/major-league-baseball.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/major-league-baseball.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### MLB Statcast (Baseball Savant)
-
-Baseball Savant is MLB's public Statcast platform, surfacing pitch- and tracking-level data captured by Statcast cameras and radar in every MLB ballpark. It exposes leaderboards, search tools, visualizations, and pitch-by-pitch detail for hitters, pitchers, and fielders, and is widely scraped or queried for analytical workflows.
-
-- **Human URL:** [https://baseballsavant.mlb.com/](https://baseballsavant.mlb.com/)
-
-#### Tags
-
-- Pitch Tracking
-- Sports Analytics
-- Statcast
-
-#### Properties
-
-- [Documentation](https://baseballsavant.mlb.com/)
-- [Leaderboard](https://baseballsavant.mlb.com/statcast_leaderboard)
-- [Postman Collection](collections/major-league-baseball.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/major-league-baseball.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/major-league-baseball)
 - [Website](https://www.mlb.com/)
-- [News](https://www.mlb.com/news)
-- [Stats](https://www.mlb.com/stats)
-- [Standings](https://www.mlb.com/standings)
-- [Schedule](https://www.mlb.com/schedule)
-- [Teams](https://www.mlb.com/team)
-- [Players](https://www.mlb.com/players)
-- [Careers](https://www.mlb.com/careers)
-- [Press](https://www.mlb.com/press)
+- [Blog](https://www.mlb.com/feeds/news/rss.xml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 18.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.0 |
+| Contract quality | 38.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 14.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/major-league-baseball/](https://apis.io/providers/major-league-baseball/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Major League Baseball: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/major-league-baseball/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
